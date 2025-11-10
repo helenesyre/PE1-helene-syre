@@ -1,5 +1,9 @@
 import './assets/styles/style.css'
 import { setupCounter } from './counter.js'
+import { navbar } from './components/navbar.js'
+
+// Initialize navbar
+navbar(document.querySelector('#header'))
 
 document.querySelector('#app').innerHTML = `
   <div>
