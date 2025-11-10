@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="24" height="24" style="fill: none;"/>
+    </clipPath>
+  </defs>
+  <g style="clip-path: url(#clippath);">
+    <path d="M23,23l-6.35-6.35M16.65,16.65c1.72-1.72,2.68-4.05,2.68-6.48s-.97-4.76-2.68-6.48c-1.72-1.72-4.05-2.68-6.48-2.68s-4.76.97-6.48,2.68c-1.72,1.72-2.68,4.05-2.68,6.48s.97,4.76,2.68,6.48c1.72,1.72,4.05,2.68,6.48,2.68s4.76-.97,6.48-2.68Z" style="fill: none; stroke: #051122; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5px;"/>
+  </g>
+</svg>
