@@ -4,7 +4,9 @@ export function navbar(element) {
         <div class="nav__brand">
           <!-- Toggle button -->
           <div class="nav__toggle" id="nav-toggle">
-            <i class="fa-solid fa-bars"></i>
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M1,4h22M1,12h22M1,20h22" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5px;"/>
+            </svg>
           </div>
 
           <svg class="nav__logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 35.61">
