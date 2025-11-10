@@ -12,6 +12,39 @@ body {
   padding-top: var(--spacing-24);
 }
 
+h1{
+  font-size: var(--font-size-h1);
+}
+
+h2{
+  font-size: var(--font-size-h2);
+}
+
+h3{
+  font-size: var(--font-size-h3);
+}
+
+h4{
+  font-size: var(--font-size-h4);
+}
+
+h5{
+  font-size: var(--font-size-h5);
+}
+
+h6{
+  font-size: var(--font-size-h6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
 /*========== Navigation ==========*/
 
 .header {
@@ -22,7 +55,6 @@ body {
 
 .nav {
   margin-bottom: var(--spacing-40);
-  padding: 0 36px;
   height: var(--spacing-56);
   display: flex;
   align-items: center;
@@ -37,18 +69,26 @@ body {
 }
 
 .nav__logo {
-  width: 98px;
+  width: 96px;
   height: auto;
   cursor: pointer;
-  color: var(--color-blue-500);
+  color: var(--color-white-500);
 }
 
 .nav__toggle {
   font-size: 24px;
   color: var(--color-white-500);
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1001;
+}
+
+.nav__toggle svg {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .nav__menu {
@@ -134,6 +174,119 @@ body {
 .nav__link:hover::after {
   width: 100%;
 }
+
+/*========== Footer ==========*/
+
+footer {
+  width: 100%;
+  background-color: var(--color-black-500);
+  padding: var(--spacing-80) 0;
+  color: var(--color-white-500);
+  position: relative;
+  overflow: hidden;
+}
+
+footer section {
+  overflow: hidden;
+  position: relative;
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-80);
+}
+
+.footer__info {
+  max-width: 300px;
+}
+
+.footer__logo {
+  width: 96px;
+  height: auto;
+  color: var(--color-light-blue-500);
+  margin-bottom: var(--spacing-16);
+}
+
+.footer__links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-64);
+}
+
+.footer__links-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.footer__links  {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.footer__links a {
+  text-decoration: none;
+  color: var(--color-white-500);
+  transition: all 0.3s ease;
+  font-size: 16px;
+  position: relative;
+}
+
+.footer__links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--color-light-blue-500);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.footer__links a:hover {
+  color: var(--color-light-blue-500);
+  transform: translateY(-2px);
+}
+
+.footer__links a:hover::after {
+  width: 100%;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: var(--spacing-8);
+  flex-direction: row;
+}
+
+.footer__social-links a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-light-blue-500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+  color: var(--color-light-blue-500);
+  font-size: 16px;
+}
+
+footer .copyright {
+  margin-top: var(--spacing-80);
+  padding-bottom: 256px;
+  color: var(--color-light-blue-500);
+}
+
+.footer__decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 /*========== Tablet ==========*/
 
 @media (min-width: 768px) {
@@ -141,7 +294,7 @@ body {
     padding-top: var(--spacing-32);
   }
 
-  .nav {
+  .container {
     padding: 0 var(--spacing-48);
   }
 
@@ -157,12 +310,35 @@ body {
     width: 22px;
     height: 22px;
   }
+
+  footer {
+    padding-bottom: 0;
+  }
+
+  .footer__logo {
+    width: 110px;
+  }
+
+  .footer__links-wrapper {
+    flex-direction: row;
+    gap: 130px;
+  }
+
+  .footer__social-links a {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  footer .copyright {
+    padding-bottom: 100px;
+  }
 }
 
 /*========== Desktop ==========*/
 
 @media (min-width: 1200px) {
-  .nav {
+  .container {
     padding: 0 108px;
   }
 
@@ -196,6 +372,20 @@ body {
 
   .nav__link {
     font-size: 16px;
+  }
+
+  .footer__top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    width: 125px;
+  }
+
+  footer .copyright {
+    margin-top: 150px;
+    padding-bottom: 38px;
   }
 }
 
