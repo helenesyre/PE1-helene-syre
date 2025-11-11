@@ -1,10 +1,15 @@
-import './assets/styles/style.css'
-import { setupCounter } from './counter.js'
-import { navbar } from './components/navbar.js'
-import footer from './components/footer.js'
+import './assets/styles/style.css';
+import { setupCounter } from './counter.js';
+import { navbar } from './components/navbar.js';
+import footer from './components/footer.js';
+import { heroCarousel, handleCarousel } from './components/carousel.js';
 
 // Initialize navbar
-navbar(document.querySelector('#header'))
+navbar(document.querySelector('#navbar-container'))
+
+// Initialize carousel
+document.querySelector('#header .hero-carousel').innerHTML = await heroCarousel()
+handleCarousel()
 
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer()
@@ -19,6 +24,6 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
-`
+`;
 
 setupCounter(document.querySelector('#counter'))
