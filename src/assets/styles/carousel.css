@@ -70,6 +70,7 @@
 .prev__slide:hover,
 .next__slide:hover {
   background-color: var(--color-purple-500);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .prev__slide {
