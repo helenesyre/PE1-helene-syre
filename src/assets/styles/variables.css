@@ -15,7 +15,11 @@
 
     /* Neutral Colors */
     --color-black-500: #051122;
+    --color-black-200: #8C9299;
     --color-white-500: #F5F7FA;
+    --color-white-50: #FEFEFF;
+    --color-white-600: #DFE1E4;
+    --color-white-900: #676869;
 
     /* Background colors */
     --color-bg-light: var(--color-white-500);
@@ -58,7 +62,7 @@
     --button-font-size-small: 12px;
 
     --tag-font-size-large: 12px;
-    --tag-font-size-small: 8px;
+    --tag-font-size-small: 10px;
 
     /* Line heights */
     --line-height-tight: 1.2;     /* For headings */
@@ -67,6 +71,7 @@
 
     /* Spacing */
     --spacing-0: 0px;
+    --spacing-4: 4px;
     --spacing-8: 8px;
     --spacing-16: 16px;
     --spacing-24: 24px;

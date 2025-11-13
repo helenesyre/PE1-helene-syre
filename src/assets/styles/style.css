@@ -1,5 +1,6 @@
 @import './variables.css';
 @import './carousel.css';
+@import './cards.css';
 
 /*========== Base ==========*/
 * {
@@ -10,6 +11,7 @@
 
 body {
   font-family: var(--font-secondary);
+  background: var(--color-white-500);
 }
 
 h1{
@@ -50,16 +52,23 @@ h1, h2, h3, h4, h5, h6 {
 /*========== Buttons ==========*/
 .btn {
   display: inline-flex;
-  padding: 4px 16px;
+  padding: var(--spacing-4) var(--spacing-16);
   align-items: center;
-  line-height: 24px;
-  gap: 8px;
-  border-radius: 8px;
+  line-height: var(--spacing-24);
+  gap: var(--spacing-8);
+  border-radius: var(--border-radius-medium);
   font-size: var(--button-font-size-small);
   font-weight: var(--font-weight-semibold);
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn__full-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-8);
 }
 
 .btn-primary {
@@ -320,7 +329,8 @@ footer .copyright {
 
 /*========== Image grid ==========*/
 
-.image__grid {
+.image__grid,
+.product__grid-section {
   margin: var(--spacing-64) 0;
 }
 
@@ -443,7 +453,8 @@ footer .copyright {
 
   /*========== Image grid ==========*/
 
-  .image__grid {
+  .image__grid,
+  .product__grid-section {
     margin: var(--spacing-80) 0;
   }
 
@@ -526,10 +537,10 @@ footer .copyright {
     flex-direction: row;
     gap: var(--spacing-48);
     background-color: var(--color-white-500);
-    padding: 18px 24px;
+    padding: 18px var(--spacing-24);
     justify-content: center;
     align-items: center;
-    border-radius: 40px;
+    border-radius: var(--spacing-40);
   }
 
   .nav__link {
@@ -551,7 +562,8 @@ footer .copyright {
   }
   /*========== Image grid ==========*/
   
-  .image__grid {
+  .image__grid,
+  .product__grid-section {
     margin: var(--spacing-96) 0;
   }
 
