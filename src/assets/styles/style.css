@@ -1,6 +1,7 @@
 @import './variables.css';
 @import './carousel.css';
 @import './cards.css';
+@import './cta.css';
 
 /*========== Base ==========*/
 * {
@@ -11,7 +12,7 @@
 
 body {
   font-family: var(--font-secondary);
-  background: var(--color-white-500);
+  background: var(--color-bg-light);
 }
 
 h1{
@@ -20,7 +21,6 @@ h1{
 
 h2{
   font-size: var(--font-size-h2);
-  margin-bottom: var(--spacing-32);
 }
 
 h3{
@@ -42,6 +42,11 @@ h6{
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-semibold);
   font-family: var(--font-primary);
+}
+
+.image__grid h2,
+.product__grid-section h2 {
+  margin-bottom: var(--spacing-32);
 }
 
 .container {
@@ -74,6 +79,19 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background: var(--color-blue-500);
   color: var(--color-white-500);
+}
+
+.btn__cta {
+  padding: 12px 24px;
+  background: var(--color-beige-500);
+  color: var(--color-black-500);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  font-size: var(--button-font-size-small);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.3px;
 }
 
 

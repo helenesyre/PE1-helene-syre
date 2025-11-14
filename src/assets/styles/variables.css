@@ -2,6 +2,7 @@
 
     /* Primary color */
     --color-blue-500: #393BF4;
+    --color-blue-600: #3436DE;
     /* --color-primary-hover: #646cff; */
 
     /* Secondary colors */
@@ -64,6 +65,8 @@
     --tag-font-size-large: 12px;
     --tag-font-size-small: 10px;
 
+    --input-font-size: 16px;
+
     /* Line heights */
     --line-height-tight: 1.2;     /* For headings */
     --line-height-normal: 1.5;    /* For body text */
@@ -80,6 +83,7 @@
     --spacing-48: 48px;
     --spacing-56: 56px;
     --spacing-64: 64px;
+    --spacing-72: 72px;
     --spacing-80: 80px;
     --spacing-96: 96px;
 
@@ -112,7 +116,7 @@
 
     --font-size-paragraph-large: 28px;
     --font-size-paragraph-medium: 24px;
-    --font-size-paragraph-small: 16px;
+    --font-size-paragraph-small: 20px;
 
     --font-size-label: 16px;
 

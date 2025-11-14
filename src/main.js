@@ -4,6 +4,7 @@ import { navbar } from './components/navbar.js';
 import footer from './components/footer.js';
 import { heroCarousel, handleCarousel } from './components/carousel.js';
 import { featuredGrid } from './components/grids/featuredGrid.js';
+import cta from './components/cta.js';
 
 // Initialize navbar
 navbar(document.querySelector('#navbar-container'))
@@ -18,6 +19,9 @@ document.querySelector('#footer').innerHTML = footer();
 // Featured grid (for testing purposes)
 const featuredSection = await featuredGrid();
 document.querySelector('#featuredGrid').appendChild(featuredSection);
+
+// Initialize CTA
+document.querySelector('#cta').innerHTML = cta();
 
 document.querySelector('#app').innerHTML = `
   <div>

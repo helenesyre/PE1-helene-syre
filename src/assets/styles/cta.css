@@ -1,0 +1,129 @@
+/*========== CTA homepage ==========*/
+.cta {
+    padding: 60px 0;
+    background: var(--color-bg-beige);
+    text-align: center;
+}
+
+.cta__content {
+    background: var(--color-blue-500);
+    padding: var(--spacing-64) var(--spacing-16);
+    border-radius: 26px;
+    color: var(--color-white-500);
+    border: 1px solid var(--color-white-500);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-48);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-8);
+    z-index: 10;
+}
+
+.cta__text p {
+    font-size: var(--font-size-paragraph-small);
+    font-weight: var(--font-weight-regular);
+    max-width: 250px;
+}
+
+.cta__form {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    max-width: 395px;
+    margin: 0 auto;
+    background: var(--color-white-500);
+    border-radius: var(--border-radius-medium);
+    padding: 10px 10px 10px 16px;
+    z-index: 10;
+}
+
+.cta__input {
+    flex: 1;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    font-size: var(--input-font-size);
+    font-family: var(--font-secondary);
+    outline: none;
+    background: transparent;
+    z-index: 10;
+}
+
+.cta__input::placeholder {
+    color: var(--color-black-200);
+}
+
+.cta__shape-top-left {
+    color: var(--color-blue-600);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 136px;
+    height: auto;
+}
+
+.cta__shape-bottom-right {
+    color: var(--color-blue-600);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 153px;
+    height: auto;
+}
+
+
+/*========== Tablet ==========*/
+
+@media (min-width: 768px) {
+    .cta {
+        padding: 60px 0;
+    }
+
+    .cta__content {
+        padding: var(--spacing-72);
+        gap: var(--spacing-48);
+    }
+
+    .cta__text h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .cta__text p {
+        max-width: 410px;
+    }
+
+    .cta__form {
+        padding: 10px 10px 10px 32px;
+        gap: 50px;
+    }
+
+    .cta__shape-top-left {
+        width: 170px;
+    }
+
+    .cta__shape-bottom-right {
+        width: 229px;
+    }
+}
+
+/*========== Desktop ==========*/
+
+@media (min-width: 1200px) {
+
+    .cta__shape-top-left {
+        width: 204px;
+    }
+
+    .cta__shape-bottom-right {
+        width: 305px;
+    }
+  
+}
+
+
