@@ -7,6 +7,9 @@
 
     /* Secondary colors */
     --color-purple-500: #6637FF;
+    --color-purple-50: #F0EBFF;
+    --color-purple-200: #B9A3FF;
+    --color-purple-600: #5D32E8;
 
     --color-light-blue-500: #B9D6F2;
     --color-light-blue-100: #E9F2FB;
@@ -16,7 +19,9 @@
 
     /* Neutral Colors */
     --color-black-500: #051122;
+    --color-black-50: #E6E7E9;
     --color-black-200: #8C9299;
+    --color-black-300: #58606B;
     --color-white-500: #F5F7FA;
     --color-white-50: #FEFEFF;
     --color-white-600: #DFE1E4;
@@ -56,13 +61,14 @@
     --font-size-paragraph-medium: 16px;
     --font-size-paragraph-small: 14px;
 
-    --font-size-label: 14px;
+    --font-size-label-large: 24px;
+    --font-size-label-small: 14px;
 
     --button-font-size-large: 20px;
     --button-font-size-medium: 16px;
     --button-font-size-small: 12px;
 
-    --tag-font-size-large: 12px;
+    --tag-font-size-large: 14px;
     --tag-font-size-small: 10px;
 
     --input-font-size: 16px;
@@ -97,6 +103,9 @@
     --transition-medium: 0.4s;
     --transition-slow: 0.6s;
 
+    /* Shadows */
+    --shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.10), 0 1px 3px 0 rgba(0, 0, 0, 0.10);
+
     /*
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -118,7 +127,8 @@
     --font-size-paragraph-medium: 24px;
     --font-size-paragraph-small: 20px;
 
-    --font-size-label: 16px;
+    --font-size-label-large: 32px;
+    --font-size-label-small: 16px;
 
     --button-font-size-large: 20px;
     --button-font-size-medium: 16px;

@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  border: none;
 }
 
 .btn__full-width {
@@ -93,6 +94,16 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   display: inline-block;
   letter-spacing: 0.3px;
+}
+
+/*========== Box ==========*/
+
+.box{
+  width: 100%;
+  padding: var(--spacing-24);
+  border-radius: var(--border-radius-large);
+  background: var(--color-white-50);
+  box-shadow: var(--shadow);
 }
 
 /*========== Footer ==========*/

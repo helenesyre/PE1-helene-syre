@@ -140,6 +140,10 @@
 }
 
 /*========== Light Navbar Variant ==========*/
+.padding-bottom {
+    padding-bottom: 50px;
+}
+
 .nav--light .nav__logo {
     color: var(--color-blue-500);
 }
