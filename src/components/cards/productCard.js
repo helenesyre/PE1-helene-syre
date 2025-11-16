@@ -15,7 +15,7 @@ export function prouductCard(product) {
     }        
     
     card.innerHTML = `
-    <a href="/product.html?id=${product.id}" class="product__card__link">
+    <a href="/product/index.html?id=${product.id}" class="product__card__link">
         <div class="product__card__image-wrapper">
             <div class="product__card__favorite-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -30,7 +30,7 @@ export function prouductCard(product) {
     </div>
     <h4 class="product__card__title">${product.title}</h4>
     ${priceHTML}
-    <a href="./product/index.html" class="btn btn-primary btn__full-width">Buy Now</a>
+    <a href="/product/index.html?id=${product.id}" class="btn btn-primary btn__full-width">Buy Now</a>
     `;
     return card;
 }

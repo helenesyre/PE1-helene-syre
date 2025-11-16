@@ -1,5 +1,4 @@
 import './assets/styles/style.css';
-import { setupCounter } from './counter.js';
 import { navbar } from './components/navbar.js';
 import footer from './components/footer.js';
 import { heroCarousel, handleCarousel } from './components/carousel.js';
@@ -16,7 +15,7 @@ handleCarousel();
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
-// Featured grid (for testing purposes)
+// Featured grid initialization
 const featuredSection = await featuredGrid();
 document.querySelector('#featuredGrid').appendChild(featuredSection);
 

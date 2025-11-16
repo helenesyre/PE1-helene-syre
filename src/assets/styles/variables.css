@@ -39,6 +39,9 @@
     --color-feedback-error: #D93025;
     --color-feedback-info: #1A73E8;
 
+    /* Star rating colors */
+    --color-yellow-500: #FCA311;
+
     /* Typography */
     --font-primary: "Montserrat", sans-serif;
     --font-secondary: "Open Sans", sans-serif;

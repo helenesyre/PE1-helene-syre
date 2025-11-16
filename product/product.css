@@ -52,9 +52,14 @@
     gap: var(--spacing-8);
 }
 
-.product__price-container {
+.product__price-container,
+.product__price--regular {
     font-size: var(--font-size-label-large);
     font-weight: var(--font-weight-bold);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-8);
 }
 
 .product__price--discounted {
@@ -67,10 +72,47 @@
     text-decoration: line-through;
 }
 
+.product__price--regular {
+    color: var(--color-black-500);
+}
+
+/*========== Product Rating ==========*/
+
 .product__rating {
     font-size: var(--button-font-size-medium);
-    color: var(--color-black-300);
     font-weight: var(--font-weight-semibold);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+.product__rating .star-rating {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    gap: var(--spacing-8);
+}
+
+.product__review-count {
+    color: var(--color-black-200);
+}
+
+#fullStars, #halfStar, #emptyStar {
+    width: 20px;
+    height: 20px;
+}
+
+#fullStars {
+    color: var(--color-yellow-500);
+}
+
+#halfStar {
+    color: var(--color-yellow-500);
+}
+
+#emptyStar {
+    color: var(--color-black-50);
 }
 
 .product__description {
@@ -145,6 +187,18 @@
     flex-direction: row;
     align-items: center;
     gap: var(--spacing-4);
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--color-blue-500);
+}
+
+button.share {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--color-blue-500);
 }
 
 /*========== Product Reviews ==========*/
@@ -157,7 +211,7 @@
 }
 
 .product__review-item {
-
+    width: 100%;
 }
 
 .product__review-header {
@@ -187,12 +241,40 @@
 }
 
 .product__review-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+.product__review-rating .star-rating {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    gap: var(--spacing-8);
+}
+
+.reviews__review-count {
+    color: var(--color-black-200);
     font-size: var(--button-font-size-medium);
-    color: var(--color-black-300);
+    font-weight: var(--font-weight-semibold);
 }
     
 .product__review-comment {
     font-size: var(--font-size-paragraph-small);
+}
+
+/*========== Product Similar Products ==========*/
+.product__similar-products {
+    background: var(--color-light-blue-100);
+}
+
+.product__similar-products h2 {
+    margin-bottom: var(--spacing-32);
+}
+
+.product__similar-padding {
+    padding: var(--spacing-56) 0;
 }
 
 /*========== Tablet ==========*/
@@ -219,6 +301,16 @@
     .product__review-list {
         flex-direction: row;
         gap: var(--spacing-16);
+    }
+
+    .product__review-item:only-child {
+        width: 50%;
+    }
+
+    /*========== Product Similar Products ==========*/
+
+    .product__similar-padding {
+        padding: var(--spacing-64) 0;
     }
 }
 
