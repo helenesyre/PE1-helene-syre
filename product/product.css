@@ -46,6 +46,10 @@
     gap: var(--spacing-8);
 }
 
+.product__overview h1 {
+    font-size: var(--font-size-h2);
+}
+
 .product__pricing-rating {
     display: flex;
     flex-direction: column;
