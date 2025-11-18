@@ -63,8 +63,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--spacing-24);
   gap: var(--spacing-8);
   border-radius: var(--border-radius-medium);
+  font-family: var(--font-secondary);
   font-size: var(--button-font-size-small);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
   text-align: center;
   text-decoration: none;
   cursor: pointer;

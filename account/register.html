@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FILL IN LATER">
+    <title>KORO | FILL IN LATER</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./account.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div id="navbar-container" class="padding-bottom"></div>
+    </header>
+    <main class="signup__form-container ">
+
+        <section class="container relative">
+            <div class="signup__form-header">
+                <h1>Create an Account</h1>
+                <p>Please enter your details to create an account.</p>
+            </div>
+            <form id="signup__form">
+                <div class="form__container">
+                    <div class="form__group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name..." required/>
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email..." required/>
+                    </div>
+                    <div class="form__group">
+                        <label for="password">Create a Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="create-password" name="password" placeholder="Enter your password..." required/>
+                            <span id="view-icon-create"></span>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="password">Confirm your Password</label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password..." required/>
+                            <span id="view-icon-confirm"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__terms-checkbox">
+                    <input type="checkbox" id="terms" name="terms" required/>
+                    <label for="terms">By signing up, you agree to our <span>Terms of Service</span> and <span>Privacy Policy.</span></label>
+                </div>
+                <div class="form__actions">
+                    <p class="form__not-registered">Already a member? <a href="login.html">Log in here</a></p>
+                    <button type="submit" class="btn btn-primary btn__full-width">Create Account</button>
+                </div>
+            </form>
+
+            <svg id="login__background-shapes-3"  data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 168">
+                <path d="M235.52,95.69c-5.38-5.21-15.73-10.31-23.22-10.97-29.81,1.9-62.88-2.59-92.3-.05-9.43.82-20.92,7.06-26.74,14.43-15.59,19.8-1.35,44.35-28.62,61.08-41.91,25.69-85.83-28.78-53.4-63.96,17.69-19.19,36.99-8.09,55.07-21.52,22.74-16.86,10.83-36.11,23.43-55.53,6.38-9.81,17.13-16.52,28.73-18.21,30.29,1.77,63.97-2.72,93.86-.13,15.96,1.37,31.45,15.09,35.43,30.42,1.61,6.29,1.06,12.77,2.28,19.11,3.87,20.46,20.68,31.32,40.56,32.7,27.96,1.9,60.95-3.07,88.09.11,17.39,2.04,33.52,19.27,35.11,36.5,2.54,27.94-17.34,45.67-44.03,47.29-22.82,1.4-55.52,1.4-78.34,0-16.76-1.03-30.95-7.43-39-22.76-8.68-16.55-.95-33.07-16.89-48.5Z" style="fill: currentColor;"/>
+            </svg>
+
+            <svg id="login__background-shapes-4" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 532">
+                <path d="M.9,83.14C-5.57,38.25,23.54,4.8,67.84,1.96c85.54,4.97,178.13-6.41,262.86.12,19.58,1.5,39.22,9.82,51.64,25.42,26.28,32.99,2.48,79.67,53.2,101.11,30.44,12.88,119.1,1.96,157.97,4.97,88.49,6.82,85.37,127.57,6.99,134.96-43.95,4.16-94.03-3.35-138.45,0-86.75,6.53-81.9,121.68-6.99,128.15,44.24,3.81,93.92-3.47,138.45,0,78.15,6.01,91.26,107.58,18.77,132.71-139.54,5.26-280.18.64-420.08,2.31-51.87-4.51-78.38-64.25-48.52-106.54,28.42-40.27,70.18-16.47,100.33-46.86,30.15-30.39,7.22-69.97,43.9-98.1,32.63-25.02,72.89-2.89,97.09-46.57,23.68-42.81-3.64-91.11-51.06-96.25l-279.32-.98c-25.53-3.93-50.02-27.27-53.77-53.15l.06-.12Z" style="fill: currentColor;"/>
+            </svg>
+        </section>
+
+      
+    </main>
+    <footer class="footer" id="footer"></footer>
+    <script type="module" src="./register.js"></script>
+  </body>
+</html>
