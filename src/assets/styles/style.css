@@ -3,6 +3,7 @@
 @import './cards.css';
 @import './cta.css';
 @import './navbar.css';
+@import './buttons.css';
 
 /*========== Base ==========*/
 * {
@@ -53,48 +54,6 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   margin: 0 auto;
   padding: 0 36px;
-}
-
-/*========== Buttons ==========*/
-.btn {
-  display: inline-flex;
-  padding: var(--spacing-4) var(--spacing-16);
-  align-items: center;
-  line-height: var(--spacing-24);
-  gap: var(--spacing-8);
-  border-radius: var(--border-radius-medium);
-  font-family: var(--font-secondary);
-  font-size: var(--button-font-size-small);
-  font-weight: var(--font-weight-medium);
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-}
-
-.btn__full-width {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-8);
-}
-
-.btn-primary {
-  background: var(--color-blue-500);
-  color: var(--color-white-500);
-}
-
-.btn__cta {
-  padding: 12px 24px;
-  background: var(--color-beige-500);
-  color: var(--color-black-500);
-  border: none;
-  border-radius: var(--border-radius-medium);
-  font-size: var(--button-font-size-small);
-  font-weight: var(--font-weight-semibold);
-  cursor: pointer;
-  display: inline-block;
-  letter-spacing: 0.3px;
 }
 
 /*========== Box ==========*/
@@ -294,11 +253,6 @@ footer .copyright {
 
   /*========== Buttons ==========*/
 
-  .btn {
-    padding: 6px 16px;
-    font-size: var(--button-font-size-medium);
-  }
-
   .hero-carousel {
     height: 790px;
   }
@@ -384,11 +338,6 @@ footer .copyright {
   }
 
   /*========== Buttons ==========*/
-
-  .btn {
-    padding: 10px 16px;
-    font-size: var(--button-font-size-large);
-  }
 
   .footer__top {
     flex-direction: row;

@@ -30,7 +30,7 @@ export function prouductCard(product) {
     </div>
     <h4 class="product__card__title">${product.title}</h4>
     ${priceHTML}
-    <a href="/product/index.html?id=${product.id}" class="btn btn-primary btn__full-width">Buy Now</a>
+    <a href="/product/index.html?id=${product.id}" class="btn btn__small btn__responsive-medium btn__primary btn__full-width">Buy Now</a>
     `;
     return card;
 }

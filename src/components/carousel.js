@@ -21,7 +21,7 @@ function carouselCard(product, index) {
             <div class="carousel__info">
                 <h1>${product.title}</h1>
                 <p>${product.description}</p>
-                <a href="/product/index.html?id=${product.id}" class="btn btn-primary">Shop Now</a>
+                <a href="/product/index.html?id=${product.id}" class="btn btn__small btn__responsive btn__primary">Shop Now</a>
             </div>
             <div class="carousel__shape">
                 ${shape}

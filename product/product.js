@@ -69,7 +69,7 @@ export async function displayProduct() {
                     </div>
                 </div>
                 <div class="product__actions">
-                    <button class="btn btn-primary btn__full-width">Add to Cart</button>
+                    <button class="btn btn__large btn__primary btn__full-width">Add to Cart</button>
                     <p>Login to be able to buy product.</p>
                 </div>
                 <div class="product__wishlist-share">

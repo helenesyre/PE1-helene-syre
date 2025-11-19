@@ -4,6 +4,7 @@
     --color-blue-500: #393BF4;
     --color-blue-50: #EBEBFE;
     --color-blue-600: #3436DE;
+    --color-blue-700: #282AAD;
     /* --color-primary-hover: #646cff; */
 
     /* Secondary colors */
@@ -18,6 +19,7 @@
 
     --color-beige-500: #D1C6AD;
     --color-beige-100: #F1EDE6;
+    --color-beige-600: #BEB49D;
 
     /* Neutral Colors */
     --color-black-500: #051122;
@@ -135,10 +137,6 @@
 
     --font-size-label-large: 32px;
     --font-size-label-small: 16px;
-
-    --button-font-size-large: 20px;
-    --button-font-size-medium: 16px;
-    --button-font-size-small: 12px;
 
     --tag-font-size-large: 16px;
     --tag-font-size-small: 12px;

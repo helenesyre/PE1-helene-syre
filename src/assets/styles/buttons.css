@@ -1,0 +1,119 @@
+/*========== Sizes ==========*/
+.btn {
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    display: inline-flex;
+    gap: var(--spacing-8);
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--spacing-24);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+.btn__small {
+    padding: var(--spacing-4) var(--spacing-16);
+    font-size: var(--button-font-size-small);
+}
+
+.btn__medium {
+    padding: 6px var(--spacing-16);
+    font-size: var(--button-font-size-medium);
+}
+
+.btn__large {
+    padding: 10px var(--spacing-16);
+    font-size: var(--button-font-size-large);
+}
+
+.btn__small svg,
+.btn__medium svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn__large svg {
+    width: 20px;
+    height: 20px;
+}
+
+/*========== Full width ==========*/
+
+.btn__full-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*========== Disabled ==========*/
+
+/*========== Colors ==========*/
+
+.btn__primary {
+  background: var(--color-blue-500);
+  color: var(--color-white-500);
+}
+
+.btn__primary:hover {
+  background: var(--color-blue-700);
+}
+
+/*========== Other buttons ==========*/
+
+.btn__cta {
+  padding: 12px 24px;
+  background: var(--color-beige-500);
+  color: var(--color-black-500);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  font-size: var(--button-font-size-small);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.btn__cta:hover {
+  background: var(--color-beige-600);
+}
+
+/*========== Tablet ==========*/
+
+@media (min-width: 768px) {
+  .btn__responsive {
+    padding: 6px var(--spacing-16);
+    font-size: var(--button-font-size-medium);
+  }
+  
+  .btn__responsive svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .btn__responsive-medium {
+    padding: 6px var(--spacing-16);
+    font-size: var(--button-font-size-medium);
+  }
+}
+
+/*========== Desktop ==========*/
+
+@media (min-width: 1200px) {
+  .btn__responsive {
+    padding: 10px var(--spacing-16);
+    font-size: var(--button-font-size-large);
+  }
+  
+  .btn__responsive svg {
+    width: 20px;
+    height: 20px;
+  }
+}
