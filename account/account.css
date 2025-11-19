@@ -91,13 +91,28 @@ body {
 
 .form__group input:valid {
     border-color: var(--color-feedback-success);
+}*/
+
+.form__error {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-4);
+    color: var(--color-feedback-error);
+}
+
+.form__error-icon {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.5px;
+    flex: none;
 }
 
 .form__error-message {
-    color: var(--color-feedback-error);
-    font-size: var(--font-size-paragraph-small);
-    margin-top: var(--spacing-4);
-}*/
+    font-size: 14px;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+}
 
 .password-input-wrapper {
     position: relative;
@@ -151,6 +166,11 @@ body {
     gap: var(--spacing-8);
     margin: 0 auto;
     padding-top: 18px;
+}
+
+.form__terms-checkbox span {
+    font-weight: var(--font-weight-bold);
+    font-size: 14px;
 }
 
 .relative {
