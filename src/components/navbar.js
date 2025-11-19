@@ -23,6 +23,8 @@ export function navbar(element, variant = 'dark') {
           </a>
         </div>
 
+        <div class="nav__overlay" id="nav-overlay"></div>
+
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li><a href="/" class="nav__link nav__link--active">Home</a></li>
@@ -91,11 +93,13 @@ export function navbar(element, variant = 'dark') {
   const navMenu = document.getElementById('nav-menu')
   const navToggle = document.getElementById('nav-toggle')
   const navClose = document.getElementById('nav-close')
+  const navOverlay = document.getElementById('nav-overlay')
 
   // Show menu
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       navMenu.classList.add('show-menu')
+      navOverlay.classList.add('show-overlay')
     })
   }
 
@@ -103,6 +107,15 @@ export function navbar(element, variant = 'dark') {
   if (navClose) {
     navClose.addEventListener('click', () => {
       navMenu.classList.remove('show-menu')
+      navOverlay.classList.remove('show-overlay')
+    })
+  }
+
+  // Close menu when clicking on overlay
+  if (navOverlay) {
+    navOverlay.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu')
+      navOverlay.classList.remove('show-overlay')
     })
   }
 
@@ -111,6 +124,7 @@ export function navbar(element, variant = 'dark') {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('show-menu')
+      navOverlay.classList.remove('show-overlay')
     })
   })
 }

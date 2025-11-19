@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  font-family: var(--font-primary);
 }
 
 .nav__brand {
@@ -70,6 +71,24 @@
 
 .nav__menu.show-menu {
   left: 0;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+  z-index: 999;
+}
+
+.nav__overlay.show-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav__close {
@@ -188,6 +207,10 @@
 
   .nav__toggle,
   .nav__close {
+    display: none;
+  }
+
+  .nav__overlay {
     display: none;
   }
 
