@@ -43,11 +43,6 @@ export function passwordToggle(passwordInputSelector, viewIconSelector) {
     const passwordInput = document.querySelector(passwordInputSelector);
     const viewIconContainer = document.querySelector(viewIconSelector);
 
-    if (!passwordInput || !viewIconContainer) {
-        console.error('Password input or view icon container not found');
-        return;
-    }
-
     // Initialize with the "off" icon (password hidden)
     viewIconContainer.innerHTML = viewOffSVG;
 
