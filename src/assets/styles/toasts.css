@@ -1,0 +1,165 @@
+.toast,
+.toast-simple {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    width: 450px;
+    padding: 20px;
+    gap: var(--spacing-16);
+    z-index: 1000;
+    border-radius: var(--border-radius-medium);
+    background: var(--color-white-50);
+    box-shadow: var(--shadow);
+    animation: slideIn 0.4s cubic-bezier(0.6, -0.4, 0.4, 1.3) forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 20px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toast {
+    align-items: flex-start;
+}
+
+.toast-simple {
+    align-items: center;
+}
+
+/* Border colors for different toast types */
+.toast--success {
+    border-left: 4px solid var(--color-feedback-success-border);
+}
+
+.toast--error {
+    border-left: 4px solid var(--color-feedback-error-border);
+}
+
+.toast--warning {
+    border-left: 4px solid var(--color-feedback-warning-border);
+}
+
+.toast--default {
+    border-left: 4px solid var(--color-feedback-info-border);
+}
+
+/* Title and message */
+.toast h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+}
+
+.toast-simple h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-black-500);
+}
+
+.toast.toast--success h4 {
+    color: var(--color-feedback-success);
+}
+
+.toast.toast--error h4 {
+    color: var(--color-feedback-error);
+}
+
+.toast.toast--warning h4 {
+    color: var(--color-feedback-warning);
+}
+
+.toast.toast--default h4 {
+    color: var(--color-feedback-info);
+}
+
+.toast p {
+    margin: 4px 0 0 0;
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-black-500);
+}
+
+/* Icon */
+.toast span {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: var(--border-radius-medium);
+}
+
+.toast--success.toast span {
+    background: var(--color-feedback-success-bg);
+}
+
+.toast--error.toast span {
+    background: var(--color-feedback-error-bg);
+}
+
+.toast--warning.toast span {
+    background: var(--color-feedback-warning-bg);
+}
+
+.toast--default.toast span {
+    background: var(--color-feedback-info-bg);
+}
+
+.toast-simple span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toast span svg,
+.toast-simple span svg {
+    width: 24px;
+    height: 24px;
+}
+
+.toast--success span svg {
+    color: var(--color-feedback-success);
+}
+
+.toast--error span svg {
+    color: var(--color-feedback-error);
+}
+
+.toast--warning span svg {
+    color: var(--color-feedback-warning);
+}
+
+.toast--default span svg {
+    color: var(--color-feedback-info);
+}
+
+/* Close button */
+.toast button,
+.toast-simple button {
+    background: none;
+    border: none;
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--color-black-500);
+}
+
+.toast button,
+.toast-simple button {
+    margin-left: auto;
+}
+
+.toast button svg,
+.toast-simple button svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}

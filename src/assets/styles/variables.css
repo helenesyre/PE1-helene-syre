@@ -40,9 +40,24 @@
 
     /* Feedback colors */
     --color-feedback-success: #188038;
+    --color-feedback-success-bg: #DCFCE7;
+    --color-feedback-success-text: #166534;
+    --color-feedback-success-border: var(--color-feedback-success);
+
     --color-feedback-warning: #E37400;
+    --color-feedback-warning-bg: #FEF3C7;
+    --color-feedback-warning-text: #784E0F;
+    --color-feedback-warning-border: var(--color-feedback-warning);
+
     --color-feedback-error: #D93025;
+    --color-feedback-error-bg: #FEE2E2;
+    --color-feedback-error-text: #8D1515;
+    --color-feedback-error-border: var(--color-feedback-error);
+
     --color-feedback-info: #1A73E8;
+    --color-feedback-info-bg: #DBEAFE;
+    --color-feedback-info-text: #1D4ED8;
+    --color-feedback-info-border: var(--color-feedback-info);
 
     /* Star rating colors */
     --color-yellow-500: #FCA311;

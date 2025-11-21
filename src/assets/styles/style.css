@@ -4,6 +4,7 @@
 @import './cta.css';
 @import './navbar.css';
 @import './buttons.css';
+@import './toasts.css';
 
 /*========== Base ==========*/
 * {

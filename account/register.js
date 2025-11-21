@@ -4,6 +4,7 @@ import footer from '../src/components/footer.js';
 import { createPasswordToggle, confirmPasswordToggle } from '../src/utils/passwordToggle.js';
 import { passwordsMatch, validateEmail, validateUsername, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
 import useFetch from '../src/utils/useFetch.js';
+import { showToast } from '../src/utils/toast.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
@@ -98,15 +99,17 @@ form.addEventListener('submit', async function(event) {
             });
 
             if (response) {
-                window.location.href = "/account/login.html";
+                showToast('Registration successful! Redirecting to login...', 'Registration Success', 'success');
+                // Redirect after a short delay to allow toast to be seen
+                setTimeout(() => {
+                    window.location.href = "/account/login.html";
+                }, 3000);
             } else {
-                // ADD TOAST HERE
-                alert("Registration failed: " + (response.errors?.[0]?.message || "Check console for details."));
+                showToast('Registration failed. Please try again.', 'Registration Error', 'error');
             }
 
         } catch (error) {
-            // ADD TOAST HERE
-            alert("Something went wrong. Please try again later.");
+            showToast('Something went wrong. Please try again later.', 'Registration Error', 'error');
         }
     }
 });

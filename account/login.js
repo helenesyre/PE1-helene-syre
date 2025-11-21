@@ -4,6 +4,7 @@ import footer from '../src/components/footer.js';
 import { passwordToggle } from '../src/utils/passwordToggle.js';
 import { validateEmail, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
 import useFetch from '../src/utils/useFetch.js';
+import { showToast } from '../src/utils/toast.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
@@ -71,17 +72,17 @@ form.addEventListener('submit', async function(event) {
                 // Save token and profile name
                 localStorage.setItem("accessToken", response.data.accessToken);
                 localStorage.setItem("profileName", response.data.name);
-                alert("Login successful!");
-                // ADD TOAST HERE
-                // Optional: redirect to your dashboard or homepage
-                window.location.href = "/index.html";
+                // Show toast before redirect
+                showToast('Login successful! Redirecting to home...', 'Login Success', 'success');
+                // Redirect after a short delay to allow toast to be seen
+                setTimeout(() => {
+                    window.location.href = "/index.html";
+                }, 3000);
             } else {
-                // ADD TOAST HERE
-                alert("Login failed: " + (response.errors?.[0]?.message || "Check console for details."));
+                showToast("Login failed: " + (response.errors?.[0]?.message || "Check console for details."), "Error", "error");
             }
         } catch (error) {
-            // ADD TOAST HERE
-            alert("Something went wrong. Try again later.");
+            showToast('Login failed. Please try again.', 'Error', 'error');
         }
     }
 });

@@ -6,6 +6,7 @@ import { getProductById } from "../src/utils/fetch";
 import { productReviews } from '../src/components/productReviews.js';
 import { renderStarRating } from '../src/utils/rating.js';
 import { similarGrid } from '../src/components/grids/similarGrid.js';
+import { showSimpleToast, showToast } from '../src/utils/toast.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
@@ -106,8 +107,11 @@ async function copyCurrentLinkToClipboard() {
     const currentUrl = window.location.href;
     // Write the URL to the clipboard
     await navigator.clipboard.writeText(currentUrl);
+    // Show a toast notification
+    showSimpleToast('Product link copied to clipboard!', 'success');
   } catch (err) {
-
+    // Show a toast notification
+    showSimpleToast('Failed to copy product link to clipboard.', 'error');
   }
 }
 
