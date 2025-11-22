@@ -1,20 +1,26 @@
+// Import the productCartCard component
+import { productCartCard } from './cards/productCartCard.js';
 
 export function cartMenu(element) {
   element.innerHTML = `
-    <div class="cart__close" id="cart-close">
-      <i class="fa-solid fa-xmark"></i>
-    </div>
-    <h3 class="cart__title">Your Cart</h3>
-    <p class="cart__subtitle">3 Products in Your Cart</p>
-    <div class="cart__content box">
-      <div class="cart__item">
-        <div class="cart__item--img">
-          <img src="/assets/images/product-1.jpg" alt="Product 1">
-        </div>
-        <div class="cart__item--details">
-          <h4 class="cart__item--name">Product 1</h4>
-          <p class="cart__item--price">$29.99</p>
-        </div>
+    <div class="cart__container">
+      <div class="cart__close" id="cart-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h3 class="cart__title">Your Cart</h3>
+      <p class="cart__subtitle">3 Products in Your Cart</p>
+      <div class="cart__content">
+          ${productCartCard()}
+          ${productCartCard()}
+          ${productCartCard()}
+      </div>
+      <div class="cart__checkout">
+        <button class="btn btn__large btn__primary btn__full-width">
+            Checkout
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+        </button>
       </div>
     </div>
   `;

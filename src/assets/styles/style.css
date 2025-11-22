@@ -5,6 +5,7 @@
 @import './navbar.css';
 @import './buttons.css';
 @import './toasts.css';
+@import './cart-menu.css';
 
 /*========== Base ==========*/
 * {

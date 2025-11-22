@@ -6,10 +6,10 @@
 }
 
 .nav-absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 #navbar-container {
@@ -186,28 +186,6 @@
   transform: translateY(-2px);
 }
 
-/*========== Cart menu ==========*/
-.cart__menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--color-white-500);
-  padding: var(--spacing-32);
-  transition: right 0.4s;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.cart__menu.show-cart {
-  right: 0;
-}
-
-#cart-button {
-  cursor: pointer;
-}
-
 /*========== Tablet ==========*/
 
 @media (min-width: 768px) {
@@ -221,10 +199,6 @@
 
   .nav__menu {
     width: 50%;
-  }
-
-  .cart__menu {
-    width: 400px;
   }
 
   .nav__actions svg {
@@ -256,6 +230,7 @@
     background-color: transparent;
     padding: 0;
     box-shadow: none;
+    z-index: 800;
   }
 
   .nav__list {

@@ -1,0 +1,239 @@
+/*========== Cart menu ==========*/
+
+.cart__menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-white-500);
+  padding: var(--spacing-32);
+  transition: right 0.4s;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.cart__menu.show-cart {
+  right: 0;
+}
+
+#cart-button {
+  cursor: pointer;
+}
+
+.cart__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cart__title {
+    margin-bottom: var(--spacing-8);
+}
+
+.cart__subtitle {
+    margin-bottom: var(--spacing-24);
+}
+
+.cart__checkout {
+    margin-top: auto;
+}
+
+/*========== Cart Items ==========*/
+
+.cart__content {
+    display: flex;
+    gap: var(--spacing-24);
+    flex-direction: column;
+}
+
+.cart__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.cart__item--info {
+    display: flex;
+    gap: var(--spacing-16);
+    align-items: center;
+}
+
+/*========== Image ==========*/
+
+.cart__item--img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cart__item--img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*========== Details ==========*/
+
+.cart__item--details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+
+/*========== Tags ==========*/
+
+.cart__item--tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+}
+
+.tag--cart {
+    padding: var(--spacing-4) 5.5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--color-white-600);
+    color: var(--color-white-900);
+    background: var(--color-white-500);
+    font-size: 10px;
+    font-weight: var(--font-weight-semibold);
+    width: fit-content;
+}
+
+/*========== Product name ==========*/
+
+h4.cart__item--name {
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 12px;
+}
+
+/*========== Price ==========*/
+
+.cart__item--price,
+.cart__item--price-regular {
+    display: flex;
+    gap: var(--spacing-8);
+    font-size: var(--font-size-label-small);
+    font-weight: var(--font-weight-bold);
+}
+
+.cart__item--price-discount {
+    color: var(--color-blue-500);
+}
+
+.cart__item--price-old {
+    text-decoration: line-through;
+    color: var(--color-black-200);
+}
+
+/*========== Actions ==========*/
+
+.cart__item--actions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-left: auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*========== Quantity ==========*/
+
+.cart__item--quantity {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-black-50);
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.cart__item--quantity-decrease,
+.cart__item--quantity-increase  {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: none;
+    background: var(--color-white-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cart__item--quantity-decrease:hover,
+.cart__item--quantity-increase:hover  {
+    box-shadow: var(--inner-shadow);
+}
+
+.cart__item--quantity-decrease:hover svg,
+.cart__item--quantity-increase:hover svg  {
+    color: var(--color-blue-500);
+}
+
+.cart__item--quantity-decrease svg,
+.cart__item--quantity-increase svg  {
+    width: 16px;
+    height: 16px;
+    color: var(--color-black-500);
+}
+
+.cart__item--quantity-decrease svg path,
+.cart__item--quantity-increase svg path {
+    vector-effect: non-scaling-stroke;
+}
+
+.cart__item--quantity-number {
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/*========== Remove button ==========*/
+
+.cart__item--remove button{
+    background: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    color: var(--color-feedback-error);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.cart__item--remove button:hover {
+    transform: scale(1.1);
+}
+
+.cart__item--remove button svg{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/*========== Tablet ==========*/
+
+@media (min-width: 768px) {
+  .cart__menu {
+    width: 420px;
+  }
+}
+
+/*========== Desktop ==========*/
+
+@media (min-width: 1200px) {
+  
+}
