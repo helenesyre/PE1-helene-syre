@@ -85,6 +85,31 @@
   background: var(--color-beige-600);
 }
 
+.btn__clear-cart {
+  border: none;
+  border-bottom: 1px solid var(--color-feedback-error);
+  padding-bottom: 3px;
+  background: transparent;
+  color: var(--color-feedback-error);
+  font-size: var(--tag-font-size-large);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.btn__clear-cart svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn__clear-cart:hover {
+  transform: scale(1.05);
+}
+
 /*========== Tablet ==========*/
 
 @media (min-width: 768px) {

@@ -1,3 +1,4 @@
+@import './quantity.css';
 /*========== Cart menu ==========*/
 
 .cart__menu {
@@ -33,6 +34,7 @@
 
 .cart__subtitle {
     margin-bottom: var(--spacing-24);
+    font-size: 16px;
 }
 
 .cart__checkout {
@@ -111,7 +113,7 @@
 h4.cart__item--name {
     font-size: 16px;
     font-weight: var(--font-weight-semibold);
-    margin-bottom: 12px;
+    margin-bottom: var(--spacing-16);
 }
 
 /*========== Price ==========*/
@@ -142,60 +144,6 @@ h4.cart__item--name {
     margin-left: auto;
     align-items: center;
     justify-content: flex-end;
-}
-
-/*========== Quantity ==========*/
-
-.cart__item--quantity {
-    display: flex;
-    flex-direction: row;
-    gap: 13px;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-black-50);
-    padding: 3px;
-    border-radius: 6px;
-}
-
-.cart__item--quantity-decrease,
-.cart__item--quantity-increase  {
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
-    border: none;
-    background: var(--color-white-50);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.cart__item--quantity-decrease:hover,
-.cart__item--quantity-increase:hover  {
-    box-shadow: var(--inner-shadow);
-}
-
-.cart__item--quantity-decrease:hover svg,
-.cart__item--quantity-increase:hover svg  {
-    color: var(--color-blue-500);
-}
-
-.cart__item--quantity-decrease svg,
-.cart__item--quantity-increase svg  {
-    width: 16px;
-    height: 16px;
-    color: var(--color-black-500);
-}
-
-.cart__item--quantity-decrease svg path,
-.cart__item--quantity-increase svg path {
-    vector-effect: non-scaling-stroke;
-}
-
-.cart__item--quantity-number {
-    font-size: 14px;
-    font-family: var(--font-secondary);
-    font-weight: var(--font-weight-semibold);
 }
 
 /*========== Remove button ==========*/

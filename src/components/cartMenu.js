@@ -1,5 +1,5 @@
-// Import the productCartCard component
-import { productCartCard } from './cards/productCartCard.js';
+// Import the productMenuCartCard component
+import { productMenuCartCard } from './cards/productMenuCartCard.js';
 
 export function cartMenu(element) {
   element.innerHTML = `
@@ -10,9 +10,9 @@ export function cartMenu(element) {
       <h3 class="cart__title">Your Cart</h3>
       <p class="cart__subtitle">3 Products in Your Cart</p>
       <div class="cart__content">
-          ${productCartCard()}
-          ${productCartCard()}
-          ${productCartCard()}
+          ${productMenuCartCard()}
+          ${productMenuCartCard()}
+          ${productMenuCartCard()}
       </div>
       <div class="cart__checkout">
         <button class="btn btn__large btn__primary btn__full-width">

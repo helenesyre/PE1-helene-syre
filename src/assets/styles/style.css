@@ -68,6 +68,36 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow);
 }
 
+/*========== Back Link ==========*/
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-24);
+    color: var(--color-black-300);
+    font-size: var(--input-font-size);
+    font-weight: var(--font-weight-regular);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-link svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.5px;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--color-blue-500);
+    transform: translateX(-4px);
+}
+
+.back-link:hover svg {
+    transform: translateX(-2px);
+}
+
 /*========== Footer ==========*/
 
 footer {
