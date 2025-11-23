@@ -5,6 +5,7 @@ import { createPasswordToggle, confirmPasswordToggle } from '../src/utils/passwo
 import { passwordsMatch, validateEmail, validateUsername, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
 import useFetch from '../src/utils/useFetch.js';
 import { showToast } from '../src/utils/toast.js';
+import { useAuth } from '../src/utils/useAuth.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
@@ -73,43 +74,7 @@ form.addEventListener('submit', async function(event) {
         const email = formData.get('email');
         const password = formData.get('create-password');
 
-        const userData = {
-            name: username,
-            email: email,
-            password: password,
-            bio: "This is my NightNode bio",
-            avatar: {
-                url: "https://i.postimg.cc/L6m0d8vW/Night-Node-6.webp",
-                alt: "Placeholder NightNode avatar"
-            },
-            banner: {
-                url: "https://i.postimg.cc/26QyZws2/Night-Node-3.webp",
-                alt: "Placeholder NightNode banner"
-            },
-            venueManager: false
-        };
-
-        try {
-            const response = await useFetch("/auth/register", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(userData)
-            });
-
-            if (response) {
-                showToast('Registration successful! Redirecting to login...', 'Registration Success', 'success');
-                // Redirect after a short delay to allow toast to be seen
-                setTimeout(() => {
-                    window.location.href = "/account/login.html";
-                }, 3000);
-            } else {
-                showToast('Registration failed. Please try again.', 'Registration Error', 'error');
-            }
-
-        } catch (error) {
-            showToast('Something went wrong. Please try again later.', 'Registration Error', 'error');
-        }
+        const auth = useAuth();
+        await auth.register(username, email, password);
     }
 });

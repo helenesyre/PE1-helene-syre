@@ -7,6 +7,8 @@ import { productReviews } from '../src/components/productReviews.js';
 import { renderStarRating } from '../src/utils/rating.js';
 import { similarGrid } from '../src/components/grids/similarGrid.js';
 import { showSimpleToast, showToast } from '../src/utils/toast.js';
+import { useAuth } from '../src/utils/useAuth.js';
+import { useCart } from '../src/utils/useCart.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
@@ -18,6 +20,8 @@ export async function displayProduct() {
     // Get product ID from URL query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
+    const auth = useAuth();
+    const cart = useCart();
 
     if (!productId) {
         console.error('No product ID found in URL');
@@ -37,6 +41,9 @@ export async function displayProduct() {
             </div>`;
         }
         const productStarsHTML = renderStarRating(product.rating);
+        const addToCart = () => {
+            cart.addToCart(product)
+        }
         
         productsContainer.innerHTML = `
         <div class="product__page">
@@ -70,8 +77,8 @@ export async function displayProduct() {
                     </div>
                 </div>
                 <div class="product__actions">
-                    <button class="btn btn__large btn__primary btn__full-width">Add to Cart</button>
-                    <p>Login to be able to buy product.</p>
+                    <button id="add-to-cart-btn" class="btn btn__large btn__primary btn__full-width ${auth.isLoggedIn() ? '' : 'btn_disabled'}" ${auth.isLoggedIn() ? '' : 'disabled'}>Add to Cart</button>
+                    ${auth.isLoggedIn() ? '' : (`<p>Login to be able to buy product.</p>`)}
                 </div>
                 <div class="product__wishlist-share">
                     <div class="wishlist">
@@ -90,11 +97,12 @@ export async function displayProduct() {
             </div>
         </div>`;
         
-        // Add event listener for copy link button
-        document.getElementById('copy-link-btn').addEventListener('click', copyCurrentLinkToClipboard);
-        
-        // Display product reviews
-        document.getElementById('product-reviews-container').innerHTML = productReviews(product.reviews);
+    // Add event listener for copy link button
+    document.getElementById('copy-link-btn').addEventListener('click', copyCurrentLinkToClipboard);
+    document.getElementById('add-to-cart-btn').addEventListener('click', addToCart);
+    
+    // Display product reviews
+    document.getElementById('product-reviews-container').innerHTML = productReviews(product.reviews);
     } catch (error) {
         console.error('Error fetching product:', error);
     }
@@ -125,3 +133,8 @@ async function initSimilarGrid() {
 }
 
 initSimilarGrid();
+
+
+async function handleAddToCart(product) {
+    
+}

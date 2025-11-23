@@ -52,8 +52,6 @@
   justify-content: center;
 }
 
-/*========== Disabled ==========*/
-
 /*========== Colors ==========*/
 
 .btn__primary {
@@ -63,6 +61,14 @@
 
 .btn__primary:hover {
   background: var(--color-blue-700);
+}
+
+/*========== Disabled ==========*/
+.btn_disabled {
+  background: var(--color-black-200);
+  color: var(--color-black-400);
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /*========== Other buttons ==========*/

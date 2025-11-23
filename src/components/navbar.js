@@ -138,4 +138,9 @@ export function navbar(element, variant = 'dark') {
     cartMenu(cartMenuDiv);
   }
 
+  document.addEventListener('cartModified', () => {
+    if (cartMenuDiv) {
+      cartMenu(cartMenuDiv);
+    }
+  });
 }

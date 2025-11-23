@@ -1,18 +1,21 @@
 // Import the productMenuCartCard component
+import { useCart } from '../utils/useCart.js';
 import { productMenuCartCard } from './cards/productMenuCartCard.js';
 
 export function cartMenu(element) {
+  const cart = useCart();
+
   element.innerHTML = `
     <div class="cart__container">
       <div class="cart__close" id="cart-close">
         <i class="fa-solid fa-xmark"></i>
       </div>
       <h3 class="cart__title">Your Cart</h3>
-      <p class="cart__subtitle">3 Products in Your Cart</p>
+      <p class="cart__subtitle">${cart.getCartCount()} Products in Your Cart</p>
       <div class="cart__content">
-          ${productMenuCartCard()}
-          ${productMenuCartCard()}
-          ${productMenuCartCard()}
+          ${cart.getCartItems().length === 0 ? '' : (
+            cart.getCartItems().map(item => productMenuCartCard(item)).join('')
+          )}
       </div>
       <div class="cart__checkout">
         <button class="btn btn__large btn__primary btn__full-width">

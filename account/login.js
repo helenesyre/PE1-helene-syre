@@ -5,6 +5,7 @@ import { passwordToggle } from '../src/utils/passwordToggle.js';
 import { validateEmail, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
 import useFetch from '../src/utils/useFetch.js';
 import { showToast } from '../src/utils/toast.js';
+import { useAuth } from '../src/utils/useAuth.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
@@ -49,40 +50,9 @@ form.addEventListener('submit', async function(event) {
     
     if (isValid) {
         // Submit the form to API
-        console.log('Form is valid. Submitting...');
-        
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-
-        const credentials = {
-            email: email,
-            password: password
-        };
-
-        try {
-            const response = await useFetch("/auth/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(credentials)
-            });
-
-            if (response) {
-                // Save token and profile name
-                localStorage.setItem("accessToken", response.data.accessToken);
-                localStorage.setItem("profileName", response.data.name);
-                // Show toast before redirect
-                showToast('Login successful! Redirecting to home...', 'Login Success', 'success');
-                // Redirect after a short delay to allow toast to be seen
-                setTimeout(() => {
-                    window.location.href = "/index.html";
-                }, 3000);
-            } else {
-                showToast("Login failed: " + (response.errors?.[0]?.message || "Check console for details."), "Error", "error");
-            }
-        } catch (error) {
-            showToast('Login failed. Please try again.', 'Error', 'error');
-        }
+        const auth = useAuth();
+        await auth.login(email, password);
     }
 });

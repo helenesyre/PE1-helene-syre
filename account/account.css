@@ -68,6 +68,8 @@ body {
     background-color: var(--color-white-500);
     outline: none;
     width: 100%;
+    /* Add extra right padding for the toggle icon */
+    padding-right: 40px;
 }
 
 .form__group input[type="email"]::placeholder,
@@ -132,6 +134,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 #view-icon svg,
