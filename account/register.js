@@ -3,8 +3,6 @@ import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { createPasswordToggle, confirmPasswordToggle } from '../src/utils/passwordToggle.js';
 import { passwordsMatch, validateEmail, validateUsername, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
-import useFetch from '../src/utils/useFetch.js';
-import { showToast } from '../src/utils/toast.js';
 import { useAuth } from '../src/utils/useAuth.js';
 
 // Initialize light navbar

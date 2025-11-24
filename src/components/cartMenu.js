@@ -1,6 +1,7 @@
 // Import the productMenuCartCard component
 import { useCart } from '../utils/useCart.js';
 import { productMenuCartCard } from './cards/productMenuCartCard.js';
+import { quantityListeners } from '../utils/quantity.js';
 
 export function cartMenu(element) {
   const cart = useCart();
@@ -13,23 +14,24 @@ export function cartMenu(element) {
       <h3 class="cart__title">Your Cart</h3>
       <p class="cart__subtitle">${cart.getCartCount()} Products in Your Cart</p>
       <div class="cart__content">
-          ${cart.getCartItems().length === 0 ? '' : (
-            cart.getCartItems().map(item => productMenuCartCard(item)).join('')
-          )}
       </div>
       <div class="cart__checkout">
-        <button class="btn btn__large btn__primary btn__full-width">
+        <a href="/cart/index.html" class="btn btn__large btn__primary btn__full-width">
             Checkout
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
-        </button>
+        </a>
       </div>
     </div>
   `;
+  
+  const cartContent = element.querySelector('.cart__content');
+  cart.getCartItems().map(item => cartContent.appendChild(productMenuCartCard(item)));
 
+  quantityListeners(element, cart, cartMenu);
 
-  const cartMenu = element;
+  const cartMenuElement = element;
   const cartButton = document.getElementById('cart-button');
   const cartOverlay = document.getElementById('cart-overlay');
   const cartClose = element.querySelector('#cart-close');
@@ -37,7 +39,7 @@ export function cartMenu(element) {
   // Show cart menu and overlay
   if (cartButton) {
     cartButton.addEventListener('click', () => {
-      cartMenu.classList.add('show-cart');
+      cartMenuElement.classList.add('show-cart');
       cartOverlay.classList.add('show-overlay');
     });
   }
@@ -45,7 +47,7 @@ export function cartMenu(element) {
   // Hide cart menu and overlay
   if (cartClose) {
     cartClose.addEventListener('click', () => {
-      cartMenu.classList.remove('show-cart');
+      cartMenuElement.classList.remove('show-cart');
       cartOverlay.classList.remove('show-overlay');
     });
   }
@@ -53,7 +55,7 @@ export function cartMenu(element) {
   // Close cart when clicking on overlay
   if (cartOverlay) {
     cartOverlay.addEventListener('click', () => {
-      cartMenu.classList.remove('show-cart');
+      cartMenuElement.classList.remove('show-cart');
       cartOverlay.classList.remove('show-overlay');
     });
   }

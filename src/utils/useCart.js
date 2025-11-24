@@ -108,6 +108,21 @@ export function useCart() {
         }
     }
 
+    function getCartTotalDiscount() {
+        try {
+            const cart = loadCart();
+            return cart.reduce((total, item) => {
+                if (typeof item.discountedPrice === 'number' && item.discountedPrice < item.price) {
+                    return total + (item.price - item.discountedPrice) * item.quantity;
+                }
+                return total;
+            }, 0);
+        } catch (error) {
+            showSimpleToast('Error getting cart total discount', 'error');
+            throw error;
+        }
+    }
+
     function isEmpty() {
         try {
             const cart = loadCart();
@@ -118,6 +133,15 @@ export function useCart() {
         }
     }
 
+    function getCartSummary() {
+        const subtotal = getCartTotal().toFixed(2);
+        const taxes = (subtotal * 0.10).toFixed(2);
+        const discount = getCartTotalDiscount().toFixed(2);
+        const delivery = (parseFloat(subtotal) + parseFloat(taxes) - parseFloat(discount)).toFixed(2) > 500 ? '0.00' : '24.00';
+        const total = (parseFloat(subtotal) + parseFloat(delivery) + parseFloat(taxes) - parseFloat(discount)).toFixed(2);
+        return { subtotal, taxes, discount, delivery, total};
+    }
+
     return {
         getCartItems,
         addToCart,
@@ -126,6 +150,8 @@ export function useCart() {
         clearCart,
         getCartCount,
         getCartTotal,
+        getCartTotalDiscount,
         isEmpty,
+        getCartSummary,
     };
 }

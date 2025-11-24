@@ -21,60 +21,37 @@
       <div id="navbar-container" class="padding-bottom"></div>
     </header>
     <main class="container">
-        <a href="../index.html" class="back-link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
-            Back to Home
-        </a>
+      <a href="../index.html" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          Back to Home
+      </a>
 
-        <h1 class="cart-page__title">Your Cart</h1>
-        <p class="cart-page__subtitle">3 Products in Your Cart</p>
+      <h1 class="cart-page__title">Your Cart</h1>
+      <p class="cart-page__subtitle">3 Products in Your Cart</p>
+      <section class="cart-page__layout">
+        <section class="cart-page__content"></section>
 
+        <section class="cart-page__summary box">
+          <form id="promocode-form" class="promocode__form">
+              <div class="promocode__input-group">
+                  <label for="promocode">Promocode</label>
+                  <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode"/>
+              </div>
+              <button type="submit" class="btn btn__large btn__primary btn__full-width">Apply</button>
+          </form>
 
-    <section class="cart-page__layout">
-      <section class="cart-page__content"></section>
+          <div class="summary__items"></div>
 
-      <section class="cart-page__summary box">
-         <form class="promocode__form">
-            <div class="promocode__input-group">
-                <label for="promocode">Promocode</label>
-                <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode"/>
-            </div>
-            <button type="submit" class="btn btn__large btn__primary btn__full-width">Apply</button>
-         </form>
-
-         <div class="summary__items">
-            <div class="summary__item">
-                <span>Subtotal</span>
-                <span>$299.97</span>
-            </div>
-            <div class="summary__item">
-                <span>Delivery cost</span>
-                <span>$24.00</span>
-            </div>
-            <div class="summary__item">
-                <span>Tax</span>
-                <span>$10.00</span>
-            </div>
-            <div class="summary__item">
-                <span>Discount</span>
-                <span class="discount">-$167.00</span>
-            </div>
-            <div class="summary__item summary__item--total">
-                <span>Total</span>
-                <span>$166.97</span>
-            </div>
-         </div>
-
-         <button class="btn btn__large btn__primary btn__full-width">
-            Checkout
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-        </button>
+          <button class="btn btn__large btn__primary btn__full-width">
+              Checkout
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+          </button>
+        </section>
       </section>
-    </section>
 
     </main>
     <footer class="footer" id="footer"></footer>

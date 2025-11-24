@@ -1,20 +1,29 @@
 import { quantity } from "../../utils/quantity.js";
-import { useCart } from '../../../src/utils/useCart.js';
+import { useCart } from "../../utils/useCart.js";
 
 // Card component for displaying a product in the cart
+// Logic from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 export function productMenuCartCard(product) {
-    const cart = useCart();
-    const removeItem = () => {
-        console.log(`Removing item with id: ${product.id}`);
-        cart.removeFromCart(product.id);
-    };
-    const button = document.getElementById(`remove-button-${product.id}`);
-    if (button) {
-        button.addEventListener('click', removeItem);
+    let priceHTML = '';
+    const totalPrice = (product.price * product.quantity).toFixed(2);
+    if (
+        typeof product.discountedPrice === 'number' &&
+        product.discountedPrice < product.price
+    ) {
+        const totalDiscounted = (product.discountedPrice * product.quantity).toFixed(2);
+        priceHTML = `
+            <p class="cart__item--price-discount">$${totalDiscounted}</p>
+            <p class="cart__item--price-old">$${totalPrice}</p>
+        `;
+    } else {
+        priceHTML = `<p class="cart__item--price-regular">$${totalPrice}</p>`;
     }
-  return `
-    <div class="cart__item box">
 
+    const element = document.createElement('div');
+    element.classList.add('cart__item', 'box');
+    element.setAttribute('data-product-id', product.id);
+
+    element.innerHTML = `
         <div class="cart__item--info">
             <div class="cart__item--img">
             <img src="${product.image.url}" alt="${product.image.alt}">
@@ -26,8 +35,7 @@ export function productMenuCartCard(product) {
                 </div>
                 <h4 class="cart__item--name">${product.title}</h4>
                 <div class="cart__item--price">
-                    <p class="cart__item--price-discount">$${product.discountedPrice}</p>
-                    <p class="cart__item--price-old">$${product.price}</p>
+                    ${priceHTML}
                 </div>
             </div>
         </div>
@@ -42,7 +50,12 @@ export function productMenuCartCard(product) {
                 </button>
             </div>
         </div>
+    `;
+    const cart = useCart();
 
-    </div>
-  `;
+    element.querySelector(`#remove-button-${product.id}`).addEventListener('click', () => {
+        cart.removeFromCart(product.id);
+    });
+
+    return element;
 }
