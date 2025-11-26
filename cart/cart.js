@@ -70,10 +70,23 @@ function renderCart() {
   quantityListeners(cartContentDiv, cart, renderCart);
 }
 
-renderCart();
+
+function updateCartCount() {
+  const cartCountSpan = document.getElementById('cart-count');
+  if (cartCountSpan) {
+    cartCountSpan.textContent = cart.getCartCount();
+  }
+}
+
+function renderCartAndCount() {
+  renderCart();
+  updateCartCount();
+}
+
+renderCartAndCount();
 
 document.addEventListener('cartModified', () => {
-  renderCart();
+  renderCartAndCount();
 });
 
 function cartSummary() {

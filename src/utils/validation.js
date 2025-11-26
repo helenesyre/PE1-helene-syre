@@ -19,11 +19,25 @@ export function validateEmail(email) {
     return validatePattern(email, "^[a-zA-Z0-9._%+-]+@stud.noroff.no$");
 }
 
+/**
+ * Validates a phone number format
+ */
+export function validatePhoneNumber(phoneNumber) {
+    return validatePattern(phoneNumber, "^\\+?\\d{7,15}$");
+}
+
 /** 
  * Validates first or last name
  */
 export function validateName(name) {
     return validatePattern(name, "^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$");
+}
+
+/**
+ * Validates full name (first and last)
+ */
+export function validateFullName(fullName) {
+    return validatePattern(fullName, "^[A-Za-zÀ-ÖØ-öø-ÿ' -]+ [A-Za-zÀ-ÖØ-öø-ÿ' -]+$");
 }
 
 /**
@@ -53,6 +67,75 @@ export function validatePassword(password) {
  */
 export function passwordsMatch( createPassword, confirmPassword) {
     return createPassword === confirmPassword;
+}
+
+/**
+ * Validates an address format
+ * Allows only letters (including accented), numbers, and commas.
+ * Requires at least one letter and at least one number.
+ */
+export function validateAddress(address) {
+    return validatePattern(address, "^(?=.*[A-Za-zÀ-ÖØ-öø-ÿ])(?=.*\\d)[A-Za-zÀ-ÖØ-öø-ÿ0-9, ]+$");
+}
+
+/**
+ * Validates a city, province, or country name
+ * Allows only letters (including accented), spaces, hyphens, and apostrophes
+ * 2-60 characters
+ */
+export function validateLocationName(value) {
+    return validatePattern(value, "^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,60}$");
+}
+
+/**
+ * Validates a postal code format
+ */
+export function validatePostalCode(postalCode) {
+    return validatePattern(postalCode, "^\\d{4}(-\\d{4})?$");
+}
+
+/**
+ * Validates a card number format
+ * Accepts both spaced ("1234 5678 9012 3456") and unspaced ("1234567890123456")
+ */
+export function validateCardNumber(cardNumber) {
+    // Remove all spaces for validation
+    const cleaned = cardNumber.replace(/\s+/g, "");
+    return validatePattern(cleaned, "^\\d{16}$"); // Must be exactly 16 digits
+}
+
+/**
+ * Formats a card number input to add spaces every 4 digits
+ * Usage: call in input event handler for card number field
+ */
+export function formatCardNumberInput(value) {
+    // Remove all non-digit characters
+    const cleaned = value.replace(/\D/g, "").slice(0, 16); // Limit to 16 digits
+    // Insert space every 4 digits
+    return cleaned.replace(/(.{4})/g, "$1 ").trim();
+}
+
+/**
+ * Validates an expiration date format (MM/YY)
+ */
+export function validateExpirationDate(expirationDate) {
+    // Remove all non-digit characters
+    let value = expirationDate.replace(/\D/g, "");
+    value = value.substring(0, 4); // Limit to max 4 digits (MMYY)
+    if (value.length > 2) {
+        value = value.substring(0, 2) + "/" + value.substring(2); // Auto-insert slash after 2 digits
+    }
+    value = value.substring(0, 5); // Ensure max length is 5 (MM/YY)
+    return validatePattern(value, "^(0[1-9]|1[0-2])\\/\\d{2}$");
+}
+
+/**
+ * Validates a CVV format (3 or 4 digits)
+ */
+export function validateCVV(cvv) {
+    // Remove all non-digit characters and limit to 4 digits
+    const cleaned = cvv.replace(/\D/g, '').substring(0, 4);
+    return validatePattern(cleaned, "^\\d{3,4}$");
 }
 
 
