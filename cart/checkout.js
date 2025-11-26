@@ -65,6 +65,7 @@ radios.forEach(radio => {
 });
 
 // Listen for payment method changes
+// Source: https://javascriptf1.com/snippet/set-the-required-attribute-in-javascript
 document.addEventListener('paymentMethodChanged', () => {
   const selectedMethod = document.querySelector('input[name="payment-method"]:checked').value;
   if (selectedMethod === 'card') {
