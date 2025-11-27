@@ -2,6 +2,7 @@
 .btn {
     align-items: center;
     text-align: center;
+    justify-content: center;
     text-decoration: none;
     cursor: pointer;
     border: none;
@@ -61,6 +62,16 @@
 
 .btn__primary:hover {
   background: var(--color-blue-700);
+}
+
+.btn__secondary {
+  background: var(--color-white-5);
+  color: var(--color-blue-500);
+  border: 1.5px solid var(--color-blue-500);
+}
+
+.btn__secondary:hover {
+  background: var(--color-blue-50);
 }
 
 /*========== Disabled ==========*/

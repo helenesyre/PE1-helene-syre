@@ -137,7 +137,7 @@ export function useCart() {
         const subtotal = getCartTotal().toFixed(2);
         const taxes = (subtotal * 0.10).toFixed(2);
         const discount = getCartTotalDiscount().toFixed(2);
-        const delivery = (parseFloat(subtotal) + parseFloat(taxes) - parseFloat(discount)).toFixed(2) > 500 ? '0.00' : '24.00';
+        const delivery = (parseFloat(subtotal) + parseFloat(taxes) - parseFloat(discount)).toFixed(2) > 500 ? '0.00' : '15.00';
         const total = (parseFloat(subtotal) + parseFloat(delivery) + parseFloat(taxes) - parseFloat(discount)).toFixed(2);
         return { subtotal, taxes, discount, delivery, total};
     }
@@ -154,4 +154,13 @@ export function useCart() {
         isEmpty,
         getCartSummary,
     };
+
+    function clearCart() {
+        try {
+            localStorage.removeItem(CART_KEY);
+        } catch (error) {
+            showSimpleToast('Error clearing cart', 'error');
+            throw error;
+        }
+    }
 }
