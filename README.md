@@ -38,9 +38,9 @@ Follow these steps to get a copy of the project running locally:
 
 2. Open the repository:
 
-```bash
-  cd your-repo-name
-```
+   ```bash
+     cd your-repo-name
+   ```
 
 3. Run Live Server
 
