@@ -26,7 +26,7 @@ export function productMenuCartCard(product) {
     element.innerHTML = `
         <div class="cart__item--info">
             <div class="cart__item--img">
-            <img src="${product.image.url}" alt="${product.image.alt}">
+            <img src="${product.image.url}" alt="${product.title}">
             </div>
 
             <div class="cart__item--details">

@@ -16,7 +16,7 @@ function carouselCard(product, index) {
     return `
     <div class="carousel__slide" data-index="${index}">
             <a href="/product/index.html?id=${product.id}">
-                <img src="${product.image.url}" alt="${product.name}">
+                <img src="${product.image.url}" alt="${product.title}">
             </a>
             <div class="carousel__info">
                 <h1>${product.title}</h1>

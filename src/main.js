@@ -1,4 +1,3 @@
-import './assets/styles/style.css';
 import { navbar } from './components/navbar.js';
 import footer from './components/footer.js';
 import { heroCarousel, handleCarousel } from './components/carousel.js';
@@ -17,7 +16,7 @@ document.querySelector('#footer').innerHTML = footer();
 
 // Featured grid initialization
 const featuredSection = await featuredGrid();
-document.querySelector('#featuredGrid').appendChild(featuredSection);
+document.querySelector('#featuredGrid').innerHTML = featuredSection.outerHTML;
 
 // Initialize CTA
 document.querySelector('#cta').innerHTML = cta();

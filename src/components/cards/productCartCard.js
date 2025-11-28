@@ -23,7 +23,7 @@ export function productCartCard(product) {
     element.innerHTML = `
         <div class="cart-page__item--info">
             <div class="cart-page__item--img">
-            <img src="${product.image.url}" alt="${product.image.alt}">
+            <img src="${product.image.url}" alt="${product.title}">
             </div>
             <div class="cart-page__item--details">
                 <div class="cart-page__item--tags">

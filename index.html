@@ -13,11 +13,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/assets/styles/style.css">
   </head>
   <body>
     <header class="header" id="header">
       <div id="navbar-container" class="nav-absolute"></div>
-      <div class="hero-carousel"></div>
+      <div class="hero-carousel">
+        <span class="loader"></span>
+      </div>
     </header>
 
     <main>
@@ -30,18 +34,19 @@
               <p>Our most popular gaming accessories</p>
               <a href="#" class="btn btn__small btn__responsive-medium btn__primary">Get yours now!</a>
             </div>
-            <img src="src/assets/images/usb-plug.jpg" class="image__grid-image">
+            <img src="src/assets/images/usb-plug.jpg" alt="USB charger cable" class="image__grid-image">
           </div>
-          <div class="div2"><img src="src/assets/images/watch-black.jpg" class="image__grid-image"></div>
-          <div class="div3"><img src="src/assets/images/wireless-earbuds.jpg" class="image__grid-image"></div>
-          <div class="div4"><img src="src/assets/images/gaming-mouse.jpg" class="image__grid-image"></div>
-          <div class="div5"><img src="src/assets/images/headphones.jpg" class="image__grid-image"></div>
+          <div class="div2"><img src="src/assets/images/watch-black.jpg" alt="Black Watch" class="image__grid-image"></div>
+          <div class="div3"><img src="src/assets/images/wireless-earbuds.jpg" alt="Wireless Earbuds" class="image__grid-image"></div>
+          <div class="div4"><img src="src/assets/images/gaming-mouse.jpg" alt="Gaming Mouse" class="image__grid-image"></div>
+          <div class="div5"><img src="src/assets/images/headphones.jpg" alt="Black Headphones" class="image__grid-image"></div>
         </div>        
-        <!--<div id="app"></div>-->
       </section>
       <section class="container product__grid-section">
         <h2>Our products</h2>
-        <div id="featuredGrid"></div>
+        <div id="featuredGrid">
+          <span class="loader"></span>
+        </div>
       </section>
       <section class="cta" id="cta"></section>
     </main>

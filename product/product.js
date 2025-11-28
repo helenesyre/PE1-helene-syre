@@ -127,12 +127,8 @@ displayProduct();
 // Similar grid initialization
 async function initSimilarGrid() {
     const similarSection = await similarGrid();
-    document.querySelector('#similarGrid').appendChild(similarSection);
+    document.querySelector('#similarGrid').innerHTML = similarSection.outerHTML;
 }
 
 initSimilarGrid();
 
-
-async function handleAddToCart(product) {
-    
-}

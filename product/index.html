@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./product.css" />
+    <link rel="stylesheet" href="../src/assets/styles/style.css">
+    <link rel="stylesheet" href="./product.css">
   </head>
   <body>
     <header class="header" id="header">
@@ -22,20 +23,21 @@
     </header>
     <main class="">
 
-      <section id="products-container" class="products-container container"></section>
+      <section id="products-container" class="products-container container">
+        <span class="loader"></span>
+      </section>
 
       <section class="product__reviews container">
         <h2>Rating and Reviews</h2>
         <div id="product-reviews-container" class="product__review-list">
-          <!-- Reviews will be dynamically inserted here -->
+          <span class="loader"></span>
         </div>
       </section>
       
       <section class="product__similar-products container">
         <div class="product__similar-padding">
           <h2>You might also like</h2>
-          <div class="similarGrid" id="similar-products-container"></div>
-          <div id="similarGrid"></div>
+          <div id="similarGrid"><span class="loader"></span></div>
         </div>
       </section>
 
