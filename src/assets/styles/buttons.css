@@ -75,8 +75,9 @@
 }
 
 /*========== Disabled ==========*/
+
 .btn_disabled {
-  background: var(--color-black-200);
+  background: var(--color-black-100);
   color: var(--color-black-400);
   cursor: not-allowed;
   pointer-events: none;
