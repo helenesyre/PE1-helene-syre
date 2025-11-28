@@ -1,5 +1,3 @@
-import './product.css';
-import '../src/assets/styles/style.css';
 import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { getProductById } from "../src/utils/fetch";

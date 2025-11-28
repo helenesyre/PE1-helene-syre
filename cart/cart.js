@@ -1,5 +1,3 @@
-import './cart.css';
-import '../src/assets/styles/style.css';
 import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { productCartCard } from '../src/components/cards/productCartCard.js';

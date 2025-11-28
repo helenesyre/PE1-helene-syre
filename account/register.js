@@ -1,8 +1,7 @@
-import '../src/assets/styles/style.css';
 import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { createPasswordToggle, confirmPasswordToggle } from '../src/utils/passwordToggle.js';
-import { passwordsMatch, validateEmail, validateUsername, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
+import { passwordsMatch, validateNoroffEmail, validateUsername, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
 import { useAuth } from '../src/utils/useAuth.js';
 
 // Initialize light navbar
@@ -39,7 +38,7 @@ form.addEventListener('submit', async function(event) {
                 }
                 break;
             case 'email':
-                if (value && validateEmail(value)) {
+                if (value && validateNoroffEmail(value)) {
                     continue;
                 } else {
                     isValid = false;

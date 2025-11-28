@@ -1,9 +1,7 @@
-import '../src/assets/styles/style.css';
-import '../src/assets/styles/forms.css';
 import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { passwordToggle } from '../src/utils/passwordToggle.js';
-import { validateEmail, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
+import { validateNoroffEmail, validatePassword, validationErrorMessageHTML } from '../src/utils/validation.js';
 import { useAuth } from '../src/utils/useAuth.js';
 
 // Initialize light navbar
@@ -29,7 +27,7 @@ form.addEventListener('submit', async function(event) {
     for (const [name, value] of formData.entries()) {
         switch(name) {
             case 'email':
-                if (value && validateEmail(value)) {
+                if (value && validateNoroffEmail(value)) {
                     continue;
                 } else {
                     isValid = false;

@@ -1,4 +1,3 @@
-import '../src/assets/styles/style.css';
 import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { useCart } from '../src/utils/useCart.js';
