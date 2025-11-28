@@ -12,12 +12,20 @@ function validatePattern(value, pattern) {
 }
 
 /**
- * Validates an email address format
+ * Validates a Noroff email address format
  */
-export function validateEmail(email) {
+export function validateNoroffEmail(email) {
     // validate only stud.noroff.no emails
     return validatePattern(email, "^[a-zA-Z0-9._%+-]+@stud.noroff.no$");
 }
+
+/**
+ * Validates a general email address format
+ */
+export function validateEmail(email) {
+    return validatePattern(email, "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+}
+ 
 
 /**
  * Validates a phone number format
