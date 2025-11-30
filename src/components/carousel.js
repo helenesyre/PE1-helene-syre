@@ -15,13 +15,13 @@ function carouselCard(product, index) {
     const shape = getCarouselCardShape(index);
     return `
     <div class="carousel__slide" data-index="${index}">
-            <a href="/product/index.html?id=${product.id}">
+            <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}">
                 <img src="${product.image.url}" alt="${product.title}">
             </a>
             <div class="carousel__info">
                 <h1>${product.title}</h1>
                 <p>${product.description}</p>
-                <a href="/product/index.html?id=${product.id}" class="button button--small button--responsive button--primary">Shop Now</a>
+                <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}" class="button button--small button--responsive button--primary">Shop Now</a>
             </div>
             <div class="carousel__shape">
                 ${shape}
