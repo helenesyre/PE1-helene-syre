@@ -21,8 +21,8 @@ export function useAuth() {
                 showToast('Login successful! Redirecting to home...', 'Login Success', 'success');
                 // Redirect after a short delay to allow toast to be seen
                 setTimeout(() => {
-                    window.location.href = "/index.html";
-                }, 3000);
+                    window.location.href = `${import.meta.env.BASE_URL}/`;
+                }, 2000);
             } else {
                 showToast("Login failed: " + (response.errors?.[0]?.message || "Check console for details."), "Error", "error");
             }
@@ -61,8 +61,8 @@ export function useAuth() {
                 showToast('Registration successful! Redirecting to login...', 'Registration Success', 'success');
                 // Redirect after a short delay to allow toast to be seen
                 setTimeout(() => {
-                    window.location.href = "/account/login.html";
-                }, 3000);
+                    window.location.href = `${import.meta.env.BASE_URL}/account/login`;
+                }, 2000);
             } else {
                 showToast('Registration failed. Please try again.', 'Registration Error', 'error');
             }

@@ -242,8 +242,8 @@ form.addEventListener('submit', async function(event) {
         showToast('Purchase successful! Redirecting...', 'Purchase Success', 'success');
         // Redirect after a short delay to allow toast to be seen
         setTimeout(() => {
-            window.location.href = "/cart/success.html";
-        }, 3000);
+            window.location.href = `${import.meta.env.BASE_URL}/cart/success`;
+        }, 2000);
     }
 });
 
