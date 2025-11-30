@@ -18,15 +18,15 @@ function cartSummary() {
   const cartSummarySection = document.querySelector('.summary__items');
   if (cartSummarySection) {
     cartSummarySection.innerHTML = `
-        <div class="summary__item subtotal">
+        <div class="summary__item">
             <span>Subtotal</span>
             <span>$${subtotal}</span>
         </div>
-        <div class="summary__item delivery">
+        <div class="summary__item">
             <span>Delivery cost</span>
             <span>$${delivery}</span>
         </div>
-        <div class="summary__item tax">
+        <div class="summary__item">
             <span>Tax</span>
             <span>$${taxes}</span>
         </div>
@@ -34,7 +34,7 @@ function cartSummary() {
             <span>Discount</span>
             <span class="discount">-$${discount}</span>
         </div>
-        <div class="summary__item summary__item--total total">
+        <div class="summary__item summary__item--total">
             <span>Total</span>
             <span>$${total}</span>
         </div>

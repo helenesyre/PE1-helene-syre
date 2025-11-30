@@ -31,16 +31,16 @@ function successPageSetup() {
   
     // Clear cart when clicking 'Track order' or 'Continue Shopping'
     const cart = useCart();
-    const trackOrderBtn = document.querySelector('.btn--track-order');
-    const continueShoppingBtn = document.querySelector('.btn--continue-shopping');
+    const trackOrderButton = document.querySelector('.button--track-order');
+    const continueShoppingButton = document.querySelector('.button--continue-shopping');
     function handleClearCart() {
         cart.clearCart();
     }
-    if (trackOrderBtn) {
-        trackOrderBtn.addEventListener('click', handleClearCart);
+    if (trackOrderButton) {
+        trackOrderButton.addEventListener('click', handleClearCart);
     }
-    if (continueShoppingBtn) {
-        continueShoppingBtn.addEventListener('click', handleClearCart);
+    if (continueShoppingButton) {
+        continueShoppingButton.addEventListener('click', handleClearCart);
     }
 };
 

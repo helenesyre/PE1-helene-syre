@@ -90,18 +90,6 @@ body {
     border-color: var(--color-blue-500);
 }
 
-/*.form__group input:invalid {
-    border-color: var(--color-feedback-error);
-}
-
-.form__group input:valid {
-    border-color: var(--color-feedback-success);
-}*/
-
-.password-input-wrapper {
-    position: relative;
-}
-
 #view-icon,
 #view-icon-create,
 #view-icon-confirm {
@@ -156,10 +144,6 @@ body {
 .form__terms-checkbox span {
     font-weight: var(--font-weight-bold);
     font-size: 14px;
-}
-
-.relative {
-    position: relative;
 }
 
 #login__background-shapes-1 {

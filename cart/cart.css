@@ -278,7 +278,7 @@ h4.cart-page__item--name {
     width: 475px;
 }
 
-.success-page_order-number {
+.success-page__order-number {
     font-size: var(--font-size-paragraph-small);
     font-weight: var(--font-weight-bold);
 }
@@ -312,11 +312,11 @@ h4.cart-page__item--name {
     margin-top: var(--spacing-40);
 }
 
-.btn--track-order {
+.button--track-order {
     flex: 1 1 0%;
 }
 
-.btn--track-order .track-order-svg {
+.button--track-order .track-order-svg {
     width: 24px;
     height: 24px;
 }

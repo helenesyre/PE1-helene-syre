@@ -1,53 +1,53 @@
 /*========== Sizes ==========*/
-.btn {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: var(--border-radius-medium);
-    display: inline-flex;
-    gap: var(--spacing-8);
-    font-family: var(--font-secondary);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--spacing-24);
-    transition: all 0.3s ease;
+.button {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-medium);
+  display: inline-flex;
+  gap: var(--spacing-8);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--spacing-24);
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-    transform: scale(1.02);
+.button:hover {
+  transform: scale(1.02);
 }
 
-.btn__small {
-    padding: var(--spacing-4) var(--spacing-16);
-    font-size: var(--button-font-size-small);
+.button--small {
+  padding: var(--spacing-4) var(--spacing-16);
+  font-size: var(--button-font-size-small);
 }
 
-.btn__medium {
-    padding: 6px var(--spacing-16);
-    font-size: var(--button-font-size-medium);
+.button--medium {
+  padding: 6px var(--spacing-16);
+  font-size: var(--button-font-size-medium);
 }
 
-.btn__large {
-    padding: 10px var(--spacing-16);
-    font-size: var(--button-font-size-large);
+.button--large {
+  padding: 10px var(--spacing-16);
+  font-size: var(--button-font-size-large);
 }
 
-.btn__small svg,
-.btn__medium svg {
-    width: 18px;
-    height: 18px;
+.button--small svg,
+.button--medium svg {
+  width: 18px;
+  height: 18px;
 }
 
-.btn__large svg {
-    width: 20px;
-    height: 20px;
+.button--large svg {
+  width: 20px;
+  height: 20px;
 }
 
 /*========== Full width ==========*/
 
-.btn__full-width {
+.button--full-width {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -55,28 +55,28 @@
 
 /*========== Colors ==========*/
 
-.btn__primary {
+.button--primary {
   background: var(--color-blue-500);
   color: var(--color-white-500);
 }
 
-.btn__primary:hover {
+.button--primary:hover {
   background: var(--color-blue-700);
 }
 
-.btn__secondary {
+.button--secondary {
   background: var(--color-white-5);
   color: var(--color-blue-500);
   border: 1.5px solid var(--color-blue-500);
 }
 
-.btn__secondary:hover {
+.button--secondary:hover {
   background: var(--color-blue-50);
 }
 
 /*========== Disabled ==========*/
 
-.btn_disabled {
+.button--disabled {
   background: var(--color-black-100);
   color: var(--color-black-400);
   cursor: not-allowed;
@@ -85,7 +85,7 @@
 
 /*========== Other buttons ==========*/
 
-.btn__cta {
+.button--cta {
   padding: 12px 24px;
   background: var(--color-beige-500);
   color: var(--color-black-500);
@@ -99,11 +99,11 @@
   transition: all 0.3s ease;
 }
 
-.btn__cta:hover {
+.button--cta:hover {
   background: var(--color-beige-600);
 }
 
-.btn__clear-cart {
+.button--clear-cart {
   border: none;
   border-bottom: 1px solid var(--color-feedback-error);
   padding-bottom: 3px;
@@ -120,29 +120,29 @@
   margin: 0 auto;
 }
 
-.btn__clear-cart svg {
+.button--clear-cart svg {
   width: 20px;
   height: 20px;
 }
 
-.btn__clear-cart:hover {
+.button--clear-cart:hover {
   transform: scale(1.05);
 }
 
 /*========== Tablet ==========*/
 
 @media (min-width: 768px) {
-  .btn__responsive {
+  .button--responsive {
     padding: 6px var(--spacing-16);
     font-size: var(--button-font-size-medium);
   }
   
-  .btn__responsive svg {
+  .button--responsive svg {
     width: 18px;
     height: 18px;
   }
   
-  .btn__responsive-medium {
+  .button--responsive-medium {
     padding: 6px var(--spacing-16);
     font-size: var(--button-font-size-medium);
   }
@@ -151,12 +151,12 @@
 /*========== Desktop ==========*/
 
 @media (min-width: 1200px) {
-  .btn__responsive {
+  .button--responsive {
     padding: 10px var(--spacing-16);
     font-size: var(--button-font-size-large);
   }
   
-  .btn__responsive svg {
+  .button--responsive svg {
     width: 20px;
     height: 20px;
   }

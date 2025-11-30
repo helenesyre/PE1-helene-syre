@@ -27,7 +27,7 @@
     left: 100%;
 }
 
-.carousel__slide.active__slide {
+.carousel__slide.carousel__slide--active {
   left: 0;
 }
 
@@ -48,8 +48,8 @@
   pointer-events: none;
 }
 
-.prev__slide,
-.next__slide {
+.carousel__slide--prev,
+.carousel__slide--next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -67,17 +67,17 @@
   pointer-events: auto;
 }
 
-.prev__slide:hover,
-.next__slide:hover {
+.carousel__slide--prev:hover,
+.carousel__slide--next:hover {
   background-color: var(--color-purple-500);
   transform: translateY(-50%) scale(1.1);
 }
 
-.prev__slide {
+.carousel__slide--prev {
   left: 8px;
 }
 
-.next__slide {
+.carousel__slide--next {
   right: 8px;
 }
 
@@ -184,19 +184,19 @@
         display: block;
     }
 
-  .prev__slide,
-  .next__slide {
+  .carousel__slide--prev,
+  .carousel__slide--next {
     width: 40px;
     height: 40px;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .prev__slide {
+  .carousel__slide--prev {
     left: 40px;
   }
 
-  .next__slide {
+  .carousel__slide--next {
     right: 40px;
   }
 

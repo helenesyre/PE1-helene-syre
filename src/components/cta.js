@@ -8,7 +8,7 @@ export default function cta() {
             </div>
             <form class="cta__form" action="#" method="post">
                 <input type="email" class="cta__input" placeholder="Enter your email...">
-                <button type="submit" class="btn__cta">Subscribe</button>
+                <button type="submit" class="button--cta">Subscribe</button>
             </form>
             <svg class="cta__shape-top-left" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 169">
                 <path d="M29.01,139.9c6,5.96,3.42,11.5,6.05,18.01,2.44,6.05,8.03,10.06,14.54,10.76,11.95-.85,25.44,1.11,37.21-.05,15.16-1.51,20.79-20.95,8.83-30.51-7.68-6.13-16.64-1.01-23.65-9.77-6.23-7.78-.91-16.4-10.19-23.81-7.61-6.08-16.5-1.08-23.51-9.59-8.73-10.59-1.7-26.09,12-27.04,22.68-1.58,47.2,1.22,70.07,0,15.32-1.64,21.36-20.78,9.14-30.55-7.68-6.13-16.64-1.01-23.65-9.77-4.7-5.87-2.57-10.42-4.77-16.42-1.84-5.01-6.74-9.41-12-10.59C64.72-.56,40.17.39,15.76.09,7.37.98.86,7.31,0,15.69l.1,105.03c1.04,4.72,3.51,8.93,7.66,11.55,7.3,4.62,14.51.94,21.25,7.63Z" style="fill: currentColor;"/>

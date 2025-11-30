@@ -21,7 +21,7 @@ function carouselCard(product, index) {
             <div class="carousel__info">
                 <h1>${product.title}</h1>
                 <p>${product.description}</p>
-                <a href="/product/index.html?id=${product.id}" class="btn btn__small btn__responsive btn__primary">Shop Now</a>
+                <a href="/product/index.html?id=${product.id}" class="button button--small button--responsive button--primary">Shop Now</a>
             </div>
             <div class="carousel__shape">
                 ${shape}
@@ -39,12 +39,12 @@ export async function heroCarousel() {
         ${products.map(carouselCard).join('')}
       </div>
       <div class="carousel__controls">
-        <button class="prev__slide" aria-label="Previous Slide">
+        <button class="carousel__slide--prev" aria-label="Previous Slide">
           <svg class="prev" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
           </svg>
         </button>
-        <button class="next__slide" aria-label="Next Slide">
+        <button class="carousel__slide--next" aria-label="Next Slide">
           <svg class="next" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
           </svg>
@@ -58,16 +58,16 @@ export function handleCarousel() {
   // Access carousel slides
   let carouselSlides = document.querySelectorAll('.carousel__slide');
   // Access next and previous buttons
-  let next = document.querySelector('.next__slide');
-  let prev = document.querySelector('.prev__slide');
+  let next = document.querySelector('.carousel__slide--next');
+  let prev = document.querySelector('.carousel__slide--prev');
 
   // Find the active slide index
   let counter = 0;
 
-  if (Array.from(carouselSlides).some(slide => slide.classList.contains('active__slide')) === false) {
-    carouselSlides[0].classList.add('active__slide');
+  if (Array.from(carouselSlides).some(slide => slide.classList.contains('carousel__slide--active')) === false) {
+    carouselSlides[0].classList.add('carousel__slide--active');
   } else {
-    carouselSlides[counter].classList.add('active__slide');
+    carouselSlides[counter].classList.add('carousel__slide--active');
   }
 
   // Next button functionality

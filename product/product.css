@@ -130,7 +130,6 @@
     width: fit-content;
 }
 
-
 .product__actions {
     margin: var(--spacing-56) 0;
     display: flex;
@@ -251,6 +250,14 @@ button.share {
 
 .product__similar-padding {
     padding: var(--spacing-56) 0;
+}
+
+/*========== Product error ==========*/
+.product__error {
+    color: var(--color-feedback-error);
+    font-size: var(--font-size-h4);
+    text-align: center;
+    margin: var(--spacing-48) 0;
 }
 
 /*========== Tablet ==========*/

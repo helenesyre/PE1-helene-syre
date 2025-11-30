@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./account.css">
   </head>
   <body>
-    <header class="header" id="header">
+    <header class="site-header" id="header">
       <div id="navbar-container" class="padding-bottom"></div>
     </header>
     <main class="signup__form-container ">
@@ -40,14 +40,14 @@
                     </div>
                     <div class="form__group">
                         <label for="create-password">Create a Password</label>
-                        <div class="password-input-wrapper">
+                        <div class="relative">
                             <input type="password" id="create-password" name="create-password" placeholder="Enter your password..." required/>
                             <span id="view-icon-create"></span>
                         </div>
                     </div>
                     <div class="form__group">
                         <label for="confirm-password">Confirm your Password</label>
-                        <div class="password-input-wrapper">
+                        <div class="relative">
                             <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password..." required/>
                             <span id="view-icon-confirm"></span>
                         </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="form__actions">
                     <p class="form__not-registered">Already a member? <a href="login.html">Log in here</a></p>
-                    <button type="submit" class="btn btn__large btn__primary btn__full-width">
+                    <button type="submit" class="button button--large button--primary button--full-width">
                         Create Account
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                             <defs>
@@ -90,7 +90,7 @@
 
       
     </main>
-    <footer class="footer" id="footer"></footer>
+    <footer id="footer"></footer>
     <script type="module" src="./register.js"></script>
   </body>
 </html>

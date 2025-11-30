@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="./cart.css">
   </head>
   <body>
-    <header class="header" id="header">
+    <header class="site-header" id="header">
       <div id="navbar-container" class="padding-bottom"></div>
     </header>
     <main class="container">
-      <a href="../index.html" class="back-link">
+      <a href="../index.html" class="page__back-link">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
           </svg>
@@ -40,12 +40,12 @@
                   <label for="promocode">Promocode</label>
                   <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode"/>
               </div>
-              <button type="submit" class="btn btn__large btn__primary btn__full-width">Apply</button>
+              <button type="submit" class="button button--large button--primary button--full-width">Apply</button>
           </form>
 
           <div class="summary__items"></div>
 
-          <a href="/cart/checkout.html" class="btn btn__large btn__primary btn__full-width">
+          <a href="/cart/checkout.html" class="button button--large button--primary button--full-width">
               Checkout
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -55,7 +55,7 @@
       </section>
 
     </main>
-    <footer class="footer" id="footer"></footer>
+    <footer id="footer"></footer>
     <script type="module" src="./cart.js"></script>
   </body>
 </html>

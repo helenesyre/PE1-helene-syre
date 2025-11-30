@@ -11,7 +11,7 @@ export function showToast(message, title, type = 'success') {
   const textElement = document.createElement('p');
   const iconElement = document.createElement('span');
   const textContentElement = document.createElement('div');
-  const closeBtn = document.createElement('button');
+  const closeButton = document.createElement('button');
 
   toast.className = 'toast';
   switch(type) {
@@ -86,19 +86,19 @@ export function showToast(message, title, type = 'success') {
 
   titleElement.textContent = title || (type === 'success' ? 'Success' : type === 'error' ? 'Error' : 'Warning');
   textElement.textContent = message;
-  closeBtn.innerHTML = `
+  closeButton.innerHTML = `
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
       <path d="M.75,12.75L12.75.75M.75.75l12,12" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5px;"/>
     </svg>
   `;
-  closeBtn.onclick = () => {
+  closeButton.onclick = () => {
       toast.remove();
   };
   toast.appendChild(iconElement);
   textContentElement.appendChild(titleElement);
   textContentElement.appendChild(textElement);
   toast.appendChild(textContentElement);
-  toast.appendChild(closeBtn);
+  toast.appendChild(closeButton);
 
   document.body.appendChild(toast);
   setTimeout(() => {
@@ -118,7 +118,7 @@ export function showSimpleToast(message, type = 'success') {
   const titleElement = document.createElement('h4');
   const iconElement = document.createElement('span');
   const textContentElement = document.createElement('div');
-  const closeBtn = document.createElement('button');
+  const closeButton = document.createElement('button');
 
   toast.className = 'toast-simple';
   switch(type) {
@@ -180,18 +180,18 @@ export function showSimpleToast(message, type = 'success') {
   
 
   titleElement.textContent = message;
-  closeBtn.innerHTML = `
+  closeButton.innerHTML = `
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
       <path d="M.75,12.75L12.75.75M.75.75l12,12" style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5px;"/>
     </svg>
   `;
-  closeBtn.onclick = () => {
+  closeButton.onclick = () => {
       toast.remove();
   };
   toast.appendChild(iconElement);
   textContentElement.appendChild(titleElement);
   toast.appendChild(textContentElement);
-  toast.appendChild(closeBtn);
+  toast.appendChild(closeButton);
 
   document.body.appendChild(toast);
   setTimeout(() => {
