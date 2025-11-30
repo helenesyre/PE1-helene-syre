@@ -11,7 +11,7 @@ export function cartMenu(element) {
       <div class="cart__close" id="cart-close">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <h3 class="cart__title">Your Cart</h3>
+      <h2 class="cart__title">Your Cart</h2>
       <p class="cart__subtitle">${cart.getCartCount()} Products in Your Cart</p>
       <div class="cart__content">
       </div>

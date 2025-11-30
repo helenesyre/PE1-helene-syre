@@ -19,7 +19,7 @@
 }
 
 .product__overview h1 {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h1);
 }
 
 .product__pricing-rating {
@@ -212,7 +212,7 @@ button.share {
 }
 
 .product__review-author {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h5);
     font-weight: var(--font-weight-semibold);
 }
 

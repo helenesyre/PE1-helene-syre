@@ -76,11 +76,11 @@
 
     /* Font sizes - Mobile first */
     --font-size-h1: 32px;
-    --font-size-h2: 30px;
+    --font-size-h2: 26px;
     --font-size-h3: 22px;
-    --font-size-h4: 16px;
-    --font-size-h5: 14px;
-    --font-size-h6: 12px;
+    --font-size-h4: 18px;
+    --font-size-h5: 16px;
+    --font-size-h6: 14px;
 
     --font-size-paragraph-large: 18px;
     --font-size-paragraph-medium: 16px;
@@ -139,19 +139,20 @@
     -moz-osx-font-smoothing: grayscale; */
 }
 
-/* Desktop font sizes */
+/*========== Tablet ==========*/
+
 @media (min-width: 768px) {
   :root {
-    --font-size-h1: 64px;
-    --font-size-h2: 50px;
-    --font-size-h3: 40px;
-    --font-size-h4: 20px;
-    --font-size-h5: 16px;
-    --font-size-h6: 14px;
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 26px;
+    --font-size-h4: 22px;
+    --font-size-h5: 18px;
+    --font-size-h6: 16px;
 
-    --font-size-paragraph-large: 28px;
-    --font-size-paragraph-medium: 24px;
-    --font-size-paragraph-small: 18px;
+    --font-size-paragraph-large: 20px;
+    --font-size-paragraph-medium: 18px;
+    --font-size-paragraph-small: 15px;
 
     --font-size-label-large: 32px;
     --font-size-label-small: 16px;
@@ -159,4 +160,23 @@
     --tag-font-size-large: 16px;
     --tag-font-size-small: 12px;
   }
+
+}
+
+/*========== Desktop ==========*/
+
+@media (min-width: 1200px) {
+  :root {
+    --font-size-h1: 56px;
+    --font-size-h2: 40px;
+    --font-size-h3: 32px;
+    --font-size-h4: 24px;
+    --font-size-h5: 20px;
+    --font-size-h6: 18px;
+
+    --font-size-paragraph-large: 22px;
+    --font-size-paragraph-medium: 20px;
+    --font-size-paragraph-small: 16px;
+  }
+  
 }

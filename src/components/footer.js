@@ -16,7 +16,7 @@ export default function footer() {
           </div>
           <div class="footer__links-wrapper">
             <div class="footer__links-container">
-              <h4>Site Map</h4>
+              <h5>Site Map</h5>
               <ul class="footer__links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
@@ -25,7 +25,7 @@ export default function footer() {
               </ul>
             </div>
             <div class="footer__links-container">
-              <h4>Resources</h4>
+              <h5>Resources</h5>
               <ul class="footer__links">
                 <li><a href="#">Terms of use</a></li>
                 <li><a href="#">Privacy Policy</a></li>
@@ -33,7 +33,7 @@ export default function footer() {
               </ul>
             </div>
             <div class="footer__links-container">
-              <h4>Join Us</h4>
+              <h5>Join Us</h5>
               <ul class="footer__links footer__social-links">
                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
