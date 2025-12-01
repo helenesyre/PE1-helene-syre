@@ -32,6 +32,16 @@ export async function displayProduct() {
     try {
         const product = await getProductById(productId);
 
+        // Dynamically update meta description and title
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute(
+                "content",
+                `Discover the ${product.title} by Koro. Built with modern minimalism and reliable performance to enhance your everyday tech experience with ease.`
+            );
+        }
+        document.title = `KORO | ${product.title} - modern, minimal tech`;
+
         let priceHTML = `<p class="product__price--regular">$${product.price}</p>`;
         if (product.discountedPrice < product.price) {
             priceHTML = `
