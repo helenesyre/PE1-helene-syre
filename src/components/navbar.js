@@ -45,7 +45,7 @@ export function navbar(element, variant = 'dark') {
 
         <ul class="nav__actions">
           <li>
-            <a href="#search" class="nav__link">
+            <a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
                   <clipPath id="clippath">

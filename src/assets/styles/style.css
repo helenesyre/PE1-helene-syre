@@ -159,31 +159,31 @@ h1, h2, h3, h4, h5, h6 {
 /*========== Back Link ==========*/
 
 .page__back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-8);
-    margin-bottom: var(--spacing-24);
-    color: var(--color-black-300);
-    font-size: var(--input-font-size);
-    font-weight: var(--font-weight-regular);
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-24);
+  color: var(--color-black-300);
+  font-size: var(--input-font-size);
+  font-weight: var(--font-weight-regular);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .page__back-link svg {
-    width: 20px;
-    height: 20px;
-    stroke-width: 1.5px;
-    transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5px;
+  transition: transform 0.3s ease;
 }
 
 .page__back-link:hover {
-    color: var(--color-blue-500);
-    transform: translateX(-4px);
+  color: var(--color-blue-500);
+  transform: translateX(-4px);
 }
 
 .page__back-link:hover svg {
-    transform: translateX(-2px);
+  transform: translateX(-2px);
 }
 
 /*========== Center Page ==========*/
@@ -192,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 /*========== Coming Soon ==========*/
@@ -349,6 +350,8 @@ footer .copyright {
   left: 0;
   right: 0;
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .image__grid-text h3 {
@@ -395,11 +398,13 @@ footer .copyright {
     padding: 0 var(--spacing-48);
   }
 
-  /*========== Buttons ==========*/
+  /*========= Carousel ==========*/
 
   .hero-carousel {
     height: 790px;
   }
+
+  /*========== Footer ==========*/
 
   footer {
     padding-bottom: 0;
@@ -472,6 +477,10 @@ footer .copyright {
     object-fit: cover;
     border-radius: 8px;
   }
+
+  .image__grid-text {
+    width: 100%;
+  }
 }
 
 /*========== Desktop ==========*/
@@ -481,7 +490,7 @@ footer .copyright {
     padding: 0 108px;
   }
 
-  /*========== Buttons ==========*/
+  /*========== Footer ==========*/
 
   .footer__top {
     flex-direction: row;
