@@ -59,7 +59,7 @@ export function navbar(element, variant = 'dark') {
             </a>
           </li>
           <li>
-            <div href="#" class="nav__link" id="cart-button">
+            <div class="nav__link" id="cart-button">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
                   <clipPath id="clippath">
