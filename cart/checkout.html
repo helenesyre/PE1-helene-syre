@@ -34,7 +34,8 @@
             <form id="checkout__form" class="cart-page__layout">
                 <section class="cart-page__content box">
                     <h2>Payment Method</h2>
-                    <div class="checkout__input-group--radio">
+                    <fieldset class="checkout__input-group--radio">
+                        <legend class="sr-only">Select payment method</legend>
                         <label class="card-label checked">
                             <input type="radio" class="payment-method-radio" name="payment-method" value="card" checked/>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -65,7 +66,7 @@
                             </svg>
                             <span>Norwegian Top Banks</span>
                         </label>
-                    </div>
+                    </fieldset>
                     <div class="checkout__payment-method-card-info">
                         <div class="checkout__input-group">
                             <label for="card-number" class="sr-only">Card Number</label>

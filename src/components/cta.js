@@ -11,7 +11,8 @@ export default function cta() {
                 <p class="section__subtitle section__subtitle--centered">Join our newsletter to get exclusive offers on new products, sales and more.</p>
             </div>
             <form class="cta__form" action="#" method="post">
-                <input type="email" class="cta__input" placeholder="Enter your email...">
+                <label for="cta-email" class="sr-only">Email address</label>
+                <input id="cta-email" type="email" class="cta__input" placeholder="Enter your email...">
                 <button type="submit" class="button--cta">Subscribe</button>
             </form>
             <svg class="cta__shape-top-left" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 169">

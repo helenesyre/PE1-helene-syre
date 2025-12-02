@@ -192,6 +192,7 @@ h4.cart-page__item--name {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    border: none;
 }
 
 .checkout__input-group--radio label {

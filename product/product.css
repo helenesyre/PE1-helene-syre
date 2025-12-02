@@ -256,7 +256,7 @@ button.share {
 
 /*========== Product error ==========*/
 .product__error {
-    color: var(--color-feedback-error);
+    color: var(--color-feedback-error-text);
     font-size: var(--font-size-h4);
     text-align: center;
     margin: var(--spacing-48) 0;
