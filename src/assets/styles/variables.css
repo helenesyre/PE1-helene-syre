@@ -97,13 +97,8 @@
 
     --input-font-size: 16px;
 
-    /* Line heights */
-    --line-height-tight: 1.2;     /* For headings */
-    --line-height-normal: 1.5;    /* For body text */
-    --line-height-relaxed: 1.75;  /* For larger paragraphs */
-
     /* Spacing */
-    --spacing-0: 0px;
+    --spacing-0: 0;
     --spacing-4: 4px;
     --spacing-8: 8px;
     --spacing-16: 16px;
@@ -128,8 +123,9 @@
     --transition-slow: 0.6s;
 
     /* Shadows */
-    --shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.10), 0 1px 3px 0 rgba(0, 0, 0, 0.10);
-    --inner-shadow: inset 0 2px 6px rgba(0,0,0,0.10);
+    --shadow: 0 1px 2px -1px rgb(0 0 0 / 10%), 0 1px 3px 0 rgb(0 0 0 / 10%);
+    --inner-shadow: inset 0 2px 6px rgb(0 0 0 / 10%);
+    --overlay-shadow: -2px 0 8px rgb(0 0 0 / 10%);
 
     /*
     font-synthesis: none;

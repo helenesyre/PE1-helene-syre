@@ -208,7 +208,7 @@ h4.cart-page__item--name {
     background: transparent;
     cursor: pointer;
     position: relative;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast) ease;
 }
 
 .checkout__input-group--radio input[type="radio"] {

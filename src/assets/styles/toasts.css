@@ -11,7 +11,7 @@
     border-radius: var(--border-radius-medium);
     background: var(--color-white-50);
     box-shadow: var(--shadow);
-    animation: slideIn 0.4s cubic-bezier(0.6, -0.4, 0.4, 1.3) forwards;
+    animation: slideIn var(--transition-medium) cubic-bezier(0.6, -0.4, 0.4, 1.3) forwards;
 }
 
 @keyframes slideIn {

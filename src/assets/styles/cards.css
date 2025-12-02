@@ -7,7 +7,7 @@
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all var(--transition-medium) cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /** 
@@ -46,7 +46,7 @@
     background-color: var(--color-white-50);
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast) ease;
     z-index: 10;
     display: flex;
     align-items: center;
