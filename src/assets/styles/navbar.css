@@ -154,10 +154,6 @@
   transform: translateX(-50%);
 }
 
-.nav__link--active {
-  color: var(--color-blue-500);
-}
-
 .nav__link:hover, .nav__actions svg:hover {
   color: var(--color-blue-500);
   transform: translateY(-2px);
@@ -181,6 +177,13 @@
 .nav__link:hover, .nav__actions svg:hover {
   color: var(--color-blue-500);
   transform: translateY(-2px);
+}
+
+/*========== Active Link Style ==========*/
+
+.nav__link--active,
+.nav--light .nav__link--active svg {
+  color: var(--color-blue-500);
 }
 
 /*========== Tablet ==========*/

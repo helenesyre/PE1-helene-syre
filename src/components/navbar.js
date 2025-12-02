@@ -8,6 +8,7 @@ import { cartMenu } from './cartMenu.js';
  */
 export function navbar(element, variant = 'dark') {
   const lightClass = variant === 'light' ? 'nav--light' : '';
+  const currentPath = document.location.pathname;
   element.innerHTML = `
     <nav class="nav container ${lightClass}">
         <div class="nav__brand">
@@ -38,10 +39,10 @@ export function navbar(element, variant = 'dark') {
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li><a href="${import.meta.env.BASE_URL}/" class="nav__link nav__link--active">Home</a></li>
-            <li><a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link">Shop</a></li>
-            <li><a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link">About us</a></li>
-            <li><a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link">Contact</a></li>
+            <li><a href="${import.meta.env.BASE_URL}/" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/` ? 'nav__link--active' : ''}">Home</a></li>
+            <li><a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/shop/` ? 'nav__link--active' : ''}">Shop</a></li>
+            <li><a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/about-us/` ? 'nav__link--active' : ''}">About us</a></li>
+            <li><a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/contact/` ? 'nav__link--active' : ''}">Contact</a></li>
           </ul>
 
           <!-- Close button -->
@@ -67,7 +68,7 @@ export function navbar(element, variant = 'dark') {
             </a>
           </li>
           <li>
-            <div class="nav__link" id="cart-button">
+            <div class="nav__link  ${currentPath === `${import.meta.env.BASE_URL}/cart/` || currentPath === `${import.meta.env.BASE_URL}/cart/checkout` || currentPath === `${import.meta.env.BASE_URL}/cart/success` ? 'nav__link--active' : ''}" id="cart-button">
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
                   <clipPath id="clippath">
@@ -85,7 +86,7 @@ export function navbar(element, variant = 'dark') {
             </div>
           </li>
           <li>
-            <a href="${import.meta.env.BASE_URL}/account/login" class="nav__link">
+            <a href="${import.meta.env.BASE_URL}/account/login" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/account/login` || currentPath === `${import.meta.env.BASE_URL}/account/register` ? 'nav__link--active' : ''}">
               <span class="sr-only">User Account</span>
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
