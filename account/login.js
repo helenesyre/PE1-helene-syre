@@ -13,10 +13,23 @@ document.querySelector('#footer').innerHTML = footer();
 passwordToggle('#password', '#view-icon');
 
 /** 
- * Code setup and adapted from 18-19.nov:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
- * https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+ * Code setup and adaptation based on:
+ * switch
+ * @publisher: MDN Contributors
+ * @date: 2025-07-08
+ * accessed: 2025-11-18
+ * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 */
+
+/** 
+ * Code setup and adaptation based on:
+ * Event: preventDefault() method
+ * @publisher: MDN Contributors
+ * @date: 2024-09-18
+ * accessed: 2025-11-19
+ * link: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+*/
+
 const form = document.querySelector('#login__form');
 form.addEventListener('submit', async function(event) {
     event.preventDefault();

@@ -10,7 +10,14 @@
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-/* Hover effect 1 from https://www.subframe.com/tips/css-card-hover-effect-examples */
+/** 
+ * Hover effect source and adaption from:
+ * 10 Card Hover Effect Examples - 1) Animated Product Reveal
+ * @publisher: Irvin Zhan
+ * @date: N/A
+ * link: https://www.subframe.com/tips/css-card-hover-effect-examples
+*/
+
 .product-card:hover {
     transform: translateY(-5px);
 }

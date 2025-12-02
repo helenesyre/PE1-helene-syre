@@ -7,7 +7,14 @@ navbar(document.querySelector('#navbar-container'), 'light')
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
-// Logic from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+/** 
+ * Code logic from:
+ * Math.random()
+ * @publisher: MDN Contributors
+ * @date: 2025-07-10
+ * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+*/
+
 // Generate and display a random order number
 function generateRandomOrderNumber() {
 	// Generates a random 5-digit number between 10000 and 99999

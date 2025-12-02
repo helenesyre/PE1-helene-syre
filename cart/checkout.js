@@ -62,8 +62,15 @@ radios.forEach(radio => {
   });
 });
 
+/** 
+ * Code setup and adaptation based on:
+ * Set the required attribute in JavaScript
+ * @publisher: Mike
+ * @date: 2023-08-06
+ * link: https://javascriptf1.com/snippet/set-the-required-attribute-in-javascript
+*/
+
 // Listen for payment method changes
-// Source: https://javascriptf1.com/snippet/set-the-required-attribute-in-javascript
 document.addEventListener('paymentMethodChanged', () => {
   const selectedMethod = document.querySelector('input[name="payment-method"]:checked').value;
   if (selectedMethod === 'card') {

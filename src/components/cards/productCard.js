@@ -1,5 +1,10 @@
-// Link for price comparison logic:
-// https://stackoverflow.com/questions/70943684/compare-old-and-new-price-for-each-element-if-any-is-equal-or-not
+/** 
+ * Price comparison logic from:
+ * Compare old and new price for each element if any is equal or not
+ * @publisher: Mohamed-Yousef
+ * @date: 2022-02-01
+ * link: https://stackoverflow.com/questions/70943684/compare-old-and-new-price-for-each-element-if-any-is-equal-or-not
+*/
 
 export function prouductCard(product) {
     const card = document.createElement('div');

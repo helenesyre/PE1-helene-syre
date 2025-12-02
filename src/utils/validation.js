@@ -1,10 +1,20 @@
-/**
- * Validation utility functions for form inputs
- * Code setup and adapted from 18-19.nov:
- * https://regex101.com/
- * https://medium.com/@ravipatel.it/form-validation-with-javascript-all-html-input-types-2b0f0bb6e28e
- * 
- */
+/** 
+ * Code setup and adaptation based on:
+ * Regular Expressions (RegExp)
+ * @publisher: firasdib
+ * @date: 2024-04-20
+ * accessed: 2025-11-18
+ * link: https://regex101.com/
+*/
+
+/** 
+ * Code setup and adaptation based on:
+ * Form Validation with JavaScript (All HTML Input Types)
+ * @publisher: Ravi Patel
+ * @date: 2024-09-13
+ * accessed: 2025-11-19
+ * link: https://medium.com/@ravipatel.it/form-validation-with-javascript-all-html-input-types-2b0f0bb6e28e
+*/
 
 function validatePattern(value, pattern) {
     const regex = new RegExp(pattern);

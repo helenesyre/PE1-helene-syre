@@ -33,9 +33,17 @@ const viewOnSVG = `
   </g>
 </svg>`;
 
+/** 
+ * Tutorial from:
+ * Show / Hide Password using HTML CSS and JavaScript | Toggle Password
+ * @publisher: OnlineITtuts Tutorials
+ * @date: 2023-05-01
+ * accessed: 2025-11-18
+ * link: https://www.youtube.com/watch?v=i_uwBWEA30c
+*/
+
 /**
  * Initialize password visibility toggle for a password input field
- * Tutorial from 18.nov: https://www.youtube.com/watch?v=i_uwBWEA30c
  * @param {string} passwordInputSelector - CSS selector for the password input element
  * @param {string} viewIconSelector - CSS selector for the view icon container element
  */
@@ -64,9 +72,6 @@ export function createPasswordToggle() {
 
     // Initialize with the "off" icon (password hidden)
     viewIconCreateContainer.innerHTML = viewOffSVG;
-
-    // Tutorial from 18.nov: https://www.youtube.com/watch?v=i_uwBWEA30c
-    // Add click event listener to toggle password visibility
     viewIconCreateContainer.addEventListener('click', () => {
         if (createPasswordInput.type === 'password') {
             createPasswordInput.type = 'text';
@@ -84,9 +89,6 @@ export function confirmPasswordToggle() {
 
     // Initialize with the "off" icon (password hidden)
     viewIconConfirmContainer.innerHTML = viewOffSVG;
-
-    // Tutorial from 18.nov: https://www.youtube.com/watch?v=i_uwBWEA30c
-    // Add click event listener to toggle password visibility
     viewIconConfirmContainer.addEventListener('click', () => {
         if (confirmPasswordInput.type === 'password') {
             confirmPasswordInput.type = 'text';

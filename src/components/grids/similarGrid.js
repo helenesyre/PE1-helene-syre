@@ -1,7 +1,19 @@
-/*
-Sources 16.nov:
-- slice number of products to show: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-- forEach loop - comment keenthinker: https://stackoverflow.com/questions/21811630/splicing-a-javascript-array-from-within-the-callback-passed-to-foreach
+/** 
+ * Code setup and adaptation based on:
+ * Array.prototype.slice()
+ * @publisher: MDN Contributors
+ * @date: 2025-07-20
+ * accessed: 2025-11-16
+ * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+*/
+
+/** 
+ * Code setup and adaptation based on:
+ * Splicing a Javascript array from within the callback passed to forEach
+ * @publisher: keenthinker
+ * @date: 2014-02-16
+ * accessed: 2025-11-16
+ * link: https://stackoverflow.com/questions/21811630/splicing-a-javascript-array-from-within-the-callback-passed-to-foreach
 */
 
 import { getProductsByTags } from "../../utils/fetch.js";

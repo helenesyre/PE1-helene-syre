@@ -76,8 +76,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*========== Loader ==========*/
+/** 
+ * Source and adaptation from:
+ * Loaders
+ * @publisher: cssloaders
+ * @date: N/A
+ * accessed: 2025-11-28
+ * link: https://cssloaders.github.io/
+*/
 
-/* Code from: https://cssloaders.github.io/ */
 .product__loader {
   color: var(--color-blue-500);
   font-size: 45px;

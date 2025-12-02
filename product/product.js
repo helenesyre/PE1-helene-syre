@@ -119,7 +119,15 @@ export async function displayProduct() {
     }
 }
 
-/* Source from 16.nov: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard */
+/** 
+ * Source and adaptation from:
+ * Interact with the clipboard
+ * @publisher: MDN Contributors
+ * @date: 2025-11-30
+ * accessed: 2025-11-16
+ * link: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
+*/
+
 async function copyCurrentLinkToClipboard() {
   try {
     // Get the current URL with its query parameters

@@ -1,8 +1,15 @@
 import { quantity } from "../../utils/quantity.js";
 import { useCart } from "../../utils/useCart.js";
 
-// Card component for displaying a product in the cart
-// Logic from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+/** 
+ * Code logic adapted from:
+ * Number.prototype.toFixed()
+ * @publisher: MDN Contributors
+ * @date: 2025-07-10
+ * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+*/
+
+// Card component for displaying a product in the cart menu
 export function productMenuCartCard(product) {
     let priceHTML = '';
     const totalPrice = (product.price * product.quantity).toFixed(2);

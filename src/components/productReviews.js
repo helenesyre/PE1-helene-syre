@@ -1,5 +1,10 @@
-/* Avatar initials logic reference (Penny Liu) 16.nov:
-https://stackoverflow.com/questions/36823343/how-do-i-set-profile-image-as-first-letters-of-first-and-last-name
+/** 
+ * Avatar initials logic reference from:
+ * How do I set profile image as first letters of first and last name?
+ * @publisher: Penny Liu
+ * @date: 2020-05-07
+ * accessed: 2025-11-16
+ * link: https://stackoverflow.com/questions/36823343/how-do-i-set-profile-image-as-first-letters-of-first-and-last-name
 */
 
 import { renderStarRating } from '../utils/rating.js';

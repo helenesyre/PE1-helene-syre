@@ -29,8 +29,14 @@ function carouselCard(product, index) {
         </div>
     `;
 }
+/** 
+ * Tutorial from:
+ * Responsive Image Slider With Auto-sliding And Full Controls | HTML,CSS & Pure JavaScript
+ * @publisher: Five-Star Tutorials
+ * @date: 2022-10-07
+ * link: https://www.youtube.com/watch?v=57pXPbTRhCc
+*/
 
-// Tutorial from https://www.youtube.com/watch?v=57pXPbTRhCc
 export async function heroCarousel() {
     const products = await getProductsByIds(['f6712e3b-8050-4841-bd64-f332a48f7566','83111322-05a9-4a93-bc81-7d6b58f1a707', 'f99cafd2-bd40-4694-8b33-a6052f36b435']);
   return `

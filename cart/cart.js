@@ -9,8 +9,15 @@ navbar(document.querySelector('#navbar-container'), 'light')
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
+/** 
+ * Code logic adapted from:
+ * preventDefault() Event Method
+ * @publisher: W3Schools
+ * @date: N/A
+ * link: https://www.w3schools.com/jsref/event_preventdefault.asp
+*/
+
 // Prevent form refresh on promocode apply
-// Logic adapted from https://www.w3schools.com/jsref/event_preventdefault.asp
 document.addEventListener('DOMContentLoaded', () => {
   const promocodeForm = document.getElementById('promocode-form');
   if (promocodeForm) {

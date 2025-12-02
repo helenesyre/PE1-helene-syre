@@ -1,4 +1,12 @@
-/* Source Math.floor 16.nov: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor */
+/** 
+ * Source from:
+ * Math.floor()
+ * @publisher: MDN Contributors
+ * @date: 2025-07-10
+ * accessed: 2025-11-16
+ * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+*/
+
 export function renderStarRating(rating) {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5 ? 1 : 0;
