@@ -234,6 +234,10 @@ footer section {
   position: relative;
 }
 
+footer h3 {
+  font-size: var(--font-size-h5);
+}
+
 .footer__top {
   display: flex;
   flex-direction: column;

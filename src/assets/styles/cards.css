@@ -83,6 +83,10 @@
     width: fit-content;
 }
 
+.product-card h3 {
+    font-size: var(--font-size-h5);
+}
+
 .product-card__title {
     margin-top: var(--spacing-4);
 }
@@ -98,7 +102,7 @@
 
 .product-card__price--old {
     text-decoration: line-through;
-    color: var(--color-black-200);
+    color: var(--color-black-300);
 }
 
 .product-card__price--discount {

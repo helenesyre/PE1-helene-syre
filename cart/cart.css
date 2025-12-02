@@ -143,7 +143,7 @@ h4.cart-page__item--name {
 
 .cart-page__item--price-old {
     text-decoration: line-through;
-    color: var(--color-black-200);
+    color: var(--color-black-300);
 }
 
 /*========== Actions ==========*/

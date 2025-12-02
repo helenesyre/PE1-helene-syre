@@ -135,7 +135,7 @@ h4.cart__item--name {
 
 .cart__item--price-old {
     text-decoration: line-through;
-    color: var(--color-black-200);
+    color: var(--color-black-300);
 }
 
 /*========== Actions ==========*/

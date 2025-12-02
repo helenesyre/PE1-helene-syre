@@ -19,6 +19,7 @@ export function navbar(element, variant = 'dark') {
           </div>
 
           <a href="${import.meta.env.BASE_URL}/">
+            <span class="sr-only">Home</span>
             <svg class="nav__logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 35.61">
               <g>
                 <polygon points="65.92 6.32 60.67 6.32 48.33 19.16 48.33 6.32 43.68 6.32 43.68 31.35 48.33 31.35 48.33 24.9 52.3 20.87 61.13 31.35 66.6 31.35 55.4 17.5 65.92 6.32" style="fill: currentColor"/>
@@ -52,6 +53,7 @@ export function navbar(element, variant = 'dark') {
         <ul class="nav__actions">
           <li>
             <a href="${import.meta.env.BASE_URL}/coming-soon/" class="nav__link">
+              <span class="sr-only">Search</span>
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
                   <clipPath id="clippath">
@@ -84,6 +86,7 @@ export function navbar(element, variant = 'dark') {
           </li>
           <li>
             <a href="${import.meta.env.BASE_URL}/account/login" class="nav__link">
+              <span class="sr-only">User Account</span>
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
                   <clipPath id="clippath">

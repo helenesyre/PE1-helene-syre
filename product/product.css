@@ -44,7 +44,7 @@
 }
 
 .product__price {
-    color: var(--color-black-200);
+    color: var(--color-black-300);
     text-decoration: line-through;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .product__review-count {
-    color: var(--color-black-200);
+    color: var(--color-black-300);
 }
 
 #fullStars, #halfStar, #emptyStar {
@@ -232,7 +232,7 @@ button.share {
 }
 
 .reviews__review-count {
-    color: var(--color-black-200);
+    color: var(--color-black-300);
     font-size: var(--button-font-size-medium);
     font-weight: var(--font-weight-semibold);
 }

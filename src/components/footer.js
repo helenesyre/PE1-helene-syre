@@ -20,7 +20,7 @@ export default function footer() {
           </div>
           <div class="footer__links-wrapper">
             <div class="footer__links-container">
-              <h5>Site Map</h5>
+              <h3>Site Map</h3>
               <ul class="footer__links">
                 <li><a href="${import.meta.env.BASE_URL}/">Home</a></li>
                 <li><a href="${import.meta.env.BASE_URL}/coming-soon/">Shop</a></li>
@@ -29,7 +29,7 @@ export default function footer() {
               </ul>
             </div>
             <div class="footer__links-container">
-              <h5>Resources</h5>
+              <h3>Resources</h3>
               <ul class="footer__links">
                 <li><a href="${import.meta.env.BASE_URL}/coming-soon/">Terms of use</a></li>
                 <li><a href="${import.meta.env.BASE_URL}/coming-soon/">Privacy Policy</a></li>
@@ -37,11 +37,26 @@ export default function footer() {
               </ul>
             </div>
             <div class="footer__links-container">
-              <h5>Join Us</h5>
+              <h3>Join Us</h3>
               <ul class="footer__links footer__social-links">
-                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li>
+                  <a href="https://www.instagram.com/">
+                    <span class="sr-only">Instagram</span>
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/">
+                    <span class="sr-only">Facebook</span>
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/">
+                    <span class="sr-only">LinkedIn</span>
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
