@@ -12,9 +12,6 @@ import { renderStarRating } from '../utils/rating.js';
 /**
  * Generates HTML for product reviews.
  * @param {Array<Object>} reviews - Array of review objects.
- * @param {string} reviews[].username - The reviewer's username.
- * @param {number} reviews[].rating - The review rating (0-5).
- * @param {string} reviews[].description - The review text.
  * @returns {string} HTML string for the product reviews section.
  */
 export function productReviews(reviews) {
