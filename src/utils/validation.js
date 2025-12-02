@@ -111,7 +111,7 @@ export function validatePassword(password) {
  * @param {string} confirmPassword - The confirmed password.
  * @returns {boolean} True if passwords match, false otherwise.
  */
-export function passwordsMatch( createPassword, confirmPassword) {
+export function passwordsMatch(createPassword, confirmPassword) {
     return createPassword === confirmPassword;
 }
 
