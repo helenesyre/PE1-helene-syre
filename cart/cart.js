@@ -6,6 +6,7 @@ import { quantityListeners } from '../src/utils/quantity.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
+
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
@@ -39,6 +40,10 @@ if (quantityContainer) {
 const cartContentDiv = document.querySelector('.cart-page__content');
 const cart = useCart();
 
+/**
+ * Renders the cart items and sets up event listeners for cart interactions.
+ * @returns {void}
+ */
 function renderCart() {
   if (cartContentDiv) {
     cartContentDiv.innerHTML = '';
@@ -66,23 +71,40 @@ function renderCart() {
       if (clearButton) {
         cart.clearCart();
         renderCart();
+          updateCartCount();
         return;
       }
     });
   }
 
-
   quantityListeners(cartContentDiv, cart, renderCart);
 }
 
-
+/** 
+ * Updates the cart item count displayed in the UI.
+ * @returns {void}
+ */
 function updateCartCount() {
   const cartCountSpan = document.getElementById('cart-count');
   if (cartCountSpan) {
     cartCountSpan.textContent = cart.getCartCount();
   }
+
+    // Disable checkout button if cart is empty
+    const checkoutButton = document.querySelector('.button--primary.button--full-width[href="./checkout"]');
+    if (checkoutButton) {
+      if (cart.getCartCount() === 0) {
+        checkoutButton.classList.add('button--disabled');
+      } else {
+        checkoutButton.classList.remove('button--disabled');
+      }
+    }
 }
 
+/**
+ * Renders the cart items and updates the cart count.
+ * @returns {void}
+ */
 function renderCartAndCount() {
   renderCart();
   updateCartCount();
@@ -94,6 +116,10 @@ document.addEventListener('cartModified', () => {
   renderCartAndCount();
 });
 
+/** 
+ * Renders the cart summary section with updated pricing details.
+ * @returns {void}
+ */
 function cartSummary() {
   const { subtotal, taxes, discount, delivery, total } = cart.getCartSummary();
   // Inject summary HTML into .summary__items

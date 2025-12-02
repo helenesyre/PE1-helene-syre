@@ -9,7 +9,11 @@ import { useCart } from "../../utils/useCart.js";
  * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 */
 
-// Card component for displaying a product in the cart menu
+/**
+ * Generates a product card for the cart menu.
+ * @param {Object} product - The product data.
+ * @returns {HTMLElement} The product card element.
+ */
 export function productMenuCartCard(product) {
     let priceHTML = '';
     const totalPrice = (product.price * product.quantity).toFixed(2);

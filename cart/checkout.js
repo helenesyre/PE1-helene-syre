@@ -2,16 +2,20 @@ import { navbar } from '../src/components/navbar.js';
 import footer from '../src/components/footer.js';
 import { useCart } from '../src/utils/useCart.js';
 import { showToast } from "../src/utils/toast.js";
-import { validateCardNumber, validateFullName, validateExpirationDate, validateCVV, validateEmail, validatePhoneNumber, validateName, validateAddress, validateLocationName, validatePostalCode, validationErrorMessageHTML, formatCardNumberInput } from '../src/utils/validation.js';
+import { validateCardNumber, validateFullName, validateExpirationDate, validateCVV, validateEmail, validatePhoneNumber, validateName, validateAddress, validateLocationName, validatePostalCode, validationErrorMessageHTML, formatCardNumberInput, formatExpirationDateInput } from '../src/utils/validation.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
+
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
-
 const cart = useCart();
 
+/** 
+ * Renders the cart summary section in the checkout page.
+ * @returns {void}
+ */
 function cartSummary() {
   const { subtotal, taxes, discount, delivery, total } = cart.getCartSummary();
   // Inject summary HTML into .summary__items
@@ -54,6 +58,7 @@ const radios = document.querySelectorAll('input[name="payment-method"]');
 
 const paymentMethodChanged = new Event('paymentMethodChanged');
 
+// Add change event listeners to each radio button
 radios.forEach(radio => {
   radio.addEventListener('change', () => {
     radios.forEach(r => r.closest('label').classList.remove('checked'));
@@ -88,7 +93,12 @@ document.addEventListener('paymentMethodChanged', () => {
   }
 });
 
-// Helper to show validation error after input
+/** 
+ * Displays a validation error message after the specified input element.
+ * @param {HTMLElement} input - The input element to show the error for.
+ * @param {string} message - The validation error message to display.
+ * @returns {void}
+ */
 function showValidationError(input, message) {
     const oldError = input.parentElement.querySelector('.form__error');
     if (oldError) oldError.remove();
@@ -103,7 +113,23 @@ if (cardNumberInput) {
     });
 }
 
-// Form submission validation handling
+// Expiration date input formatting
+document.addEventListener("DOMContentLoaded", () => {
+  const expirationInput = document.getElementById("expiration-date");
+  if (expirationInput) {
+    expirationInput.addEventListener("input", (e) => {
+      const formatted = formatExpirationDateInput(e.target.value);
+      e.target.value = formatted;
+    });
+  }
+});
+
+/**
+ * Handles the form submission event for the checkout form.
+ * Form submission validation handling
+ * @param {Event} event - The form submission event.
+ * @returns {void}
+ */
 const form = document.querySelector('#checkout__form');
 form.addEventListener('submit', async function(event) {
     event.preventDefault();

@@ -7,7 +7,7 @@ import cta from './components/cta.js';
 // Initialize navbar
 navbar(document.querySelector('#navbar-container'))
 
-// Initialize carousel
+// Initialize hero carousel 
 document.querySelector('#header .hero-carousel').innerHTML = await heroCarousel();
 handleCarousel();
 

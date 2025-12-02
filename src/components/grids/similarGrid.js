@@ -1,3 +1,6 @@
+import { getProductsByTags } from "../../utils/fetch.js";
+import { prouductCard } from "../cards/productCard.js";
+
 /** 
  * Code setup and adaptation based on:
  * Array.prototype.slice()
@@ -16,9 +19,10 @@
  * link: https://stackoverflow.com/questions/21811630/splicing-a-javascript-array-from-within-the-callback-passed-to-foreach
 */
 
-import { getProductsByTags } from "../../utils/fetch.js";
-import { prouductCard } from "../cards/productCard.js";
-
+/**
+ * Generates a similar product grid.
+ * @returns {Promise<HTMLElement>} The similar product grid element.
+ */
 export async function similarGrid() {
     const grid = document.createElement('div');
     grid.className = 'product__grid grid__padding';

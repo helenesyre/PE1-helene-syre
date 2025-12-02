@@ -1,6 +1,11 @@
 import { quantity } from "../../utils/quantity.js";
 import { useCart } from "../../utils/useCart.js";
-// Card component for displaying a product in the cart
+
+/**
+ * Generates a product card for the cart page.
+ * @param {Object} product - The product data.
+ * @returns {HTMLElement} The product card element.
+ */
 export function productCartCard(product) {
     let priceHTML = '';
     const totalPrice = (product.price * product.quantity).toFixed(2);

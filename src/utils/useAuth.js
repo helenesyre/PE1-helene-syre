@@ -1,6 +1,20 @@
 import { showToast } from "./toast";
 import useFetch from "./useFetch";
 
+/**
+ * Custom hook for user authentication.
+ * Provides methods for login, registration, logout, and checking authentication status.
+ *
+ * Methods:
+ * - login(email, password): Logs in the user and stores auth data in localStorage.
+ * - register(username, email, password, isVenueManager): Registers a new user.
+ * - logout(): Logs out the user and clears auth data.
+ * - isLoggedIn(): Returns true if a user is logged in.
+ * - isAdmin(): Returns true if the user is a venue manager.
+ * - getToken(): Returns the current access token.
+ *
+ * @returns {Object} Authentication methods.
+ */
 export function useAuth() {
     async function login(email, password) {
         try {

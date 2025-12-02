@@ -10,10 +10,14 @@ import { useCart } from '../src/utils/useCart.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
+
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
-
+/**
+ * Fetches and displays product details on the product page.
+ * @returns {Promise<void>}
+ */
 export async function displayProduct() {
     // Get product ID from URL query parameter
     const urlParams = new URLSearchParams(window.location.search);
@@ -128,6 +132,10 @@ export async function displayProduct() {
  * link: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 */
 
+/** 
+ * Copies the current page URL to the clipboard and shows a toast notification.
+ * @returns {Promise<void>}
+ */
 async function copyCurrentLinkToClipboard() {
   try {
     // Get the current URL with its query parameters
@@ -145,7 +153,10 @@ async function copyCurrentLinkToClipboard() {
 // Call the function to display the product
 displayProduct();
 
-// Similar grid initialization
+/**
+ * Initializes the similar product grid and inserts it into the DOM.
+ * @returns {Promise<void>}
+ */
 async function initSimilarGrid() {
     const similarSection = await similarGrid();
     document.querySelector('#similarGrid').innerHTML = similarSection.outerHTML;

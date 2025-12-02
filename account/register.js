@@ -33,6 +33,10 @@ confirmPasswordToggle('#confirm-password', '#view-icon-confirm');
  * link: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 */
 
+/** 
+ * Handles the signup form submission, including validation and API interaction.
+ * @returns {void}
+ */
 const form = document.querySelector('#signup__form');
 form.addEventListener('submit', async function(event) {
     event.preventDefault();

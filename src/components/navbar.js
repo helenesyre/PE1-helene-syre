@@ -1,5 +1,11 @@
 import { cartMenu } from './cartMenu.js';
 
+/**
+ * Renders the navbar component inside the provided element.
+ * @param {HTMLElement} element - The container element to render the navbar into.
+ * @param {string} [variant='dark'] - The variant of the navbar, either 'dark' or 'light'.
+ * @return {void}
+ */
 export function navbar(element, variant = 'dark') {
   const lightClass = variant === 'light' ? 'nav--light' : '';
   element.innerHTML = `

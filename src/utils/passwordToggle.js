@@ -46,6 +46,7 @@ const viewOnSVG = `
  * Initialize password visibility toggle for a password input field
  * @param {string} passwordInputSelector - CSS selector for the password input element
  * @param {string} viewIconSelector - CSS selector for the view icon container element
+ * @returns {void}
  */
 export function passwordToggle(passwordInputSelector, viewIconSelector) {
     const passwordInput = document.querySelector(passwordInputSelector);
@@ -66,6 +67,10 @@ export function passwordToggle(passwordInputSelector, viewIconSelector) {
     });
 }
 
+/**
+ * Initialize password visibility toggle for the create password field.
+ * @returns {void}
+*/
 export function createPasswordToggle() {
     const createPasswordInput = document.querySelector('#create-password');
     const viewIconCreateContainer = document.querySelector('#view-icon-create');
@@ -83,6 +88,10 @@ export function createPasswordToggle() {
     });
 }
 
+/** 
+ * Initialize password visibility toggle for the confirm password field.
+ * @returns {void}
+*/
 export function confirmPasswordToggle() {
     const confirmPasswordInput = document.querySelector('#confirm-password');
     const viewIconConfirmContainer = document.querySelector('#view-icon-confirm');

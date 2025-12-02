@@ -6,6 +6,18 @@
  * link: https://stackoverflow.com/questions/70943684/compare-old-and-new-price-for-each-element-if-any-is-equal-or-not
 */
 
+/**
+ * Creates a product card element.
+ * @param {Object} product - The product data.
+ * @param {string} product.id - The product ID.
+ * @param {string} product.title - The product title.
+ * @param {Object} product.image - The product image object.
+ * @param {string} product.image.url - The URL of the product image.
+ * @param {number} product.price - The regular price of the product.
+ * @param {number} product.discountedPrice - The discounted price of the product.
+ * @param {Array<string>} product.tags - An array of tags associated with the product.
+ * @returns {HTMLElement} The product card element.
+ */
 export function prouductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card';

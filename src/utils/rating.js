@@ -7,6 +7,11 @@
  * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
 */
 
+/**
+ * Renders star rating HTML based on the given rating.
+ * @param {number} rating - The rating value (0 to 5).
+ * @returns {string} HTML string representing the star rating.
+ */
 export function renderStarRating(rating) {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5 ? 1 : 0;

@@ -1,3 +1,7 @@
+/**
+ * Footer component rendering function.
+ * @returns {string} HTML string for the footer section.
+ */
 export default function footer() {
     return `
     <section class="container">

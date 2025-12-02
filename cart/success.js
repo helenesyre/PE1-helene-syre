@@ -4,6 +4,7 @@ import { useCart } from '../src/utils/useCart.js';
 
 // Initialize light navbar
 navbar(document.querySelector('#navbar-container'), 'light')
+
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
@@ -15,13 +16,21 @@ document.querySelector('#footer').innerHTML = footer();
  * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 */
 
-// Generate and display a random order number
+/** 
+ * Generates a random order number in the format ORD-XXXXX.
+ * @returns {number} A random 5-digit order number.
+ */
 function generateRandomOrderNumber() {
 	// Generates a random 5-digit number between 10000 and 99999
 	return Math.floor(10000 + Math.random() * 90000);
 }
 
+/** 
+ * Sets up the success page by displaying order details and clearing the cart.
+ * @returns {void}
+ */
 function successPageSetup() {
+    // Display order number in the success page
 	const orderNumber = document.getElementById('order-number');
 	if (orderNumber) {
 		const randomOrderNum = generateRandomOrderNumber();
@@ -58,17 +67,30 @@ document.addEventListener('cartModified', () => {
 });
 
 
-// Logic from JS course material
+// Logic from JS1 course material
+/** 
+ * Formats a date to "DD MMM YYYY".
+ * @param {Date} date - The date to format.
+ * @returns {string} The formatted date string.
+ */
 function formatDate(date) {
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
     return date.toLocaleDateString('en-US', options);
 }
 
+/** 
+ * Gets today's date formatted as "DD MMM YYYY".
+ * @returns {string} The formatted date string for today.
+ */
 function todaysDate() {
     const today = new Date();
     return formatDate(today);
 }
 
+/** 
+ * Calculates the estimated delivery date (7 days from today) and formats it.
+ * @returns {string} The formatted estimated delivery date string.
+ */
 function estimatedDeliveryDate() {
     const today = new Date();
     const deliveryDate = new Date(today);

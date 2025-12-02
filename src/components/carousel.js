@@ -1,6 +1,11 @@
 import { getProductsByIds } from "../utils/fetch";
 import { shapeOne, shapeThree, shapeTwo } from "../utils/shapes";
 
+/**
+ * Determines the SVG shape and its position for a carousel card based on the index.
+ * @param {number} index - The index of the carousel card.
+ * @returns {string} HTML string containing the SVG shape with appropriate positioning class.
+ */
 function getCarouselCardShape(index) {
     const shape = index % 3 === 0 ? shapeOne() : index % 3 === 1 ? shapeTwo() : shapeThree();
     const position = index % 3 === 0 ? 'br' : index % 3 === 1 ? 'tr' : 'bl';
@@ -11,6 +16,12 @@ function getCarouselCardShape(index) {
     `;
 }
 
+/**
+ * Generates the HTML for a single carousel card.
+ * @param {Object} product - The product data for the carousel card.
+ * @param {number} index - The index of the carousel card.
+ * @returns {string} HTML string for the carousel card.
+ */
 function carouselCard(product, index) {
     const shape = getCarouselCardShape(index);
     return `
@@ -37,6 +48,10 @@ function carouselCard(product, index) {
  * link: https://www.youtube.com/watch?v=57pXPbTRhCc
 */
 
+/**
+ * Generates the hero carousel HTML with product slides.
+ * @returns {Promise<string>} HTML string for the hero carousel.
+ */
 export async function heroCarousel() {
     const products = await getProductsByIds(['f6712e3b-8050-4841-bd64-f332a48f7566','83111322-05a9-4a93-bc81-7d6b58f1a707', 'f99cafd2-bd40-4694-8b33-a6052f36b435']);
   return `
@@ -60,6 +75,10 @@ export async function heroCarousel() {
   `;
 }
 
+/** 
+ * Handles the carousel functionality including slide transitions.
+ * @returns {void}
+ */
 export function handleCarousel() {
   // Access carousel slides
   let carouselSlides = document.querySelectorAll('.carousel__slide');

@@ -1,4 +1,8 @@
-// Returns the HTML markup for the cart quantity controls
+/**
+ * Generate HTML for cart quantity controls.
+ * @param {number} quantity - The current quantity of the item.
+ * @returns {string} HTML string for the quantity controls.
+ */
 export function quantity(quantity = 1) {
   return `
     <div class="cart__item--quantity">
@@ -17,7 +21,13 @@ export function quantity(quantity = 1) {
   `;
 }
 
-// Attach event listeners for cart quantity controls
+/**
+ * Attach event listeners to quantity control buttons.
+ * @param {HTMLElement} element - The parent element containing cart items.
+ * @param {Object} cart - The cart object with methods to update quantities.
+ * @param {Function} rerenderCartMenu - Function to rerender the cart menu UI.
+ * @returns {void}
+ */
 export function quantityListeners(element, cart, rerenderCartMenu) {
   const cartItemDivs = element.querySelectorAll('.cart__item, .cart-page__item');
   cartItemDivs.forEach(cartItemDiv => {

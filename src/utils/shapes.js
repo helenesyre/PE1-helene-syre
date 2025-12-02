@@ -1,3 +1,9 @@
+/**
+ * Utility functions for reusable SVG shape components.
+ *
+ * This file exports functions that return SVG markup for decorative shapes used throughout the UI.
+ * Each function returns a string containing the SVG element for a specific shape.
+ */
 export function shapeOne() {
     return `
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 354 304">

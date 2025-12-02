@@ -1,7 +1,29 @@
 import { showSimpleToast } from "./toast";
 
+/**
+ * Custom event to notify when the cart has been modified.
+ * @type {Event}
+ */
 export const cartModified = new Event('cartModified');
 
+/**
+ * Custom hook for managing the shopping cart.
+ * Provides methods to add, update, remove items, and retrieve cart information.
+ *
+ * Methods:
+ * - getCartItems(): Returns an array of items in the cart.
+ * - addToCart(product, quantity): Adds a product to the cart with the specified quantity.
+ * - updateItemQuantity(productId, quantity): Updates the quantity of a specific product in the cart.
+ * - removeFromCart(productId): Removes a product from the cart.
+ * - clearCart(): Clears all items from the cart.
+ * - getCartCount(): Returns the total number of items in the cart.
+ * - getCartTotal(): Returns the total price of items in the cart.
+ * - getCartTotalDiscount(): Returns the total discount amount for items in the cart.
+ * - isEmpty(): Returns true if the cart is empty, false otherwise.
+ * - getCartSummary(): Returns an object with subtotal, taxes, discount, delivery, and total amounts.
+ *
+ * @returns {Object} Cart management methods.
+ */
 export function useCart() {
     const CART_KEY = 'cart';
 

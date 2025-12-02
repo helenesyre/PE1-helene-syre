@@ -1,8 +1,12 @@
-// Import the productMenuCartCard component
 import { useCart } from '../utils/useCart.js';
 import { productMenuCartCard } from './cards/productMenuCartCard.js';
 import { quantityListeners } from '../utils/quantity.js';
 
+/**
+ * Renders the cart menu component.
+ * @param {HTMLElement} element - The DOM element to render the cart menu into.
+ * @returns {void}
+ */
 export function cartMenu(element) {
   const cart = useCart();
 

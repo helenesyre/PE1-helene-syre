@@ -1,3 +1,7 @@
+/**
+ * Call-to-Action (CTA) component rendering function.
+ * @returns {string} HTML string for the CTA section.
+ */
 export default function cta() {
     return `
     <div class="container">
