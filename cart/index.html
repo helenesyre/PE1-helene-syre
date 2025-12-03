@@ -32,13 +32,17 @@
       <h1 class="cart-page__title">Your Cart</h1>
       <p class="cart-page__subtitle"><span id="cart-count">0</span> Products in Your Cart</p>
       <section class="cart-page__layout">
-        <section class="cart-page__content"></section>
+        <h2 class="sr-only">Products in Your Cart</h2>
+        <section class="cart-page__content">
+          <h3 class="sr-only">Cart Product List</h3>
+        </section>
 
         <section class="cart-page__summary box">
+          <h2 class="sr-only">Order Summary</h2>
           <form id="promocode-form" class="promocode__form">
               <div class="promocode__input-group">
                   <label for="promocode">Promocode</label>
-                  <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode"/>
+                  <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode">
               </div>
               <button type="submit" class="button button--large button--primary button--full-width">Apply</button>
           </form>
