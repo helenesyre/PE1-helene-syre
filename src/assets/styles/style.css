@@ -66,13 +66,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 36px;
+  max-width: 1728px;
+  justify-self: center;
+  width: 100%;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 /*========== Loader ==========*/
@@ -338,7 +341,7 @@ footer .copyright {
 
 .image__grid,
 .product__grid-section {
-  margin: var(--spacing-64) 0;
+  margin: var(--spacing-64) auto;
 }
 
 .image__grid-container {
@@ -444,7 +447,7 @@ footer .copyright {
 
   .image__grid,
   .product__grid-section {
-    margin: var(--spacing-80) 0;
+    margin: var(--spacing-80) auto;
   }
 
   .image__grid-container {
@@ -520,7 +523,7 @@ footer .copyright {
   
   .image__grid,
   .product__grid-section {
-    margin: var(--spacing-96) 0;
+    margin: var(--spacing-96) auto;
   }
 
   .image__grid-container {

@@ -25,7 +25,7 @@ import { prouductCard } from "../cards/productCard.js";
  */
 export async function similarGrid() {
     const grid = document.createElement('div');
-    grid.className = 'product__grid grid__padding';
+    grid.className = 'product__grid grid__padding, container';
     const products = await getProductsByTags(['headphones', 'storage', 'electronics', 'audio', 'accessories', 'watches', 'watch', 'wearables', 'peripherals', 'gaming', 'computers']);
 
     products.slice(0, 4).forEach(product => {
