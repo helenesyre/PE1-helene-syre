@@ -59,6 +59,7 @@
     background: transparent;
     z-index: 10;
     width: 100%;
+    font-size: 12px;
 }
 
 .cta__input::placeholder {
@@ -107,6 +108,10 @@
     .cta__form {
         padding: 10px 10px 10px 32px;
         gap: 50px;
+    }
+
+    .cta__input {
+        font-size: 16px;
     }
 
     .cta__shape-top-left {
