@@ -86,7 +86,7 @@ export function navbar(element, variant = 'dark') {
             </div>
           </li>
           <li>
-            <a href="${import.meta.env.BASE_URL}/account/login" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/account/login` || currentPath === `${import.meta.env.BASE_URL}/account/register` ? 'nav__link--active' : ''}">
+            <a href="${import.meta.env.BASE_URL}/account/login" class="nav__link ${currentPath === `${import.meta.env.BASE_URL}/account/login` || currentPath === `${import.meta.env.BASE_URL}/account/register` || currentPath === `${import.meta.env.BASE_URL}/account/profile` ? 'nav__link--active' : ''}" id="user-account-link">
               <span class="sr-only">User Account</span>
               <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24">
                 <defs>
@@ -142,7 +142,7 @@ export function navbar(element, variant = 'dark') {
     });
   });
 
-  /* Render cart menu component */
+  // Render cart menu component
   const cartMenuDiv = document.getElementById('cart-menu');
   if (cartMenuDiv) {
     cartMenu(cartMenuDiv);
@@ -153,4 +153,17 @@ export function navbar(element, variant = 'dark') {
       cartMenu(cartMenuDiv);
     }
   });
+  
+  const userAccountLink = document.getElementById('user-account-link');
+  if (userAccountLink) {
+    const token = localStorage.getItem('accessToken');
+    if (token) {
+      userAccountLink.href = `${import.meta.env.BASE_URL}/account/profile`;
+      userAccountLink.classList.toggle('nav__link--active', currentPath === `${import.meta.env.BASE_URL}/account/profile`);
+    } else {
+      userAccountLink.href = `${import.meta.env.BASE_URL}/account/login`;
+      userAccountLink.classList.toggle('nav__link--active', currentPath === `${import.meta.env.BASE_URL}/account/login` || currentPath === `${import.meta.env.BASE_URL}/account/register`);
+    }
+  }
+
 }

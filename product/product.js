@@ -4,7 +4,7 @@ import { getProductById } from "../src/utils/fetch";
 import { productReviews } from '../src/components/productReviews.js';
 import { renderStarRating } from '../src/utils/rating.js';
 import { similarGrid } from '../src/components/grids/similarGrid.js';
-import { showSimpleToast, showToast } from '../src/utils/toast.js';
+import { showSimpleToast } from '../src/utils/toast.js';
 import { useAuth } from '../src/utils/useAuth.js';
 import { useCart } from '../src/utils/useCart.js';
 

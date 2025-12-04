@@ -1,4 +1,5 @@
 import { showToast } from "./toast";
+import { useCart } from "./useCart";
 import useFetch from "./useFetch";
 
 /**
@@ -90,6 +91,8 @@ export function useAuth() {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('profileName');
         localStorage.removeItem('venueManager');
+        const cart = useCart();
+        cart.clearCart();
         window.location.reload();
     }
 
