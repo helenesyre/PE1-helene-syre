@@ -71,6 +71,9 @@ html, body {
     background-color: var(--color-white-500);
     outline: none;
     width: 100%;
+}
+
+.form__group input[type="password"] {
     padding-right: 40px;
 }
 
