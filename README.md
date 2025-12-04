@@ -1,28 +1,76 @@
-# Project Title
+# PE1 - Project Exam 1
 
-A short sentence describing what the project is about.
+Responsive front-end web application for an e-commerce platform. Users can view products (with descriptions, prices, ratings, and reviews), register, log in, purchase products (when logged in), and log out after checkout. Integrates with an existing e-commerce API.
 
 ---
 
 ## 📸 Screenshot
 
-Add a screenshot of your project here (you can drag an image into GitHub or link it).
+Below you can see screenshots of the main pages and features for the e-commerce website, shown in both desktop and mobile views. (Sizes on mobile images are for readability).
 
-![Project Screenshot](./images/screenshot.png)
+### Homepage
+
+**Desktop:**
+![Homepage Desktop](src/assets/screenshots/desktop/homepage.png)
+
+**Mobile:**
+![Homepage Mobile](src/assets/screenshots/mobile/homepage.png)
+
+### Product List
+
+**Desktop:**
+![Product List Desktop](src/assets/screenshots/desktop/product-list.png)
+
+### Product Page
+
+**Desktop:**
+![Product Page Desktop](src/assets/screenshots/desktop/product-page.png)
+
+**Mobile:**
+![Product Page Mobile](src/assets/screenshots/mobile/product-page.png)
+
+### Cart Page
+
+**Desktop:**
+![Cart Page Desktop](src/assets/screenshots/desktop/cart.png)
+
+**Mobile:**
+![Cart Page Mobile](src/assets/screenshots/mobile/cart.png)
+
+### Checkout Page
+
+**Desktop:**
+![Checkout Page Desktop](src/assets/screenshots/desktop/checkout.png)
+
+### Order Success Page
+
+**Desktop:**
+![Order Success Desktop](src/assets/screenshots/desktop/order-success.png)
+
+### Login Page
+
+**Desktop:**
+![Login Desktop](src/assets/screenshots/desktop/login.png)
+
+**Mobile:**
+![Login Mobile](src/assets/screenshots/mobile/login.png)
+
+### Profile Page
+
+**Desktop:**
+![Profile Desktop](src/assets/screenshots/desktop/profile.png)
 
 ---
 
 ## 🛠️ Built With
 
-List the main tools and technologies used in this project:
+Main tools and technologies used in this project:
 
 ![Static Badge](https://img.shields.io/badge/HTML-orange)
 
 ![Static Badge](https://img.shields.io/badge/CSS-purple)
 
 ![Static Badge](https://img.shields.io/badge/JavaScript-lightblue)
-
-![Static Badge](https://img.shields.io/badge/HTML-lightgreen)
 
 ---
 
@@ -33,18 +81,23 @@ Follow these steps to get a copy of the project running locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/helenesyre/PE1-helene-syre.git
    ```
 
 2. Open the repository:
 
    ```bash
-     cd your-repo-name
+     cd PE1-helene-syre
    ```
 
-3. Run Live Server
+3. Run Local Server
 
-   Insert instructions
+   Install dependencies and start the development server:
+
+   ```bash
+   npm install
+   npm run dev
+   ```
 
 ## License
 
@@ -52,6 +105,6 @@ MIT License
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Helene Syre - [@syre_design](https://www.instagram.com/syre_design/) - syrehelene@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://helenesyre.github.io/PE1-helene-syre/](https://helenesyre.github.io/PE1-helene-syre/)
