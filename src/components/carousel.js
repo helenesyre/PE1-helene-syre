@@ -81,10 +81,10 @@ export async function heroCarousel() {
  */
 export function handleCarousel() {
   // Access carousel slides
-  let carouselSlides = document.querySelectorAll('.carousel__slide');
+  const carouselSlides = document.querySelectorAll('.carousel__slide');
   // Access next and previous buttons
-  let next = document.querySelector('.carousel__slide--next');
-  let prev = document.querySelector('.carousel__slide--prev');
+  const next = document.querySelector('.carousel__slide--next');
+  const prev = document.querySelector('.carousel__slide--prev');
 
   // Find the active slide index
   let counter = 0;
