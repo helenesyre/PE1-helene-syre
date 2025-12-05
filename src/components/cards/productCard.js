@@ -28,7 +28,8 @@ export function prouductCard(product) {
       <div class="product-card__price">
         <p class="product-card__price--discount">$${product.discountedPrice}</p>
         <p class="product-card__price--old">$${product.price}</p>
-      </div>`;
+      </div>
+    `;
   }
 
   card.innerHTML = `
@@ -48,6 +49,6 @@ export function prouductCard(product) {
     <h3 class="product-card__title">${product.title}</h3>
     ${priceHTML}
     <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}" class="button button--small button--responsive-medium button--primary button--full-width">Buy Now</a>
-    `;
+  `;
   return card;
 }

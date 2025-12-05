@@ -110,7 +110,6 @@ export function useAuth() {
     return localStorage.getItem('accessToken');
   }
 
-
   return {
     login,
     register,

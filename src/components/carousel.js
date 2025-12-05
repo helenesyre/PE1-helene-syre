@@ -11,9 +11,9 @@ function getCarouselCardShape(index) {
   const position = index % 3 === 0 ? 'br' : index % 3 === 1 ? 'tr' : 'bl';
   return `
     <div class="carousel__shape-svg carousel__shape-svg--${position}">
-        ${shape}
+      ${shape}
     </div>
-    `;
+  `;
 }
 
 /**
@@ -26,20 +26,21 @@ function carouselCard(product, index) {
   const shape = getCarouselCardShape(index);
   return `
     <div class="carousel__slide" data-index="${index}">
-            <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}">
-                <img src="${product.image.url}" alt="${product.title}">
-            </a>
-            <div class="carousel__info">
-                <h1>${product.title}</h1>
-                <p>${product.description}</p>
-                <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}" class="button button--small button--responsive button--primary">Shop Now</a>
-            </div>
-            <div class="carousel__shape">
-                ${shape}
-            </div>
-        </div>
-    `;
+      <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}">
+        <img src="${product.image.url}" alt="${product.title}">
+      </a>
+      <div class="carousel__info">
+        <h1>${product.title}</h1>
+        <p>${product.description}</p>
+        <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}" class="button button--small button--responsive button--primary">Shop Now</a>
+      </div>
+      <div class="carousel__shape">
+        ${shape}
+      </div>
+    </div>
+  `;
 }
+
 /**
  * Tutorial from:
  * Responsive Image Slider With Auto-sliding And Full Controls | HTML,CSS & Pure JavaScript
