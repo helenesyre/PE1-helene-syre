@@ -1,4 +1,4 @@
-import { cartMenu } from './cartMenu.js';
+import { cartMenu } from "./cartMenu.js";
 
 /**
  * Renders the navbar component inside the provided element.
@@ -6,8 +6,8 @@ import { cartMenu } from './cartMenu.js';
  * @param {string} [variant='dark'] - The variant of the navbar, either 'dark' or 'light'.
  * @return {void}
  */
-export function navbar(element, variant = 'dark') {
-  const lightClass = variant === 'light' ? 'nav--light' : '';
+export function navbar(element, variant = "dark") {
+  const lightClass = variant === "light" ? "nav--light" : "";
   const currentPath = document.location.pathname;
   element.innerHTML = `
     <nav class="nav container ${lightClass}">
@@ -101,69 +101,75 @@ export function navbar(element, variant = 'dark') {
             </a>
           </li>
         </ul>
-      </nav>`
-  
+      </nav>`;
+
   /* Mobile Menu Toggle */
-  const navMenu = document.getElementById('nav-menu');
-  const navToggle = document.getElementById('nav-toggle');
-  const navClose = document.getElementById('nav-close');
-  const navOverlay = document.getElementById('nav-overlay');
+  const navMenu = document.getElementById("nav-menu");
+  const navToggle = document.getElementById("nav-toggle");
+  const navClose = document.getElementById("nav-close");
+  const navOverlay = document.getElementById("nav-overlay");
 
   // Show menu
   if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.add('show-menu');
-      navOverlay.classList.add('show-overlay');
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.add("show-menu");
+      navOverlay.classList.add("show-overlay");
     });
   }
 
   // Hide menu
   if (navClose) {
-    navClose.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
-      navOverlay.classList.remove('show-overlay');
+    navClose.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+      navOverlay.classList.remove("show-overlay");
     });
   }
 
   // Close menu when clicking on overlay
   if (navOverlay) {
-    navOverlay.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
-      navOverlay.classList.remove('show-overlay');
+    navOverlay.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+      navOverlay.classList.remove("show-overlay");
     });
   }
 
   // Close menu when clicking on nav links
-  const navLinks = document.querySelectorAll('.nav__link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
-      navOverlay.classList.remove('show-overlay');
+  const navLinks = document.querySelectorAll(".nav__link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show-menu");
+      navOverlay.classList.remove("show-overlay");
     });
   });
 
   // Render cart menu component
-  const cartMenuDiv = document.getElementById('cart-menu');
+  const cartMenuDiv = document.getElementById("cart-menu");
   if (cartMenuDiv) {
     cartMenu(cartMenuDiv);
   }
 
-  document.addEventListener('cartModified', () => {
+  document.addEventListener("cartModified", () => {
     if (cartMenuDiv) {
       cartMenu(cartMenuDiv);
     }
   });
-  
-  const userAccountLink = document.getElementById('user-account-link');
+
+  const userAccountLink = document.getElementById("user-account-link");
   if (userAccountLink) {
-    const token = localStorage.getItem('accessToken');
+    const token = localStorage.getItem("accessToken");
     if (token) {
       userAccountLink.href = `${import.meta.env.BASE_URL}/account/profile`;
-      userAccountLink.classList.toggle('nav__link--active', currentPath === `${import.meta.env.BASE_URL}/account/profile`);
+      userAccountLink.classList.toggle(
+        "nav__link--active",
+        currentPath === `${import.meta.env.BASE_URL}/account/profile`
+      );
     } else {
       userAccountLink.href = `${import.meta.env.BASE_URL}/account/login`;
-      userAccountLink.classList.toggle('nav__link--active', currentPath === `${import.meta.env.BASE_URL}/account/login` || currentPath === `${import.meta.env.BASE_URL}/account/register`);
+      userAccountLink.classList.toggle(
+        "nav__link--active",
+        currentPath === `${import.meta.env.BASE_URL}/account/login` ||
+        currentPath === `${import.meta.env.BASE_URL}/account/register`
+      );
     }
   }
-
 }

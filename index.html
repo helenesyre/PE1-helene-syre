@@ -1,60 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Koro's collection of sleek, reliable tech essentials—headphones, smart watches, audio gear, storage solutions, and more. Modern design, effortless functionality.">
-    <title>KORO | Modern tech essentials for everyday living</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="src/assets/styles/style.css">
-  </head>
-  <body class="page-wrapper">
-    <header class="site-header" id="header">
-      <div id="navbar-container" class="nav-absolute"></div>
-      <div class="hero-carousel">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discover Koro's collection of sleek, reliable tech essentials—headphones, smart watches, audio gear, storage solutions, and more. Modern design, effortless functionality.">
+  <title>KORO | Modern tech essentials for everyday living</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="src/assets/styles/style.css">
+</head>
+
+<body class="page-wrapper">
+  <header class="site-header" id="header">
+    <div id="navbar-container" class="nav-absolute"></div>
+    <div class="hero-carousel">
+      <span class="product__loader"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="container image__grid">
+      <h2>Top products</h2>
+      <div class="image__grid-container">
+        <div class="div1">
+          <div class="image__grid-text">
+            <h3>Best in test</h3>
+            <p>Our most popular gaming accessories</p>
+            <a href="coming-soon/" class="button button--small button--responsive-medium button--primary">Get yours
+              now!</a>
+          </div>
+          <img src="src/assets/images/usb-plug.jpg" alt="White USB charger cable" class="image__grid-image">
+        </div>
+        <div class="div2"><img src="src/assets/images/watch-black.jpg" alt="Black Watch" class="image__grid-image">
+        </div>
+        <div class="div3"><img src="src/assets/images/wireless-earbuds.jpg" alt="Wireless Earbuds"
+            class="image__grid-image"></div>
+        <div class="div4"><img src="src/assets/images/gaming-mouse.jpg" alt="Gaming Mouse" class="image__grid-image">
+        </div>
+        <div class="div5"><img src="src/assets/images/headphones.jpg" alt="Black Headphones" class="image__grid-image">
+        </div>
+      </div>
+    </section>
+    <section class="container product__grid-section">
+      <h2>Our products</h2>
+      <div id="featuredGrid">
         <span class="product__loader"></span>
       </div>
-    </header>
+    </section>
+    <section class="cta" id="cta">
+      <h2 class="sr-only">Call to Action</h2>
+    </section>
+  </main>
 
-    <main>
-      <section class="container image__grid">
-        <h2>Top products</h2>
-        <div class="image__grid-container">
-          <div class="div1">
-            <div class="image__grid-text">
-              <h3>Best in test</h3>
-              <p>Our most popular gaming accessories</p>
-              <a href="coming-soon/" class="button button--small button--responsive-medium button--primary">Get yours now!</a>
-            </div>
-            <img src="src/assets/images/usb-plug.jpg" alt="White USB charger cable" class="image__grid-image">
-          </div>
-          <div class="div2"><img src="src/assets/images/watch-black.jpg" alt="Black Watch" class="image__grid-image"></div>
-          <div class="div3"><img src="src/assets/images/wireless-earbuds.jpg" alt="Wireless Earbuds" class="image__grid-image"></div>
-          <div class="div4"><img src="src/assets/images/gaming-mouse.jpg" alt="Gaming Mouse" class="image__grid-image"></div>
-          <div class="div5"><img src="src/assets/images/headphones.jpg" alt="Black Headphones" class="image__grid-image"></div>
-        </div>        
-      </section>
-      <section class="container product__grid-section">
-        <h2>Our products</h2>
-        <div id="featuredGrid">
-          <span class="product__loader"></span>
-        </div>
-      </section>
-      <section class="cta" id="cta">
-        <h2 class="sr-only">Call to Action</h2>
-      </section>
-    </main>
+  <footer id="footer"></footer>
 
-    <footer id="footer"></footer>
+  <script type="module" src="src/main.js"></script>
+</body>
 
-    <script type="module" src="src/main.js"></script>
-  </body>
 </html>

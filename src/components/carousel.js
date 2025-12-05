@@ -7,9 +7,9 @@ import { shapeOne, shapeThree, shapeTwo } from "../utils/shapes";
  * @returns {string} HTML string containing the SVG shape with appropriate positioning class.
  */
 function getCarouselCardShape(index) {
-    const shape = index % 3 === 0 ? shapeOne() : index % 3 === 1 ? shapeTwo() : shapeThree();
-    const position = index % 3 === 0 ? 'br' : index % 3 === 1 ? 'tr' : 'bl';
-    return `
+  const shape = index % 3 === 0 ? shapeOne() : index % 3 === 1 ? shapeTwo() : shapeThree();
+  const position = index % 3 === 0 ? 'br' : index % 3 === 1 ? 'tr' : 'bl';
+  return `
     <div class="carousel__shape-svg carousel__shape-svg--${position}">
         ${shape}
     </div>
@@ -23,8 +23,8 @@ function getCarouselCardShape(index) {
  * @returns {string} HTML string for the carousel card.
  */
 function carouselCard(product, index) {
-    const shape = getCarouselCardShape(index);
-    return `
+  const shape = getCarouselCardShape(index);
+  return `
     <div class="carousel__slide" data-index="${index}">
             <a href="${import.meta.env.BASE_URL}/product/?id=${product.id}">
                 <img src="${product.image.url}" alt="${product.title}">
@@ -40,7 +40,7 @@ function carouselCard(product, index) {
         </div>
     `;
 }
-/** 
+/**
  * Tutorial from:
  * Responsive Image Slider With Auto-sliding And Full Controls | HTML,CSS & Pure JavaScript
  * @publisher: Five-Star Tutorials
@@ -53,7 +53,7 @@ function carouselCard(product, index) {
  * @returns {Promise<string>} HTML string for the hero carousel.
  */
 export async function heroCarousel() {
-    const products = await getProductsByIds(['f6712e3b-8050-4841-bd64-f332a48f7566','83111322-05a9-4a93-bc81-7d6b58f1a707', 'f99cafd2-bd40-4694-8b33-a6052f36b435']);
+  const products = await getProductsByIds(['f6712e3b-8050-4841-bd64-f332a48f7566', '83111322-05a9-4a93-bc81-7d6b58f1a707', 'f99cafd2-bd40-4694-8b33-a6052f36b435']);
   return `
     <div class="hero-carousel">
       <div class="carousel__slides">
@@ -75,7 +75,7 @@ export async function heroCarousel() {
   `;
 }
 
-/** 
+/**
  * Handles the carousel functionality including slide transitions.
  * @returns {void}
  */

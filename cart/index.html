@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Review your selected Koro tech essentials in your cart. Modern, innovative, and ready for a smooth checkout experience tailored to everyday needs.">
-    <title>KORO | Your cart</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
-    <link rel="stylesheet" href="./cart.css">
-  </head>
-  <body class="page-wrapper">
-    <header class="site-header" id="header">
-      <div id="navbar-container" class="padding-bottom"></div>
-    </header>
-    <main class="container">
-      <a href="../index.html" class="page__back-link">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-          </svg>
-          Back to Home
-      </a>
 
-      <h1 class="cart-page__title">Your Cart</h1>
-      <p class="cart-page__subtitle"><span id="cart-count">0</span> Products in Your Cart</p>
-      <section class="cart-page__layout">
-        <h2 class="sr-only">Products in Your Cart</h2>
-        <section class="cart-page__content">
-          <h3 class="sr-only">Cart Product List</h3>
-        </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Review your selected Koro tech essentials in your cart. Modern, innovative, and ready for a smooth checkout experience tailored to everyday needs.">
+  <title>KORO | Your cart</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../src/assets/styles/style.css">
+  <link rel="stylesheet" href="./cart.css">
+</head>
 
-        <section class="cart-page__summary box">
-          <h2 class="sr-only">Order Summary</h2>
-          <form id="promocode-form" class="promocode__form">
-              <div class="promocode__input-group">
-                  <label for="promocode">Promocode</label>
-                  <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode">
-              </div>
-              <button type="submit" class="button button--large button--primary button--full-width">Apply</button>
-          </form>
+<body class="page-wrapper">
+  <header class="site-header" id="header">
+    <div id="navbar-container" class="padding-bottom"></div>
+  </header>
+  <main class="container">
+    <a href="../index.html" class="page__back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+      </svg>
+      Back to Home
+    </a>
 
-          <div class="summary__items"></div>
-
-          <a href="./checkout" class="button button--large button--primary button--full-width">
-              Checkout
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-          </a>
-        </section>
+    <h1 class="cart-page__title">Your Cart</h1>
+    <p class="cart-page__subtitle"><span id="cart-count">0</span> Products in Your Cart</p>
+    <section class="cart-page__layout">
+      <h2 class="sr-only">Products in Your Cart</h2>
+      <section class="cart-page__content">
+        <h3 class="sr-only">Cart Product List</h3>
       </section>
 
-    </main>
-    <footer id="footer"></footer>
-    <script type="module" src="./cart.js"></script>
-  </body>
+      <section class="cart-page__summary box">
+        <h2 class="sr-only">Order Summary</h2>
+        <form id="promocode-form" class="promocode__form">
+          <div class="promocode__input-group">
+            <label for="promocode">Promocode</label>
+            <input type="text" id="promocode" name="promocode" placeholder="Enter your promocode">
+          </div>
+          <button type="submit" class="button button--large button--primary button--full-width">Apply</button>
+        </form>
+
+        <div class="summary__items"></div>
+
+        <a href="./checkout" class="button button--large button--primary button--full-width">
+          Checkout
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </section>
+    </section>
+
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="./cart.js"></script>
+</body>
+
 </html>

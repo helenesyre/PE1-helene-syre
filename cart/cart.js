@@ -10,7 +10,7 @@ navbar(document.querySelector('#navbar-container'), 'light')
 // Initialize footer
 document.querySelector('#footer').innerHTML = footer();
 
-/** 
+/**
  * Code logic adapted from:
  * preventDefault() Event Method
  * @publisher: W3Schools
@@ -22,7 +22,7 @@ document.querySelector('#footer').innerHTML = footer();
 document.addEventListener('DOMContentLoaded', () => {
   const promocodeForm = document.getElementById('promocode-form');
   if (promocodeForm) {
-    promocodeForm.addEventListener('submit', function(event) {
+    promocodeForm.addEventListener('submit', function (event) {
       event.preventDefault();
       // Reset input field
       const input = promocodeForm.querySelector('input[name="promocode"]');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //Render quantity controls in cart
 const quantityContainer = document.getElementById('cart-quantity');
 if (quantityContainer) {
-	quantityContainer.innerHTML = quantity(1);
+  quantityContainer.innerHTML = quantity(1);
 }
 // Render product cart card in .cart-page__content
 const cartContentDiv = document.querySelector('.cart-page__content');
@@ -71,7 +71,7 @@ function renderCart() {
       if (clearButton) {
         cart.clearCart();
         renderCart();
-          updateCartCount();
+        updateCartCount();
         return;
       }
     });
@@ -80,7 +80,7 @@ function renderCart() {
   quantityListeners(cartContentDiv, cart, renderCart);
 }
 
-/** 
+/**
  * Updates the cart item count displayed in the UI.
  * @returns {void}
  */
@@ -90,15 +90,15 @@ function updateCartCount() {
     cartCountSpan.textContent = cart.getCartCount();
   }
 
-    // Disable checkout button if cart is empty
-    const checkoutButton = document.querySelector('.button--primary.button--full-width[href="./checkout"]');
-    if (checkoutButton) {
-      if (cart.getCartCount() === 0) {
-        checkoutButton.classList.add('button--disabled');
-      } else {
-        checkoutButton.classList.remove('button--disabled');
-      }
+  // Disable checkout button if cart is empty
+  const checkoutButton = document.querySelector('.button--primary.button--full-width[href="./checkout"]');
+  if (checkoutButton) {
+    if (cart.getCartCount() === 0) {
+      checkoutButton.classList.add('button--disabled');
+    } else {
+      checkoutButton.classList.remove('button--disabled');
     }
+  }
 }
 
 /**
@@ -116,7 +116,7 @@ document.addEventListener('cartModified', () => {
   renderCartAndCount();
 });
 
-/** 
+/**
  * Renders the cart summary section with updated pricing details.
  * @returns {void}
  */
@@ -148,7 +148,6 @@ function cartSummary() {
       </div>
     `;
   }
-  
 }
 
 cartSummary();

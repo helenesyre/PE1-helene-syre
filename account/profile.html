@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manage your KORO account, update personal information, change password, and customize preferences securely on your user profile page.">
-    <title>KORO | User profile</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
-    <link rel="stylesheet" href="./account.css">
-  </head>
-  <body class="page-wrapper">
-    <header class="site-header" id="header">
-      <div id="navbar-container" class="padding-bottom"></div>
-    </header>
-    <main class="container center-page">
-        <h1 class="profile__title">Profile</h1>
-        <div class="profile__content box">
-            <img src="../src/assets/images/profile-banner.jpg" alt="User profile banner" class="profile__banner">
-            <div class="profile__avatar" id="profile-avatar"></div>
-            <h2 class="profile__name" id="profile-name">Username</h2>
-            <p class="profile__info">This is just a temporary profile page. You can easily logout using the button below.</p>
-            <button id="logout-button" class="button button--large button--secondary">Logout</button>
-        </div>
-    </main>
-    <footer id="footer"></footer>
-    <script type="module" src="./profile.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Manage your KORO account, update personal information, change password, and customize preferences securely on your user profile page.">
+  <title>KORO | User profile</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../src/assets/styles/style.css">
+  <link rel="stylesheet" href="./account.css">
+</head>
+
+<body class="page-wrapper">
+  <header class="site-header" id="header">
+    <div id="navbar-container" class="padding-bottom"></div>
+  </header>
+  <main class="container center-page">
+    <h1 class="profile__title">Profile</h1>
+    <div class="profile__content box">
+      <img src="../src/assets/images/profile-banner.jpg" alt="User profile banner" class="profile__banner">
+      <div class="profile__avatar" id="profile-avatar">US</div>
+      <h2 class="profile__name" id="profile-name">Username</h2>
+      <p class="profile__info">This is just a temporary profile page. You can easily logout using the button below.</p>
+      <button id="logout-button" class="button button--large button--secondary">Logout</button>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="./profile.js"></script>
+</body>
+
 </html>

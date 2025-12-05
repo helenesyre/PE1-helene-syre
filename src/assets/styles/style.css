@@ -17,6 +17,7 @@
 body {
   font-family: var(--font-secondary);
   background: var(--color-bg-light);
+  color: var(--color-black-500);
 }
 
 .page-wrapper {
@@ -70,7 +71,7 @@ h6 { font: var(--font-weight-semibold) var(--font-size-h6)/1.2 var(--font-primar
 
 /*========== Loader ==========*/
 
-/** 
+/**
  * Source and adaptation from:
  * Loaders
  * @publisher: cssloaders
@@ -116,28 +117,28 @@ h6 { font: var(--font-weight-semibold) var(--font-size-h6)/1.2 var(--font-primar
   }
   5%,
   95% {
-    box-shadow: 0 -0.83em 0 -0.4em, 
-    0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+    box-shadow: 0 -0.83em 0 -0.4em,
+    0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
     0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
   10%,
   59% {
-    box-shadow: 0 -0.83em 0 -0.4em, 
-    -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+    box-shadow: 0 -0.83em 0 -0.4em,
+    -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
     -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
   20% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
-     -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+     -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
      -0.749em -0.34em 0 -0.477em;
   }
   38% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
-     -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+     -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
      -0.82em -0.09em 0 -0.477em;
   }
   100% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
     0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
 }
@@ -335,7 +336,7 @@ footer .copyright {
   grid-auto-rows: 150px;
   gap: 10px;
 }
-    
+
 .div1 {
   grid-column: span 3 / span 3;
   grid-row: span 3 / span 3;
@@ -435,7 +436,7 @@ footer .copyright {
     grid-auto-rows: 155px;
     gap: 18px;
   }
-      
+
   .div1 {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;

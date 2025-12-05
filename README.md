@@ -10,55 +10,43 @@ Below you can see screenshots of the main pages and features for the e-commerce 
 
 ### Homepage
 
-**Desktop:**
-![Homepage Desktop](src/assets/screenshots/desktop/homepage.png)
+**Desktop:** ![Homepage Desktop](src/assets/screenshots/desktop/homepage.png)
 
-**Mobile:**
-![Homepage Mobile](src/assets/screenshots/mobile/homepage.png)
+**Mobile:** ![Homepage Mobile](src/assets/screenshots/mobile/homepage.png)
 
 ### Product List
 
-**Desktop:**
-![Product List Desktop](src/assets/screenshots/desktop/product-list.png)
+**Desktop:** ![Product List Desktop](src/assets/screenshots/desktop/product-list.png)
 
 ### Product Page
 
-**Desktop:**
-![Product Page Desktop](src/assets/screenshots/desktop/product-page.png)
+**Desktop:** ![Product Page Desktop](src/assets/screenshots/desktop/product-page.png)
 
-**Mobile:**
-![Product Page Mobile](src/assets/screenshots/mobile/product-page.png)
+**Mobile:** ![Product Page Mobile](src/assets/screenshots/mobile/product-page.png)
 
 ### Cart Page
 
-**Desktop:**
-![Cart Page Desktop](src/assets/screenshots/desktop/cart.png)
+**Desktop:** ![Cart Page Desktop](src/assets/screenshots/desktop/cart.png)
 
-**Mobile:**
-![Cart Page Mobile](src/assets/screenshots/mobile/cart.png)
+**Mobile:** ![Cart Page Mobile](src/assets/screenshots/mobile/cart.png)
 
 ### Checkout Page
 
-**Desktop:**
-![Checkout Page Desktop](src/assets/screenshots/desktop/checkout.png)
+**Desktop:** ![Checkout Page Desktop](src/assets/screenshots/desktop/checkout.png)
 
 ### Order Success Page
 
-**Desktop:**
-![Order Success Desktop](src/assets/screenshots/desktop/order-success.png)
+**Desktop:** ![Order Success Desktop](src/assets/screenshots/desktop/order-success.png)
 
 ### Login Page
 
-**Desktop:**
-![Login Desktop](src/assets/screenshots/desktop/login.png)
+**Desktop:** ![Login Desktop](src/assets/screenshots/desktop/login.png)
 
-**Mobile:**
-![Login Mobile](src/assets/screenshots/mobile/login.png)
+**Mobile:** ![Login Mobile](src/assets/screenshots/mobile/login.png)
 
 ### Profile Page
 
-**Desktop:**
-![Profile Desktop](src/assets/screenshots/desktop/profile.png)
+**Desktop:** ![Profile Desktop](src/assets/screenshots/desktop/profile.png)
 
 ---
 
@@ -98,6 +86,8 @@ Follow these steps to get a copy of the project running locally:
    npm install
    npm run dev
    ```
+
+> Note: Used Prettier code formatter for formating of files. If some of the indentation looks of, its because of the auto-formating done by Prettier.
 
 ## License
 

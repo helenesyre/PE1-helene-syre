@@ -29,7 +29,7 @@ export function cartMenu(element) {
       </div>
     </div>
   `;
-  
+
   const cartContent = element.querySelector('.cart__content');
   cart.getCartItems().map(item => cartContent.appendChild(productMenuCartCard(item)));
 

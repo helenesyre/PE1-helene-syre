@@ -19,47 +19,47 @@ document.querySelector('#footer').innerHTML = footer();
  * @returns {Promise<void>}
  */
 export async function displayProduct() {
-    // Get product ID from URL query parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-    const auth = useAuth();
-    const cart = useCart();
-    const productsContainer = document.getElementById('products-container');
-    const ratingContainer = document.getElementById('product-reviews-section');
+  // Get product ID from URL query parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+  const auth = useAuth();
+  const cart = useCart();
+  const productsContainer = document.getElementById('products-container');
+  const ratingContainer = document.getElementById('product-reviews-section');
 
-    if (!productId) {
-        ratingContainer.style.display = 'none';
-        productsContainer.innerHTML = '<p class="product__error">Product ID is missing in the URL.</p>';
-        return;
+  if (!productId) {
+    ratingContainer.style.display = 'none';
+    productsContainer.innerHTML = '<p class="product__error">Product ID is missing in the URL.</p>';
+    return;
+  }
+
+  try {
+    const product = await getProductById(productId);
+
+    // Dynamically update meta description and title
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute(
+        "content",
+        `Discover the ${product.title} by Koro. Built with modern minimalism and reliable performance to enhance your everyday tech experience with ease.`
+      );
     }
+    document.title = `KORO | ${product.title} - modern, minimal tech`;
 
-    try {
-        const product = await getProductById(productId);
-
-        // Dynamically update meta description and title
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-            metaDesc.setAttribute(
-                "content",
-                `Discover the ${product.title} by Koro. Built with modern minimalism and reliable performance to enhance your everyday tech experience with ease.`
-            );
-        }
-        document.title = `KORO | ${product.title} - modern, minimal tech`;
-
-        let priceHTML = `<p class="product__price--regular">$${product.price}</p>`;
-        if (product.discountedPrice < product.price) {
-            priceHTML = `
+    let priceHTML = `<p class="product__price--regular">$${product.price}</p>`;
+    if (product.discountedPrice < product.price) {
+      priceHTML = `
             <div class="product__price-container">
                 <p class="product__price--discounted">$${product.discountedPrice}</p>
                 <p class="product__price">$${product.price}</p>
             </div>`;
-        }
-        const productStarsHTML = renderStarRating(product.rating);
-        const addToCart = () => {
-            cart.addToCart(product)
-        }
-        
-        productsContainer.innerHTML = `
+    }
+    const productStarsHTML = renderStarRating(product.rating);
+    const addToCart = () => {
+      cart.addToCart(product)
+    }
+
+    productsContainer.innerHTML = `
         <div class="product__page">
             <div class="product__image-wrapper">
                 <a href="../index.html" class="page__back-link">
@@ -110,20 +110,20 @@ export async function displayProduct() {
                 </div>
             </div>
         </div>`;
-        
+
     // Add event listener for copy link button
     document.getElementById('copy-link-button').addEventListener('click', copyCurrentLinkToClipboard);
     document.getElementById('add-to-cart-button').addEventListener('click', addToCart);
-    
+
     // Display product reviews
     document.getElementById('product-reviews-container').innerHTML = productReviews(product.reviews);
-    } catch (error) {
-        ratingContainer.style.display = 'none';
-        productsContainer.innerHTML = `<p class="product__error">Failed to load product details. Please try again later.</p>`;
-    }
+  } catch (error) {
+    ratingContainer.style.display = 'none';
+    productsContainer.innerHTML = `<p class="product__error">Failed to load product details. Please try again later.</p>`;
+  }
 }
 
-/** 
+/**
  * Source and adaptation from:
  * Interact with the clipboard
  * @publisher: MDN Contributors
@@ -132,7 +132,7 @@ export async function displayProduct() {
  * link: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 */
 
-/** 
+/**
  * Copies the current page URL to the clipboard and shows a toast notification.
  * @returns {Promise<void>}
  */
@@ -158,8 +158,8 @@ displayProduct();
  * @returns {Promise<void>}
  */
 async function initSimilarGrid() {
-    const similarSection = await similarGrid();
-    document.querySelector('#similarGrid').innerHTML = similarSection.outerHTML;
+  const similarSection = await similarGrid();
+  document.querySelector('#similarGrid').innerHTML = similarSection.outerHTML;
 }
 
 initSimilarGrid();

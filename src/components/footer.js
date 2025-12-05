@@ -3,7 +3,7 @@
  * @returns {string} HTML string for the footer section.
  */
 export default function footer() {
-    return `
+  return `
     <section class="container">
         <div class="footer__top">
           <div class="footer__info">

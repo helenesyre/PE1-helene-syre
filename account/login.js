@@ -13,7 +13,7 @@ document.querySelector('#footer').innerHTML = footer();
 // Initialize password visibility toggle
 passwordToggle('#password', '#view-icon');
 
-/** 
+/**
  * Code setup and adaptation based on:
  * switch
  * @publisher: MDN Contributors
@@ -22,7 +22,7 @@ passwordToggle('#password', '#view-icon');
  * link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 */
 
-/** 
+/**
  * Code setup and adaptation based on:
  * Event: preventDefault() method
  * @publisher: MDN Contributors
@@ -31,43 +31,43 @@ passwordToggle('#password', '#view-icon');
  * link: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 */
 
-/** 
+/**
  * Handles the login form submission, including validation and API interaction.
  * @returns {void}
  */
 const form = document.querySelector('#login-form');
-form.addEventListener('submit', async function(event) {
-    event.preventDefault();
-    // Validate form inputs
-    const formData = new FormData(event.target);
-    event.target.querySelectorAll('.form__error').forEach(errorElement => errorElement.remove());
-    let isValid = true;
-    for (const [name, value] of formData.entries()) {
-        switch(name) {
-            case 'email':
-                if (value && validateNoroffEmail(value)) {
-                    continue;
-                } else {
-                    isValid = false;
-                    event.target.querySelector('#email').parentElement.innerHTML += validationErrorMessageHTML('Please enter a valid email address.');
-                }
-                break;
-            case 'password':
-                if (value && validatePassword(value)) {
-                    continue;
-                } else {
-                    isValid = false;
-                    event.target.querySelector('#password').parentElement.parentElement.innerHTML += validationErrorMessageHTML('Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.');
-                }
-                break;
+form.addEventListener('submit', async function (event) {
+  event.preventDefault();
+  // Validate form inputs
+  const formData = new FormData(event.target);
+  event.target.querySelectorAll('.form__error').forEach(errorElement => errorElement.remove());
+  let isValid = true;
+  for (const [name, value] of formData.entries()) {
+    switch (name) {
+      case 'email':
+        if (value && validateNoroffEmail(value)) {
+          continue;
+        } else {
+          isValid = false;
+          event.target.querySelector('#email').parentElement.innerHTML += validationErrorMessageHTML('Please enter a valid email address.');
         }
+        break;
+      case 'password':
+        if (value && validatePassword(value)) {
+          continue;
+        } else {
+          isValid = false;
+          event.target.querySelector('#password').parentElement.parentElement.innerHTML += validationErrorMessageHTML('Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.');
+        }
+        break;
     }
-    
-    if (isValid) {
-        // Submit the form to API
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const auth = useAuth();
-        await auth.login(email, password);
-    }
+  }
+
+  if (isValid) {
+    // Submit the form to API
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const auth = useAuth();
+    await auth.login(email, password);
+  }
 });

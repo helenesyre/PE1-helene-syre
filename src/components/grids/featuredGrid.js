@@ -6,14 +6,14 @@ import { prouductCard } from "../cards/productCard.js";
  * @returns {Promise<HTMLElement>} The featured product grid element.
  */
 export async function featuredGrid() {
-    const grid = document.createElement('div');
-    grid.className = 'product__grid';
-    const products = await getProductsByTags(['headphones', 'storage', 'electronics', 'audio', 'accessories', 'watches', 'watch', 'wearables', 'peripherals', 'gaming', 'computers']);
+  const grid = document.createElement('div');
+  grid.className = 'product__grid';
+  const products = await getProductsByTags(['headphones', 'storage', 'electronics', 'audio', 'accessories', 'watches', 'watch', 'wearables', 'peripherals', 'gaming', 'computers']);
 
-    products.slice(0, 12).forEach(product => {
-        const card = prouductCard(product);
-        grid.appendChild(card);
-    });
+  products.slice(0, 12).forEach(product => {
+    const card = prouductCard(product);
+    grid.appendChild(card);
+  });
 
-    return grid;
+  return grid;
 }

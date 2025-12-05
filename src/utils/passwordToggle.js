@@ -33,7 +33,7 @@ const viewOnSVG = `
   </g>
 </svg>`;
 
-/** 
+/**
  * Tutorial from:
  * Show / Hide Password using HTML CSS and JavaScript | Toggle Password
  * @publisher: OnlineITtuts Tutorials
@@ -49,22 +49,22 @@ const viewOnSVG = `
  * @returns {void}
  */
 export function passwordToggle(passwordInputSelector, viewIconSelector) {
-    const passwordInput = document.querySelector(passwordInputSelector);
-    const viewIconContainer = document.querySelector(viewIconSelector);
+  const passwordInput = document.querySelector(passwordInputSelector);
+  const viewIconContainer = document.querySelector(viewIconSelector);
 
-    // Initialize with the "off" icon (password hidden)
-    viewIconContainer.innerHTML = viewOffSVG;
+  // Initialize with the "off" icon (password hidden)
+  viewIconContainer.innerHTML = viewOffSVG;
 
-    // Add click event listener to toggle password visibility
-    viewIconContainer.addEventListener('click', () => {
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            viewIconContainer.innerHTML = viewOnSVG;
-        } else {
-            passwordInput.type = 'password';
-            viewIconContainer.innerHTML = viewOffSVG;
-        }
-    });
+  // Add click event listener to toggle password visibility
+  viewIconContainer.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      viewIconContainer.innerHTML = viewOnSVG;
+    } else {
+      passwordInput.type = 'password';
+      viewIconContainer.innerHTML = viewOffSVG;
+    }
+  });
 }
 
 /**
@@ -72,39 +72,39 @@ export function passwordToggle(passwordInputSelector, viewIconSelector) {
  * @returns {void}
 */
 export function createPasswordToggle() {
-    const createPasswordInput = document.querySelector('#create-password');
-    const viewIconCreateContainer = document.querySelector('#view-icon-create');
+  const createPasswordInput = document.querySelector('#create-password');
+  const viewIconCreateContainer = document.querySelector('#view-icon-create');
 
-    // Initialize with the "off" icon (password hidden)
-    viewIconCreateContainer.innerHTML = viewOffSVG;
-    viewIconCreateContainer.addEventListener('click', () => {
-        if (createPasswordInput.type === 'password') {
-            createPasswordInput.type = 'text';
-            viewIconCreateContainer.innerHTML = viewOnSVG;
-        } else {
-            createPasswordInput.type = 'password';
-            viewIconCreateContainer.innerHTML = viewOffSVG;
-        }
-    });
+  // Initialize with the "off" icon (password hidden)
+  viewIconCreateContainer.innerHTML = viewOffSVG;
+  viewIconCreateContainer.addEventListener('click', () => {
+    if (createPasswordInput.type === 'password') {
+      createPasswordInput.type = 'text';
+      viewIconCreateContainer.innerHTML = viewOnSVG;
+    } else {
+      createPasswordInput.type = 'password';
+      viewIconCreateContainer.innerHTML = viewOffSVG;
+    }
+  });
 }
 
-/** 
+/**
  * Initialize password visibility toggle for the confirm password field.
  * @returns {void}
 */
 export function confirmPasswordToggle() {
-    const confirmPasswordInput = document.querySelector('#confirm-password');
-    const viewIconConfirmContainer = document.querySelector('#view-icon-confirm');
+  const confirmPasswordInput = document.querySelector('#confirm-password');
+  const viewIconConfirmContainer = document.querySelector('#view-icon-confirm');
 
-    // Initialize with the "off" icon (password hidden)
-    viewIconConfirmContainer.innerHTML = viewOffSVG;
-    viewIconConfirmContainer.addEventListener('click', () => {
-        if (confirmPasswordInput.type === 'password') {
-            confirmPasswordInput.type = 'text';
-            viewIconConfirmContainer.innerHTML = viewOnSVG;
-        } else {
-            confirmPasswordInput.type = 'password';
-            viewIconConfirmContainer.innerHTML = viewOffSVG;
-        }
-    });
+  // Initialize with the "off" icon (password hidden)
+  viewIconConfirmContainer.innerHTML = viewOffSVG;
+  viewIconConfirmContainer.addEventListener('click', () => {
+    if (confirmPasswordInput.type === 'password') {
+      confirmPasswordInput.type = 'text';
+      viewIconConfirmContainer.innerHTML = viewOnSVG;
+    } else {
+      confirmPasswordInput.type = 'password';
+      viewIconConfirmContainer.innerHTML = viewOffSVG;
+    }
+  });
 }

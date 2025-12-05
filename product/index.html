@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the product by Koro. Built with modern minimalism and reliable performance to enhance your everyday tech experience with ease.">
-    <title>KORO | Product - modern, minimal tech</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../src/assets/styles/style.css">
-    <link rel="stylesheet" href="./product.css">
-  </head>
-  <body class="page-wrapper">
-    <header class="site-header" id="header">
-      <div id="navbar-container" class="padding-bottom"></div>
-    </header>
-    <main class="">
 
-      <section id="products-container" class="products-container container">
-        <h2 class="sr-only">Product Details</h2>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Discover the product by Koro. Built with modern minimalism and reliable performance to enhance your everyday tech experience with ease.">
+  <title>KORO | Product - modern, minimal tech</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3965f66036.js" crossorigin="anonymous"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../src/assets/styles/style.css">
+  <link rel="stylesheet" href="./product.css">
+</head>
+
+<body class="page-wrapper">
+  <header class="site-header" id="header">
+    <div id="navbar-container" class="padding-bottom"></div>
+  </header>
+  <main class="">
+
+    <section id="products-container" class="products-container container">
+      <h2 class="sr-only">Product Details</h2>
+      <span class="product__loader"></span>
+    </section>
+
+    <section id="product-reviews-section" class="product__reviews container">
+      <h2>Rating and Reviews</h2>
+      <div id="product-reviews-container" class="product__review-list">
         <span class="product__loader"></span>
-      </section>
+      </div>
+    </section>
 
-      <section id="product-reviews-section" class="product__reviews container">
-        <h2>Rating and Reviews</h2>
-        <div id="product-reviews-container" class="product__review-list">
-          <span class="product__loader"></span>
-        </div>
-      </section>
-      
-      <section class="product__similar-products">
-        <div class="product__similar-padding">
-          <h2 class="container">You might also like</h2>
-          <div id="similarGrid"><span class="product__loader"></span></div>
-        </div>
-      </section>
+    <section class="product__similar-products">
+      <div class="product__similar-padding">
+        <h2 class="container">You might also like</h2>
+        <div id="similarGrid"><span class="product__loader"></span></div>
+      </div>
+    </section>
 
-    </main>
-    <footer id="footer"></footer>
-    <script type="module" src="./product.js"></script>
-  </body>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="./product.js"></script>
+</body>
+
 </html>
