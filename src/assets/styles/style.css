@@ -19,7 +19,6 @@ body {
   background: var(--color-bg-light);
 }
 
-
 .page-wrapper {
   min-height: 100vh;
   display: flex;
@@ -31,34 +30,12 @@ body {
   flex: 1;
 }
 
-h1{
-  font-size: var(--font-size-h1);
-}
-
-h2{
-  font-size: var(--font-size-h2);
-}
-
-h3{
-  font-size: var(--font-size-h3);
-}
-
-h4{
-  font-size: var(--font-size-h4);
-}
-
-h5{
-  font-size: var(--font-size-h5);
-}
-
-h6{
-  font-size: var(--font-size-h6);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-semibold);
-  font-family: var(--font-primary);
-}
+h1 { font: var(--font-weight-semibold) var(--font-size-h1)/1.2 var(--font-primary); }
+h2 { font: var(--font-weight-semibold) var(--font-size-h2)/1.2 var(--font-primary); }
+h3 { font: var(--font-weight-semibold) var(--font-size-h3)/1.2 var(--font-primary); }
+h4 { font: var(--font-weight-semibold) var(--font-size-h4)/1.2 var(--font-primary); }
+h5 { font: var(--font-weight-semibold) var(--font-size-h5)/1.2 var(--font-primary); }
+h6 { font: var(--font-weight-semibold) var(--font-size-h6)/1.2 var(--font-primary); }
 
 .image__grid h2,
 .product__grid-section h2 {
@@ -78,7 +55,21 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+/*========== Screen reader only ==========*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
 /*========== Loader ==========*/
+
 /** 
  * Source and adaptation from:
  * Loaders
@@ -109,9 +100,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Ensure loader is centered in featuredGrid */
 #featuredGrid {
   position: relative;
-  min-height: 120px; /* Adjust as needed for your loader size */
+  min-height: 120px;
 }
 
+/* Ensure loader is centered in similarGrid */
 #similarGrid {
   position: relative;
 }
@@ -154,10 +146,8 @@ h1, h2, h3, h4, h5, h6 {
   0% { transform: rotate(0deg) }
   100% { transform: rotate(360deg) }
 }
- 
 
 /*========== Box ==========*/
-
 .box{
   width: 100%;
   padding: var(--spacing-24);
@@ -167,7 +157,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*========== Back Link ==========*/
-
 .page__back-link {
   display: inline-flex;
   align-items: center;
@@ -197,7 +186,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*========== Center Page ==========*/
-
 .center-page {
   display: flex;
   flex-direction: column;
@@ -206,7 +194,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*========== Coming Soon ==========*/
-
 .coming-soon__title {
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--spacing-8);
@@ -222,7 +209,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*========== Footer ==========*/
-
 footer {
   width: 100%;
   background-color: var(--color-black-500);
@@ -338,7 +324,6 @@ footer .copyright {
 }
 
 /*========== Image grid ==========*/
-
 .image__grid,
 .product__grid-section {
   margin: var(--spacing-64) auto;
@@ -402,8 +387,6 @@ footer .copyright {
   object-fit: cover;
   border-radius: 8px;
 }
-      
-
 
 /*========== Tablet ==========*/
 
@@ -412,14 +395,12 @@ footer .copyright {
     padding: 0 var(--spacing-48);
   }
 
-  /*========= Carousel ==========*/
-
+  /*========== Carousel ==========*/
   .hero-carousel {
     height: 790px;
   }
 
   /*========== Footer ==========*/
-
   footer {
     padding-bottom: 0;
   }
@@ -444,7 +425,6 @@ footer .copyright {
   }
 
   /*========== Image grid ==========*/
-
   .image__grid,
   .product__grid-section {
     margin: var(--spacing-80) auto;
@@ -505,7 +485,6 @@ footer .copyright {
   }
 
   /*========== Footer ==========*/
-
   .footer__top {
     flex-direction: row;
     justify-content: space-between;
@@ -519,8 +498,8 @@ footer .copyright {
     margin-top: 150px;
     padding-bottom: 38px;
   }
+
   /*========== Image grid ==========*/
-  
   .image__grid,
   .product__grid-section {
     margin: var(--spacing-96) auto;
@@ -534,5 +513,4 @@ footer .copyright {
   .image__grid-text p {
     margin-bottom: var(--spacing-24);
   }
-  
 }

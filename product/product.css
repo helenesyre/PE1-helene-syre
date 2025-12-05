@@ -12,14 +12,10 @@
 }
 
 .product__overview {
-    margin: var(--spacing-48) 0 var(--spacing-24) 0;
+    margin: var(--spacing-48) 0 var(--spacing-24);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-8);
-}
-
-.product__overview h1 {
-    font-size: var(--font-size-h1);
 }
 
 .product__pricing-rating {
@@ -53,7 +49,6 @@
 }
 
 /*========== Product Rating ==========*/
-
 .product__rating {
     font-size: var(--button-font-size-medium);
     font-weight: var(--font-weight-semibold);
@@ -79,10 +74,7 @@
     height: 20px;
 }
 
-#fullStars {
-    color: var(--color-yellow-500);
-}
-
+#fullStars,
 #halfStar {
     color: var(--color-yellow-500);
 }
@@ -179,12 +171,11 @@ button.share {
 }
 
 /*========== Product Reviews ==========*/
-
 .product__review-list {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
-    margin: var(--spacing-32) 0 var(--spacing-48) 0;
+    margin: var(--spacing-32) 0 var(--spacing-48);
 }
 
 .product__review-item {
@@ -280,7 +271,7 @@ button.share {
 
     /*========== Product Reviews ==========*/
     .product__review-list {
-        margin: var(--spacing-32) 0 var(--spacing-80) 0;
+        margin: var(--spacing-32) 0 var(--spacing-80);
     }
 
     .product__review-list {
@@ -293,7 +284,6 @@ button.share {
     }
 
     /*========== Product Similar Products ==========*/
-
     .product__similar-padding {
         padding: var(--spacing-64) 0;
     }
@@ -324,5 +314,4 @@ button.share {
         justify-content: space-between;
         align-items: center;
     }
-  
 }

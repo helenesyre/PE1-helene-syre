@@ -20,11 +20,11 @@
 }
 
 .carousel__slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
 
 .carousel__slide.carousel__slide--active {
@@ -38,7 +38,7 @@
   display: block;
 }
 
-/* Carousel Controls */
+/*========== Carousel Controls ==========*/
 .carousel__controls {
   position: absolute;
   top: 0;
@@ -91,85 +91,89 @@
 }
 
 @keyframes next1 {
-    from{
-        left: 0%;
-    }
-    to{
-        left: -100%;
-    }
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
 }
 @keyframes next2 {
-    from{
-        left: 100%;
-    }
-    to{
-        left: 0%;
-    }
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
 }
 
 @keyframes prev1 {
-    from{
-        left: 0%;
-    }
-    to{
-        left: 100%;
-    }
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
 }
 @keyframes prev2 {
-    from{
-        left: -100%;
-    }
-    to{
-        left: 0%;
-    }
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
 }
 
 .carousel__info {
-    position: absolute;
-    left: 60px;
-    right: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--color-white-500);
-    z-index: 2;
-    max-width: 570px;
-    text-align: center;
-    margin: 0 auto;
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-white-500);
+  z-index: 2;
+  max-width: 570px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .carousel__info h1 {
-    margin-bottom: var(--spacing-16);
+  margin-bottom: var(--spacing-16);
 }
 
 .carousel__info p {
-    font-size: var(--font-size-paragraph-large);
-    margin-bottom: var(--spacing-32);
+  font-size: var(--font-size-paragraph-large);
+  margin-bottom: var(--spacing-32);
 }
 
 .carousel__shape-svg {
-    position: absolute;
-    display: none;
-    z-index: 2;
+  position: absolute;
+  display: none;
+  z-index: 2;
 }
 
 .carousel__shape-svg--tl {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
+
 .carousel__shape-svg--tr {
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
 }
+
 .carousel__shape-svg--bl {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
+
 .carousel__shape-svg--br {
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }
+
 .carousel__shape-svg svg {
-    display: block;
+  display: block;
 }
 
 /*========== Tablet ==========*/
@@ -180,9 +184,9 @@
   }
 
   .carousel__shape-svg {
-        width: 304px;
-        display: block;
-    }
+    width: 304px;
+    display: block;
+  }
 
   .carousel__slide--prev,
   .carousel__slide--next {
@@ -205,10 +209,4 @@
     width: 20px;
     height: 20px;
   }
-}
-
-/*========== Desktop ==========*/
-
-@media (min-width: 1200px) {
-  
 }

@@ -35,7 +35,7 @@ passwordToggle('#password', '#view-icon');
  * Handles the login form submission, including validation and API interaction.
  * @returns {void}
  */
-const form = document.querySelector('#login__form');
+const form = document.querySelector('#login-form');
 form.addEventListener('submit', async function(event) {
     event.preventDefault();
     // Validate form inputs

@@ -1,5 +1,4 @@
 /*========== Promocode ==========*/
-
 .promocode__form {
     display: flex;
     flex-direction: column;
@@ -60,22 +59,7 @@
     top: -0.2em;
 }
 
-/*========== Screen reader only ==========*/
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    white-space: nowrap;
-}
-
 /*========== Form errors ==========*/
-
 .form__error {
     display: flex;
     align-items: center;
@@ -103,12 +87,4 @@
     .checkout__form-row {
         flex-direction: row;
     }
-
-}
-
-/*========== Desktop ==========*/
-
-@media (min-width: 1200px) {
-
-  
 }

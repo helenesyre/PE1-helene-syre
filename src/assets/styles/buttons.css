@@ -46,7 +46,6 @@
 }
 
 /*========== Full width ==========*/
-
 .button--full-width {
   width: 100%;
   display: flex;
@@ -54,7 +53,6 @@
 }
 
 /*========== Colors ==========*/
-
 .button--primary {
   background: var(--color-blue-500);
   color: var(--color-white-500);
@@ -75,7 +73,6 @@
 }
 
 /*========== Disabled ==========*/
-
 .button--disabled {
   background: var(--color-black-50);
   color: var(--color-black-300);
@@ -84,7 +81,6 @@
 }
 
 /*========== Other buttons ==========*/
-
 .button--cta {
   padding: 12px 24px;
   background: var(--color-beige-500);

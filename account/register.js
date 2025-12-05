@@ -37,7 +37,7 @@ confirmPasswordToggle('#confirm-password', '#view-icon-confirm');
  * Handles the signup form submission, including validation and API interaction.
  * @returns {void}
  */
-const form = document.querySelector('#signup__form');
+const form = document.querySelector('#signup-form');
 form.addEventListener('submit', async function(event) {
     event.preventDefault();
     // Validate form inputs

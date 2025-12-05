@@ -1,5 +1,4 @@
 /*========== Product card ==========*/
-
 .product-card {
     padding: 12px;
     border-radius: 16px;
@@ -158,13 +157,11 @@
         grid-template-columns: repeat(3, 1fr);
         gap: var(--spacing-16);
     }
-
 }
 
 /*========== Desktop ==========*/
 
 @media (min-width: 1200px) {
-
     /*========== Product card ==========*/
     .product-card__image-wrapper {
         margin-bottom: var(--spacing-16);
@@ -182,7 +179,6 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 21px;
     }
-  
 }
 
 

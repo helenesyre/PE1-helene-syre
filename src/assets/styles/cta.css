@@ -84,7 +84,6 @@
     height: auto;
 }
 
-
 /*========== Tablet ==========*/
 
 @media (min-width: 768px) {
@@ -126,7 +125,6 @@
 /*========== Desktop ==========*/
 
 @media (min-width: 1200px) {
-
     .cta__shape-top-left {
         width: 204px;
     }
@@ -134,7 +132,4 @@
     .cta__shape-bottom-right {
         width: 305px;
     }
-  
 }
-
-

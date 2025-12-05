@@ -1,6 +1,6 @@
 @import './quantity.css';
-/*========== Cart menu ==========*/
 
+/*========== Cart menu ==========*/
 .cart__menu {
   position: fixed;
   top: 0;
@@ -42,7 +42,6 @@
 }
 
 /*========== Cart Items ==========*/
-
 .cart__content {
     display: flex;
     gap: var(--spacing-24);
@@ -65,7 +64,6 @@
 }
 
 /*========== Image ==========*/
-
 .cart__item--img {
     width: 100px;
     height: 100px;
@@ -82,7 +80,6 @@
 }
 
 /*========== Details ==========*/
-
 .cart__item--details {
     display: flex;
     flex-direction: column;
@@ -91,7 +88,6 @@
 
 
 /*========== Tags ==========*/
-
 .cart__item--tags {
     display: flex;
     flex-wrap: wrap;
@@ -112,7 +108,6 @@
 }
 
 /*========== Product name ==========*/
-
 h4.cart__item--name {
     font-size: 16px;
     font-weight: var(--font-weight-semibold);
@@ -120,7 +115,6 @@ h4.cart__item--name {
 }
 
 /*========== Price ==========*/
-
 .cart__item--price,
 .cart__item--price-regular {
     display: flex;
@@ -139,7 +133,6 @@ h4.cart__item--name {
 }
 
 /*========== Actions ==========*/
-
 .cart__item--actions {
     display: flex;
     flex-direction: row;
@@ -150,7 +143,6 @@ h4.cart__item--name {
 }
 
 /*========== Remove button ==========*/
-
 .cart__item--remove button{
     background: none;
     border: none;
@@ -181,10 +173,4 @@ h4.cart__item--name {
   .cart__menu {
     width: 420px;
   }
-}
-
-/*========== Desktop ==========*/
-
-@media (min-width: 1200px) {
-  
 }

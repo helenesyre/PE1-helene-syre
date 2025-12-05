@@ -33,7 +33,7 @@
     align-items: center;
 }
 
-/* Border colors for different toast types */
+/*========== Border Colors for Different Toast Types ==========*/
 .toast--success {
     border-left: 4px solid var(--color-feedback-success-border);
 }
@@ -50,7 +50,7 @@
     border-left: 4px solid var(--color-feedback-info-border);
 }
 
-/* Title and message */
+/*========== Title and Message ==========*/
 .toast h4 {
     margin: 0;
     font-size: 20px;
@@ -87,7 +87,7 @@
     color: var(--color-black-500);
 }
 
-/* Icon */
+/*========== Icon ==========*/
 .toast span {
     display: flex;
     padding: 10px;
@@ -139,7 +139,7 @@
     color: var(--color-feedback-info);
 }
 
-/* Close button */
+/*========== Close Button ==========*/
 .toast button,
 .toast-simple button {
     background: none;

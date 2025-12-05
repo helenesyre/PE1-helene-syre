@@ -1,5 +1,4 @@
 /*========== Navigation ==========*/
-
 .site-header {
   width: 100%;
   position: relative;
@@ -164,14 +163,13 @@
 }
 
 /*========== Light Navbar Variant ==========*/
-
 .nav--light .nav__logo {
-    color: var(--color-blue-500);
+  color: var(--color-blue-500);
 }
 
 .nav--light .nav__toggle,
 .nav--light .nav__actions svg {
-    color: var(--color-black-500);
+  color: var(--color-black-500);
 }
 
 .nav__link:hover, .nav__actions svg:hover {
@@ -180,7 +178,6 @@
 }
 
 /*========== Active Link Style ==========*/
-
 .nav__link--active,
 .nav--light .nav__link--active svg {
   color: var(--color-blue-500);
@@ -246,5 +243,4 @@
   .nav__link {
     font-size: 16px;
   }
-  
 }

@@ -1,5 +1,4 @@
 /*========== Quantity ==========*/
-
 .cart__item--quantity {
     display: flex;
     flex-direction: row;
@@ -15,7 +14,7 @@
 .cart__item--quantity-increase  {
     width: 24px;
     height: 24px;
-    border-radius: 6px;
+    border-radius: var(--border-radius-small);
     border: none;
     background: var(--color-white-50);
     display: flex;
